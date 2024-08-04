@@ -98,7 +98,7 @@ const login = asyncHandler(async(req,res)=>{
   const token = generateJwtToken(user._id);
   const options={
     httpOnly:true,
-    secure: true
+    secure: true,
   }
     return res.status(200)
     .cookie("accessToken",token,options)
