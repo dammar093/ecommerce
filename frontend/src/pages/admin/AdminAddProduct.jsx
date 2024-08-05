@@ -19,14 +19,24 @@ const AdminAddProduct = () => {
   const [colors, setColors] = useState([])
   const [size, setSize] = useState(null)
   const [sizes, setSizes] = useState([])
+  const [files, setFiles] = useState([])
+  const [error, setError] = useState("")
   const imageRef = useRef()
   const handleFiles = (e) => {
-    const files = e.target.files
+    const selectedFiles = e.target.files
+    if (selectedFiles.length > 4) {
+      setError("Add lesst than 5 files")
+      return
+    }
     // console.log(files);
-    for (let file of files) {
+    for (let file of selectedFiles) {
       let imageUrl = URL.createObjectURL(file)
       setImageUrls(prev => [...prev, imageUrl])
+      setFiles(prev => [...prev, file])
     }
+    setValue('images', files)
+    setFiles(null)
+
   }
 
   const removeImage = (image) => {
@@ -57,8 +67,37 @@ const AdminAddProduct = () => {
     setSizes(prev => prev.filter(sz => sz !== size))
   }
 
+  const handleDragOver = (e) => {
+    e.preventDefault();
+    setError(null)
+
+  }
+
+  const handleDrop = (e) => {
+    e.preventDefault();
+
+    const selectedFiles = e.dataTransfer.files;
+    console.log(selectedFiles);
+    if (selectedFiles.length > 4) {
+      setError("Add lesst than 5 files")
+      return
+    }
+    if (selectedFiles.length > 0) {
+      for (let file of selectedFiles) {
+        let imageUrl = URL.createObjectURL(file);
+        setImageUrls(prev => [...prev, imageUrl]);
+        setFiles(prev => [...prev, file]);
+      }
+      setValue('images', [...selectedFiles]);
+    }
+  };
+
+  const addProduct = (data) => {
+    console.log(data);
+
+  }
   return (
-    <div className='w-full relative flex'>
+    <div className='w-full relative flex mb-20'>
       <div>
         <SideBar />
       </div>
@@ -69,9 +108,7 @@ const AdminAddProduct = () => {
           </div>
           <div className='w-full'>
             <form method='post' encType='multipart/form-data  bg-[#ffffff]'
-              onSubmit={handleSubmit((data) => {
-
-              })}
+              onSubmit={handleSubmit(addProduct)}
             >
               <div className='flex justify-between flex-wrap gap-2 mt-4'>
                 <div className='md:w-[48%] w-full'>
@@ -269,7 +306,10 @@ const AdminAddProduct = () => {
                 </div>
               </div>
               <div className='w-full mt-2'>
-                <div className='w-full border-dashed border bg-slate-200 p-2 h-[200px] border-gray-800'>
+                <div className='w-full border-dashed border bg-slate-200 p-2 h-[200px] border-gray-800'
+                  onDragOver={handleDragOver}
+                  onDrop={handleDrop}
+                >
                   <div>
                     <div className='w-full text-center text-[100px] flex justify-center text-gray-400 font-semibold'>
                       <VscCloudUpload />
@@ -303,15 +343,18 @@ const AdminAddProduct = () => {
                     </div>
                   ))}
                   {errors.images && <p className="text-red-500">{errors.images.message}</p>}
+                  {error && <p className="text-red-500">{error}</p>}
                 </div>
               </div>
               <div className='w-full mt-2'>
                 <div className='w-full rounded-md text-gray-600'>
-                  <textarea className='w-full bg-slate-200 p-2 rounded resize-none focus:border-gray-600 focus:border' placeholder='Write description..' name="" id="" cols="30" rows="10"></textarea>
+                  <textarea className='w-full bg-slate-200 p-2 rounded resize-none focus:border-gray-600 focus:border' placeholder='Write description..' name="" id="" cols="30" rows="10"
+                    {...register("description")}
+                  ></textarea>
                 </div>
                 {
-                  errors.title && (
-                    <p className="text-red-500">{errors.title.message}</p>
+                  errors.description && (
+                    <p className="text-red-500">{errors.description.message}</p>
                   )
                 }
               </div>
