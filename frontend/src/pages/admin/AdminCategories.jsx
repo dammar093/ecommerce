@@ -10,6 +10,7 @@ import axios from "axios";
 import { addCategoryBypage, removeCategory } from '../../features/categorySlice';
 import Loading from '../../components/Loading';
 import PopUp from '../../components/PopUp';
+import baseUrl from '../../baseUrl';
 
 const AdminCategories = () => {
   const { paginateCategory } = useSelector(state => state.categories)
@@ -28,10 +29,11 @@ const AdminCategories = () => {
   useEffect(() => {
     async function getAllCategories() {
       try {
-        const res = await axios.get(`http://localhost:8000/api/v1/categories/getcategories/${page}`, {
+        const res = await axios.get(`${baseUrl}/api/v1/categories/getcategories/${page}`, {
           headers: {
             "Authorization": `Bearer ${token}`
-          }
+          },
+          withCredentials: true
         })
         // console.log(res.data.data.data);
 
@@ -87,10 +89,10 @@ const AdminCategories = () => {
             </tbody>
           </table>
           {
-            popup && <PopUp setPopup={setPopup} title="category" url={"http://localhost:8000/api/v1/categories/delete-category"} handler={removeCategory} id={id} />
+            popup && <PopUp setPopup={setPopup} title="category" url={`${baseUrl}/api/v1/categories/delete-category`} handler={removeCategory} id={id} />
           }
         </div>
-        <Pagination total={paginateCategory.total} items={paginateCategory.data} url="http://localhost:8000/api/v1/categories/getcategories" handler={addCategoryBypage} setPage={setPage} />
+        <Pagination total={paginateCategory.total} items={paginateCategory.data} url={`${baseUrl}/api/v1/categories/getcategories`} handler={addCategoryBypage} setPage={setPage} />
       </div >
     </div >
   )

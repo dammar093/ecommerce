@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
 import { setUsers, removeUser } from '../../features/usersSlice'
 import PopUp from '../../components/PopUp'
+import baseUrl from '../../baseUrl'
 const Users = () => {
   const [popup, setPopup] = useState(false)
   const { token } = useSelector(state => state.user)
@@ -17,7 +18,7 @@ const Users = () => {
   const { users, total } = useSelector(state => state.users)
   console.log("data:: ", users.data);
   useEffect(() => {
-    axios.get(`http://localhost:8000/api/v1/users/${page}`, {
+    axios.get(`${baseUrl}/api/v1/users/${page}`, {
       headers: {
         "Authorization": `Bearer ${token}`
       },
@@ -91,10 +92,10 @@ const Users = () => {
             </tbody>
           </table>
           {
-            popup && <PopUp setPopup={setPopup} title="user" url={"http://localhost:8000/api/v1/users"} handler={removeUser} id={id} />
+            popup && <PopUp setPopup={setPopup} title="user" url={`${baseUrl}/api/v1/users`} handler={removeUser} id={id} />
           }
         </div>
-        <Pagination url="http://localhost:8000/api/v1/users" items={users.data} handler={setUsers} total={users.total} setPage={setPage} />
+        <Pagination url={`${baseUrl}/api/v1/users`} items={users.data} handler={setUsers} total={users.total} setPage={setPage} />
       </div>
     </div>
   )

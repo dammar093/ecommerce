@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addCategory } from '../../features/categorySlice';
 import Loading from '../../components/Loading';
 import { useNavigate } from 'react-router-dom';
+import baseUrl from '../../baseUrl';
 
 
 const AdminAddCategory = () => {
@@ -50,11 +51,12 @@ const AdminAddCategory = () => {
   const handleCategory = async (data) => {
     setLoading(true)
     try {
-      const response = await axios.post("http://localhost:8000/api/v1/categories/add-category", data, {
+      const response = await axios.post(`${baseUrl}/api/v1/categories/add-category`, data, {
         headers: {
           "Authorization": `Bearer ${token}`,
           "Content-Type": "multipart/form-data"
-        }
+        },
+        withCredentials: true
       });
       dispatch(addCategory(response.data.data));
       setLoading(false)

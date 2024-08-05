@@ -10,6 +10,7 @@ import { useDispatch } from "react-redux"
 import { addUser, setToken } from '../features/userSlice';
 import { useNavigate } from 'react-router-dom';
 import Loading from '../components/Loading';
+import baseUrl from '../baseUrl';
 const Login = () => {
   const { register, handleSubmit, formState: { errors } } = useForm()
   const [showEye, setShowEye] = useState(true)
@@ -31,7 +32,7 @@ const Login = () => {
         }
         <form method='post'
           onSubmit={handleSubmit((data) => {
-            axios.post("http://localhost:8000/api/v1/users/login", data)
+            axios.post(`${baseUrl}/api/v1/users/login`, data)
               .then(res => {
                 setLoading(true);
                 dispatch(addUser(res.data.data.loggedInUser));

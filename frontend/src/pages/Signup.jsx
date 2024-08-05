@@ -9,6 +9,7 @@ import avatarimg from "../assets/signin.gif"
 import axios from "axios"
 import { useDispatch, useSelector } from "react-redux"
 import Loading from '../components/Loading'
+import baseUrl from '../baseUrl'
 
 const Signup = () => {
 
@@ -44,7 +45,7 @@ const Signup = () => {
             try {
               data.avatar = file
               // console.log(data);
-              axios.post("http://localhost:8000/api/v1/users/signup", data, {
+              axios.post(`${baseUrl}/api/v1/users/signup`, data, {
                 headers: {
                   "Content-Type": "multipart/form-data"
                 }

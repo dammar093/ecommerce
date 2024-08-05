@@ -16,7 +16,8 @@ const PopUp = ({ setPopup, url, id, title, handler }) => {
     axios.delete(`${url}/${id}`, {
       headers: {
         "Authorization": `Bearer ${token}`
-      }
+      },
+      withCredentials: true
     })
       .then(res => {
         console.log(res.data.data)

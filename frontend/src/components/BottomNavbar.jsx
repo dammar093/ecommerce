@@ -10,6 +10,7 @@ import Button from './Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { addUser, setToken } from '../features/userSlice';
 import axios from 'axios';
+import baseUrl from '../baseUrl';
 
 const BottomNavbar = () => {
   const [showDropBox, setShowDropBox,] = useState(false);
@@ -57,7 +58,7 @@ const BottomNavbar = () => {
                     </Link>
                     <Button className='px-6 py-1 rounded-full bg-[#AE56EF] text-white text-sm font-semibold hover:bg-[#7a40a3] transition-all'
                       onClick={() => {
-                        axios.post("http://localhost:8000/api/v1/users/logout")
+                        axios.post(`${baseUrl}/api/v1/users/logout`)
                           .then(res => {
                             if (res) {
                               dispatch(addUser(null))

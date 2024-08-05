@@ -3,6 +3,7 @@ import CategoryCard from '../components/CategoryCard'
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux"
 import { setCategory } from '../features/categorySlice';
+import baseUrl from '../baseUrl';
 
 const Categories = () => {
   const { categories } = useSelector(state => state.categories)
@@ -10,7 +11,7 @@ const Categories = () => {
 
   useEffect(() => {
     async function getAllCategories() {
-      const res = await axios.get("http://localhost:8000/api/v1/categories")
+      const res = await axios.get(`${baseUrl}/api/v1/categories`)
       dispatch(setCategory(res.data.data))
     }
     getAllCategories()

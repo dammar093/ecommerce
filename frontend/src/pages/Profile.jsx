@@ -9,6 +9,7 @@ import { MdOutlineModeEditOutline, MdOutlineCancel } from "react-icons/md";
 import { FaRegSave } from "react-icons/fa";
 import axios from "axios"
 import { addUser } from '../features/userSlice';
+import baseUrl from '../baseUrl';
 
 
 const Profile = () => {
@@ -52,10 +53,11 @@ const Profile = () => {
     setLoading(true)
     try {
       const data = { fullName, email, username, _id: user._id }
-      axios.patch("http://localhost:8000/api/v1/users/profile", data, {
+      axios.patch(`${baseUrl}/api/v1/users/profile`, data, {
         headers: {
           "Authorization": `Bearer ${token}`
-        }
+        },
+        withCredentials: true
       })
         .then(res => {
           setLoading(false)
@@ -72,11 +74,12 @@ const Profile = () => {
   // update avatar image
   const handleAvatar = () => {
     setLoading(true)
-    axios.patch("http://localhost:8000/api/v1/users/update-avatar", { avatar: file }, {
+    axios.patch(`${baseUrl}/api/v1/users/update-avatar`, { avatar: file }, {
       headers: {
         "Authorization": `Bearer ${token}`,
         "Content-Type": "multipart/form-data"
-      }
+      },
+      withCredentials: true
     })
       .then(res => {
         dispatch(addUser(res.data?.data))
