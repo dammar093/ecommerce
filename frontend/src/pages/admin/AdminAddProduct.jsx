@@ -190,7 +190,7 @@ const AdminAddProduct = () => {
                     <Input
                       type="number"
                       className="w-full h-full bg-transparent text-gray-600 rounded outline-none px-2"
-                      placeholder="Enter discount of product"
+                      placeholder="Enter discount percentage of product"
                       {...register('discount', {
                         required: 'Discount is required !',
                       })}
