@@ -4,6 +4,7 @@ const categoryRouter = require("./src/routes/category")
 const cors = require("cors")
 const app = express();
 const cookieParser = require("cookie-parser")
+const path = require("path");
 
 //middelwares
 app.use(cors({
@@ -14,6 +15,8 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser())
+// app.use(express.static(path.resolve(__dirname, 'public/dist')));
+
 //routes
 //user routes
 app.use("/api/v1/users",userRouter);
