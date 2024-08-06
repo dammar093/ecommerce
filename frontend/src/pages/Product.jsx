@@ -31,10 +31,11 @@ const Product = () => {
   }
 
   const { id } = useParams()
-  const productId = Number(id.split("=")[1])
-  // console.log(productId)
-  const product = products.find(item => item.id === productId)
-  // console.log(product);
+  console.log(id);
+
+  const productId = id.split("=")[1]
+  const product = products.find(item => item._id === productId)
+  console.log(product);
 
   const handelCart = (item) => {
     if (user) {
@@ -51,7 +52,7 @@ const Product = () => {
         <div className='w-full md:w-1/2 bg-white py-2'>
           <div className='w-full md:h-[350px] p-1 flex items-center justify-center'>
             <img className='w-[300px] h-[300px] object-scale-down'
-              src={product.images[index]}
+              src={product?.images[index]}
               alt={product.title} />
           </div>
           <div className='w-full my-2'>
@@ -61,7 +62,7 @@ const Product = () => {
                   <div className='w-[100px] h-[100px] border shadow-sm p-1' key={img}
                     onClick={() => handelImg(index)}
                   >
-                    <img className='w-full h-full object-cover cursor-pointer' src={img} alt="" />
+                    <img className='w-full h-full object-contain cursor-pointer' src={img} alt="" />
                   </div>
                 ))
               }
@@ -91,16 +92,17 @@ const Product = () => {
               </div>
             </div>
             <div className='my-2 text-gray-600 text-justify'>
-              <p>{product.desc}</p>
+              <p>{product.description}</p>
             </div>
             <div className='my-2 flex gap-3 items-center'>
-              <span className='text-3xl font-medium text-[#AE56EF]'>Rs.{Math.round(product.price - (product.discount * product.price / 100))}</span>
+              <span className='text-3xl font-medium text-[#AE56EF]'>Rs.{Math.round(product.price - (product.discountPercentage * product.price / 100))}</span>
               <span className='text-2xl font-medium text-gray-600 line-through'>Rs.{product.price}</span>
+              <span className='text-red-500 font-semibold md:text-lg text-md'>-{product.discountPercentage}%</span>
             </div>
           </div>
           {
             product.colors && <div className='flex gap-2'>
-              <span className='text-gray-600'>Colors:</span>
+              <span className='text-gray-600'>{product.colors.length > 0 && "Colors:"}</span>
               <div className='flex gap-2'>
                 {
                   product.colors.map((color, index) => (
@@ -116,7 +118,7 @@ const Product = () => {
 
           {
             product.sizes && <div className='flex gap-2'>
-              <span className='text-gray-600'>Size:</span>
+              <span className='text-gray-600'>{product.sizes.length > 0 && "Size:"}</span>
               <div className='flex gap-2 text-gray-600'>
                 {
                   product.sizes.map(size => (

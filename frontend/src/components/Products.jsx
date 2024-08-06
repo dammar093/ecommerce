@@ -6,6 +6,8 @@ import LaodingCard from './LoadingCard';
 
 const Products = ({ title }) => {
   const products = useSelector(state => state.products.products);
+  console.log(products);
+
   const [laoding, setLoading] = useState(false)
   const scrollRef = useRef(null);
 
