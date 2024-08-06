@@ -1,6 +1,7 @@
 const express = require("express");
 const userRouter = require("./src/routes/user");
 const categoryRouter = require("./src/routes/category")
+const productRouter = require("./src/routes/product")
 const cors = require("cors")
 const app = express();
 const cookieParser = require("cookie-parser")
@@ -21,4 +22,5 @@ app.use(cookieParser())
 //user routes
 app.use("/api/v1/users",userRouter);
 app.use("/api/v1/categories",categoryRouter)
+app.use("/api/v1/products",productRouter)
 module.exports = app;
