@@ -92,7 +92,7 @@ const AdminCategories = () => {
             popup && <PopUp setPopup={setPopup} title="category" url={`${baseUrl}/api/v1/categories/delete-category`} handler={removeCategory} id={id} />
           }
         </div>
-        <Pagination total={paginateCategory.total} items={paginateCategory.data} url={`${baseUrl}/api/v1/categories/getcategories`} handler={addCategoryBypage} setPage={setPage} />
+        <Pagination total={paginateCategory.total} url={`${baseUrl}/api/v1/categories/getcategories`} handler={addCategoryBypage} setPage={setPage} />
       </div >
     </div >
   )

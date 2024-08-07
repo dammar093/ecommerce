@@ -29,14 +29,14 @@ export default function Pagination({ total, url, handler, setPage }) {
           </p>
         </div>
         <div>
-          <nav className="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+          <nav className="isolate inline-flex -space-x-px rounded-md shadow-sm gap-1" aria-label="Pagination">
             {
               Array.from({ length: (Math.ceil(total / 7)) }).map((item, i) => {
                 return (
                   <span
                     key={i}
                     aria-current="page"
-                    className={`relative z-10 inline-flex items-center ${index == i ? "bg-[#AE56EF] text-[#f3f3f3]" : "border border-[#AE56EF] text-[#AE56EF]"} px-4 py-2 text-sm font-semiboldfocus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#AE56EF] mx-1 cursor-pointer rounded`}
+                    className={`relative z-10 inline-flex items-center ${index == i ? "bg-[#AE56EF] text-[#f3f3f3]" : "border border-[#AE56EF] text-[#AE56EF]"} px-4 py-2 text-sm font-semiboldfocus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#AE56EF] cursor-pointer rounded`}
                     onClick={() => handlePaginate(i + 1)}
                   >
                     {(i + 1)}
