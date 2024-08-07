@@ -98,7 +98,7 @@ const Products = ({ title, query }) => {
         {
           query === "just for you" && <div className={`flex gap-2 overflow-x-scroll scroll-smooth scrollbar-hide`} ref={scrollRef}>
             {
-              products.map(item => (
+              products.data.map(item => (
                 <Card item={item} key={item.id} />
               ))
             }

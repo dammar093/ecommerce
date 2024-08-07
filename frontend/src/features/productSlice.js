@@ -2,7 +2,10 @@ import {createSlice} from "@reduxjs/toolkit";
 
 const initialState ={
   newProducts:[],
-  products:[],
+  products:{
+    data:[],
+    total:null
+  },
   bestDeal:[],
   hightRated:[],
   search:[],

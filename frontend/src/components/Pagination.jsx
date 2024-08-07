@@ -1,10 +1,9 @@
 import axios from "axios";
 import { useState } from "react";
-import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 import { useDispatch } from "react-redux";
 
 
-export default function Pagination({ total, items, url, handler, setPage }) {
+export default function Pagination({ total, url, handler, setPage }) {
   const [index, setIndex] = useState(0)
   const dispatch = useDispatch()
   async function handlePaginate(page) {
@@ -25,7 +24,7 @@ export default function Pagination({ total, items, url, handler, setPage }) {
       <div className="flex flex-1 items-center justify-between">
         <div>
           <p className="text-sm text-gray-700">
-            Showing <span className="font-medium">1</span> to <span className="font-medium">{items?.length}</span> of{' '}
+            Showing <span className="font-medium">1</span> to <span className="font-medium">{total}</span> of{' '}
             <span className="font-medium">{total}</span> results
           </p>
         </div>

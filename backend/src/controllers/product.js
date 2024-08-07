@@ -66,9 +66,9 @@ const addProduct = asyncHandler(async (req, res) => {
 const getAllProducts = asyncHandler(async(req,res)=>{
   try {
       const products = await Product.find();
-
+      const total = await Product.countDocuments();
       return res.status(200)
-      .json(new ApiResponse(200,products,"product fetched successfuly"))
+      .json(new ApiResponse(200,{data:products,total},"product fetched successfuly"))
   } catch (error) {
       return res.status(500).json(new ApiResponse(500, {}, "Something went wrong internally"));
   }

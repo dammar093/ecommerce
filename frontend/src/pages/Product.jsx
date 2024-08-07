@@ -182,7 +182,7 @@ const Product = () => {
                       color: color || product?.colors?.[0] || null,
                       image: product?.images?.[0] || null,
                       size: size || product?.sizes?.[0] || '',
-                      price: Math.round(product.price - (product.discount * product.price / 100)) || 0,
+                      price: Math.round(product.price - (product.discountPercentage * product.price / 100)) || 0,
                       quantity: quantity,
                       title: product.title
                     })

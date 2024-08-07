@@ -33,11 +33,16 @@ const Cart = () => {
                           <h3 className='text-grey capitalize text-md md:text-lg font-semibold text-[#4B5563]'>{item.title}</h3>
 
                           <div>
-                            <p className='text-[#4B5563] capitalize'>
+                            <div className='text-[#4B5563] capitalize flex gap-1 items-center'>
                               {item.size && <span >Size: <span className='uppercase'>{item.size}</span></span>}
-                              <span>  </span>
-                              {item.color && <span>Color: {item.color}</span>}
-                            </p>
+                              {"  "}
+                              {item.color && (
+                                <div>
+                                  Color: <span style={{ backgroundColor: item.color }} className='w-4 h-4 rounded-full inline-block border border-gray-900'></span>
+                                </div>
+                              )}
+
+                            </div>
                           </div>
 
                           <div className='text-[#4B5563]'>
