@@ -47,6 +47,7 @@ const Products = ({ title, query }) => {
       const res = await axios(`${baseUrl}/api/v1/products`, {
         withCredentials: true
       });
+
       dispatch(setProducts(res.data.data))
     }
     fetchProduct()
@@ -98,7 +99,7 @@ const Products = ({ title, query }) => {
         {
           query === "just for you" && <div className={`flex gap-2 overflow-x-scroll scroll-smooth scrollbar-hide`} ref={scrollRef}>
             {
-              products.data.map(item => (
+              products.map(item => (
                 <Card item={item} key={item._id} />
               ))
             }
