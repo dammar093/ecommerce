@@ -9,7 +9,7 @@ import axios from 'axios';
 const Products = ({ title, query }) => {
 
   const { bestDeal, hightRated, newProducts, products } = useSelector(state => state.products)
-  console.log("new:: ", newProducts);
+  // console.log("new:: ", newProducts);
 
   const [laoding, setLoading] = useState(false)
   const scrollRef = useRef(null);
