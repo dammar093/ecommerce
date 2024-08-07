@@ -80,7 +80,7 @@ const AdminProducts = () => {
                       <img className='md:w-10 md:h-10 h-8 w-8 rounded-full object-cover' src={product.images[0]} alt={product.title} />
                     </td>
                     <td className='text-gray-600 font-medium text-md capitalize'>{
-                      product.title.substring(0, 20) + "..."
+                      String(product.title).substring(0, 20) + "..."
                     }</td>
                     <td className='text-gray-600 font-medium text-md capitalize'>{product.category}</td>
                     <td className='text-gray-600 font-medium text-md'>Rs. {Math.round(product.price - (product.price * product.discountPercentage / 100))}</td>

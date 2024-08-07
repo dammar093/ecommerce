@@ -30,7 +30,7 @@ const Cart = () => {
                       </div>
                       <div className='flex items-center'>
                         <div>
-                          <h3 className='text-grey capitalize text-md md:text-lg font-semibold text-[#4B5563]'>{item.title}</h3>
+                          <h3 className='text-grey capitalize text-md md:text-lg font-semibold text-[#4B5563]'>{String(item.title).substring(0, 30) + "..."}</h3>
 
                           <div>
                             <div className='text-[#4B5563] capitalize flex gap-1 items-center'>
