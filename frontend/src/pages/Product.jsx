@@ -7,13 +7,15 @@ import Rating from '../components/Rating'
 import Review from '../components/Review'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { addToCart, incrementQuantity } from '../features/cartSlice'
+import { addToCart } from '../features/cartSlice'
 import { CgShoppingCart } from "react-icons/cg";
 
 const Product = () => {
 
   const [quantity, setQuantity] = useState(1)
-  const [index, setIndex] = useState(0)
+  const [imageIndex, setImageIndex] = useState(0)
+  const [colorIndex, setColorIndex] = useState(0)
+  const [sizeIndex, setSizeIndex] = useState(0)
   const quanitiyRef = useRef()
   const dispatch = useDispatch();
   const [color, setColor] = useState('')
@@ -44,7 +46,7 @@ const Product = () => {
     else { navigate("/login") }
   }
   const handelImg = (i) => {
-    setIndex(i)
+    setImageIndex(i)
   }
   return (
     <section className='my-4 w-full mb-[70px]'>
@@ -52,14 +54,14 @@ const Product = () => {
         <div className='w-full md:w-1/2 bg-white py-2'>
           <div className='w-full md:h-[350px] p-1 flex items-center justify-center'>
             <img className='w-[300px] h-[300px] object-scale-down'
-              src={product?.images[index]}
+              src={product?.images[imageIndex]}
               alt={product.title} />
           </div>
           <div className='w-full my-2'>
             <div className='flex justify-center gap-2'>
               {
                 product.images.map((img, index) => (
-                  <div className='w-[100px] h-[100px] border shadow-sm p-1' key={img}
+                  <div className={`${index === imageIndex ? "border-2 border-[#AE56EF]" : "border"} rounded w-[100px] h-[100px]  shadow-sm p-1`} key={img}
                     onClick={() => handelImg(index)}
                   >
                     <img className='w-full h-full object-contain cursor-pointer' src={img} alt="" />
@@ -108,8 +110,11 @@ const Product = () => {
               <div className='flex gap-2'>
                 {
                   product.colors.map((color, index) => (
-                    <div key={color} style={{ background: `${color}` }} className={`w-4 h-4 cursor-pointer  rounded-full  border-2 border-[#AE56EF]`}
-                      onClick={() => setColor(color)}
+                    <div key={color} style={{ background: `${color}` }} className={` ${index === colorIndex ? " border-2 border-[#AE56EF]" : "border border-gray-600"} w-6 h-6 cursor-pointer  rounded-full `}
+                      onClick={() => {
+                        setColor(color)
+                        setColorIndex(index)
+                      }}
                     ></div>
                   ))
                 }
@@ -119,13 +124,17 @@ const Product = () => {
           }
 
           {
-            product.sizes && <div className='flex gap-2'>
+            product.sizes && <div className='flex gap-2 mt-2'>
               <span className='text-gray-600'>{product.sizes.length > 0 && "Size:"}</span>
-              <div className='flex gap-2 text-gray-600'>
+              <div className='flex gap-2 text-gray-600 '>
                 {
-                  product.sizes.map(size => (
-                    <div key={size} className='w-8 h-8 text-center text-xl cursor-pointer uppercase border'
-                      onClick={() => setSize(size)}>{size}</div>
+                  product.sizes.map((size, index) => (
+                    <div key={size} className={`${index === sizeIndex ? " border-2 border-[#AE56EF]" : "border"} w-8 h-8 text-center text-md rounded flex justify-center items-center cursor-pointer uppercase border`}
+                      onClick={() => {
+                        setSize(size)
+                        setSizeIndex(index)
+                      }
+                      }>{size}</div>
                   ))
                 }
               </div>
