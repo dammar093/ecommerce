@@ -14,7 +14,7 @@ const cartSlice = createSlice({
         state.cart[itemIndex].quantity +=1;
       }
       else{
-        state.cart = state.cart.push(action.payload)
+        state.cart = [...state.cart,action.payload]
       }
     },
     removeFromCart:(state,action)=>{
