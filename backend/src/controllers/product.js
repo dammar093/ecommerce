@@ -59,7 +59,6 @@ const addProduct = asyncHandler(async (req, res) => {
 
     return res.status(201).json(new ApiResponse(201, product, "Product added successfully"));
   } catch (error) {
-    throw new ApiError(500,"something went wrong")
     return res.status(500).json(new ApiResponse(500, {}, "Something went wrong internally"));
   }
 });
@@ -75,7 +74,42 @@ const getAllProducts = asyncHandler(async(req,res)=>{
   }
 })
 
+const getBestDealsProguct = asyncHandler(async(req,res)=>{
+  try {
+      const products = await Product.find().sort({discountPercentage:'desc'});
+
+      return res.status(200)
+      .json(new ApiResponse(200,products,"product fetched successfuly"))
+  } catch (error) {
+      return res.status(500).json(new ApiResponse(500, {}, "Something went wrong internally"));
+  }
+})
+
+const getHighRatedProduct = asyncHandler(async(req,res)=>{
+  try {
+      const products = await Product.find().sort({rating:'desc'});
+
+      return res.status(200)
+      .json(new ApiResponse(200,products,"product fetched successfuly"))
+  } catch (error) {
+      return res.status(500).json(new ApiResponse(500, {}, "Something went wrong internally"));
+  }
+})
+const getNewArrivalProducts = asyncHandler(async(req,res)=>{
+  try {
+      const products = await Product.find().sort({createdAt:'desc'});
+
+      return res.status(200)
+      .json(new ApiResponse(200,products,"product fetched successfuly"))
+  } catch (error) {
+      return res.status(500).json(new ApiResponse(500, {}, "Something went wrong internally"));
+  }
+})
+
 module.exports = {
   addProduct,
-  getAllProducts
+  getAllProducts,
+  getBestDealsProguct,
+  getHighRatedProduct,
+  getNewArrivalProducts
 };
