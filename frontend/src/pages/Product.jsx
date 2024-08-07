@@ -110,12 +110,18 @@ const Product = () => {
               <div className='flex gap-2'>
                 {
                   product.colors.map((color, index) => (
-                    <div key={color} style={{ background: `${color}` }} className={` ${index === colorIndex ? " border-2 border-[#AE56EF]" : "border border-gray-600"} w-6 h-6 cursor-pointer  rounded-full `}
-                      onClick={() => {
-                        setColor(color)
-                        setColorIndex(index)
-                      }}
-                    ></div>
+                    <div key={color}
+                      className={` ${index === colorIndex ? " border-2 border-[#AE56EF]" : "border border-gray-600"} w-8 h-8 cursor-pointer  rounded-full flex justify-center items-center `}
+                    >
+                      <div style={{ background: `${color}` }}
+                        className='w-6 h-6 rounded-full'
+                        onClick={() => {
+                          setColor(color)
+                          setColorIndex(index)
+                        }}>
+
+                      </div>
+                    </div>
                   ))
                 }
 
