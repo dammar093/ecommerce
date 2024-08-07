@@ -4,7 +4,8 @@ import DashboardCount from './DashboardCount'
 import { useSelector } from 'react-redux'
 const TotalCount = () => {
   const { users } = useSelector(state => state.users)
-  const { categories } = useSelector(state => state.categories)
+  const { paginateCategory } = useSelector(state => state.categories)
+  const { paginateProduct } = useSelector(state => state.products)
   const tolalCount = [
     {
       id: uuid(),
@@ -27,7 +28,7 @@ const TotalCount = () => {
     {
       id: uuid(),
       title: "total category",
-      count: categories.length,
+      count: paginateCategory.total,
       background1: "bg-green-200",
       background2: "bg-green-300",
       background3: "bg-green-400",
@@ -36,7 +37,7 @@ const TotalCount = () => {
     {
       id: uuid(),
       title: "total products",
-      count: 100,
+      count: paginateProduct.total,
       background1: "bg-sky-200",
       background2: "bg-sky-300",
       background3: "bg-sky-400",
