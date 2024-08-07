@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.post("/signup",upload.single("avatar"),signUp);
 router.post("/login",login);
-router.get("/getUser?:id",verifyJwtToken,getCurrentUser)
+router.get("/getUser",verifyJwtToken,getCurrentUser)
 router.patch("/profile",verifyJwtToken,updateProfile)
 router.patch("/update-avatar",verifyJwtToken,upload.single("avatar"),updateAvatar)
 router.get("/:page",verifyJwtToken,adminAuth,getAllUsers)
