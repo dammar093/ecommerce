@@ -51,7 +51,7 @@ const Product = () => {
   return (
     <section className='my-4 w-full mb-[70px]'>
       <div className='w-full flex flex-wrap'>
-        <div className='w-full md:w-1/2 bg-white py-2'>
+        <div className='w-full md:w-1/2 bg-white py-2 h-fit'>
           <div className='w-full md:h-[350px] p-1 flex items-center justify-center'>
             <img className='w-[300px] h-[300px] object-scale-down'
               src={product?.images[imageIndex]}

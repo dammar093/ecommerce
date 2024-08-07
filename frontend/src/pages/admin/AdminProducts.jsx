@@ -69,7 +69,7 @@ const AdminProducts = () => {
                 <th className='text-left px-2'>Brand</th>
                 <th className='text-left px-2'>Price</th>
                 <th className='text-left px-2'>Stock</th>
-                <th className='col-span-2 px-2'>Actions</th>
+                <th className='col-span-3 px-2'>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -85,7 +85,6 @@ const AdminProducts = () => {
                     <td className='text-gray-600 font-medium text-md capitalize'>{product.category}</td>
                     <td className='text-gray-600 font-medium text-md capitalize'>{product.brand}</td>
                     <td className='text-gray-600 font-medium text-md'>Rs. {Math.round(product.price - (product.price * product.discountPercentage / 100))}</td>
-                    <td className='text-gray-600 font-medium text-md'>{product.Brand}</td>
                     <td className='text-gray-600 font-medium text-md'>{product.stock}</td>
                     <td className='px-2'>
                       <div className='flex justify-between gap-3'>
