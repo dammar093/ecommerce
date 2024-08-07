@@ -83,6 +83,7 @@ const AdminProducts = () => {
                       String(product.title).substring(0, 20) + "..."
                     }</td>
                     <td className='text-gray-600 font-medium text-md capitalize'>{product.category}</td>
+                    <td className='text-gray-600 font-medium text-md capitalize'>{product.brand}</td>
                     <td className='text-gray-600 font-medium text-md'>Rs. {Math.round(product.price - (product.price * product.discountPercentage / 100))}</td>
                     <td className='text-gray-600 font-medium text-md'>{product.Brand}</td>
                     <td className='text-gray-600 font-medium text-md'>{product.stock}</td>
