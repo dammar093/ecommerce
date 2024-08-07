@@ -106,10 +106,21 @@ const getNewArrivalProducts = asyncHandler(async(req,res)=>{
   }
 })
 
+const deleteProducts = asyncHandler(async(req,res)=>{
+  const {id} = req.params
+  const deletedProduct = await Product.findByIdAndDelete({_id:id});
+  if(!deleteProducts){
+    throw new ApiError(500,"Failed to delete product")
+  }
+  return res.status(200)
+  .json(new ApiResponse(200,{id:deleteProducts._id},"Deleted successfuly"))
+})
+
 module.exports = {
   addProduct,
   getAllProducts,
   getBestDealsProguct,
   getHighRatedProduct,
-  getNewArrivalProducts
+  getNewArrivalProducts,
+  deleteProducts
 };
