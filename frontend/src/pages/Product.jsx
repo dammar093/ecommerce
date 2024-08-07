@@ -86,10 +86,12 @@ const Product = () => {
                 <span className='capitalize text-[#AE56EF]'>{product.stock > 0 ? "Instock" : "Out of stock"}</span>
               </div>
 
-              <div className='flex items-center gap-2'>
-                <Rating />
-                <span className='text-gray-600'>(100)</span>
-              </div>
+              {
+                product.rating > 0 && <div className='flex items-center gap-2'>
+                  <Rating rating={product.rating} />
+                  <span className='text-gray-600'>(100)</span>
+                </div>
+              }
             </div>
             <div className='my-2 text-gray-600 text-justify'>
               <p>{product.description}</p>
@@ -97,7 +99,7 @@ const Product = () => {
             <div className='my-2 flex gap-3 items-center'>
               <span className='text-3xl font-medium text-[#AE56EF]'>Rs.{Math.round(product.price - (product.discountPercentage * product.price / 100))}</span>
               <span className='text-2xl font-medium text-gray-600 line-through'>Rs.{product.price}</span>
-              <span className='text-red-500 font-semibold md:text-lg text-md'>-{product.discountPercentage}%</span>
+              {product.discountPercentage > 0 && <span className='text-red-500 font-semibold md:text-lg text-md'>-{product.discountPercentage}%</span>}
             </div>
           </div>
           {

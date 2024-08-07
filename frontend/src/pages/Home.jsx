@@ -3,24 +3,9 @@ import Slider from "../components/Slider"
 import Categories from '../components/Categories'
 import Service from '../components/Service'
 import Products from '../components/Products'
-import axios from 'axios'
-import baseUrl from '../baseUrl'
-import { useDispatch } from 'react-redux'
-import { setProducts } from '../features/productSlice'
-
 
 const Home = () => {
-  const dispatch = useDispatch()
 
-  useEffect(() => {
-    async function fetchProduct() {
-      const res = await axios(`${baseUrl}/api/v1/products`, {
-        withCredentials: true
-      });
-      dispatch(setProducts(res.data.data))
-    }
-    fetchProduct()
-  }, [])
   return (
     <main className='mb-[70px]'>
       <section className=''>
@@ -33,16 +18,16 @@ const Home = () => {
         <Service />
       </div>
       <div className='my-8'>
-        <Products title="top rated" />
+        <Products title="top rated" query="high rated" />
       </div>
       <div className='my-8'>
-        <Products title="New Arrival" />
+        <Products title="New Arrival" query="new" />
       </div>
       <div className='my-8'>
-        <Products title="Best Deals" />
+        <Products title="Best Deals" query="best deal" />
       </div>
       <div className='my-8'>
-        <Products title="Just for you" />
+        <Products title="Just for you" query="just for you" />
       </div>
     </main>
   )

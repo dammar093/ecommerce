@@ -1,9 +1,12 @@
 import {createSlice} from "@reduxjs/toolkit";
 
 const initialState ={
+  newProducts:[],
   products:[],
+  bestDeal:[],
+  hightRated:[],
   search:[],
-  searchCategory:[]
+  searchCategory:[],
 };
 
 const productSlice = createSlice({
@@ -24,10 +27,19 @@ const productSlice = createSlice({
     },
     addProductToState:(state,action)=>{
       state.products= [...state.products,action.payload]
+    },
+    addBestDeal:(state,action)=>{
+      state.bestDeal = action.payload
+    },
+    addHighRated:(state,action)=>{
+      state.hightRated = action.payload
+    },
+    setNewProducts:(state,action)=>{
+      state.newProducts = action.payload
     }
   }
 });
 
-export const {setProducts,getAllProducts,searchedProducts,searchByCategory,addProductToState} = productSlice.actions;
+export const {setProducts,getAllProducts,searchedProducts,searchByCategory,addProductToState,addBestDeal,addHighRated,setNewProducts} = productSlice.actions;
 
 export default productSlice.reducer
