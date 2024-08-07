@@ -36,7 +36,7 @@ const Product = () => {
   console.log(id);
 
   const productId = id.split("=")[1]
-  const product = products.find(item => item._id === productId)
+  const product = products?.data.find(item => item._id === productId)
   console.log(product);
 
   const handelCart = (item) => {

@@ -23,7 +23,7 @@ const Cart = () => {
             <div className=' w-full grid grid-cols-1 gap-2 h-fit'>
               {
                 cartProducts.map(item => (
-                  <div className='w-full p-2 grid grid-cols-1 gap-8 shadow' key={item.id}>
+                  <div className='w-full p-2 grid grid-cols-1 gap-8 shadow' key={item._id}>
                     <div className='flex gap-2 w-full relative'>
                       <div className='w-[150px] h-[150px] rounded'>
                         <img className='w-full h-full object-contain rounded' src={item.image} alt={item.title} />
@@ -50,7 +50,7 @@ const Cart = () => {
                           </div>
                           <div className='flex gap-1 md:gap-2 text-[#4B5563]'>
                             <Button className='w-[40px] py-1 px-2 outline-none border-[#4B5563] border-2 border-solid rounded focus:border-black'
-                              onClick={() => dispatch(decrementQuantity(item.id))}
+                              onClick={() => dispatch(decrementQuantity(item._id))}
                             ><FiMinus
                               /></Button>
                             <Input className="w-[40px] py-1 px-2 outline-none border-[#4B5563] border-2 border-solid rounded text-center focus:border-black" type="text"
@@ -58,7 +58,7 @@ const Cart = () => {
                               onChange={(e) => setQuantity(Number(e.target.value))}
                               min={1} />
                             <Button className="w-[40px] py-1 px-2 outline-none border-[#4B5563] border-2 border-solid rounded focus:border-black"
-                              onClick={() => dispatch(incrementQuantity(item.id))}
+                              onClick={() => dispatch(incrementQuantity(item._id))}
                             ><FiPlus
                               /></Button>
                           </div>
@@ -66,7 +66,7 @@ const Cart = () => {
                       </div>
                       <div className='absolute right-0 top-0'>
                         <AiOutlineClose className='text-[#4B5563] text-xl font-semibold cursor-pointer float-right'
-                          onClick={() => dispatch(removeFromCart(item.id))}
+                          onClick={() => dispatch(removeFromCart(item._id))}
                         />
                       </div>
                     </div>

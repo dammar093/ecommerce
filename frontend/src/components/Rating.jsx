@@ -2,7 +2,7 @@ import React from 'react'
 import { FaStar } from 'react-icons/fa6'
 
 const Rating = ({ rating }) => {
-  console.log(rating);
+
 
   return (
     <div className='text-[16px] flex '>

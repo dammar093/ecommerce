@@ -8,8 +8,8 @@ import { FiEdit } from 'react-icons/fi'
 import { FaRegEye } from 'react-icons/fa'
 import Pagination from '../../components/Pagination'
 import { useSelector } from 'react-redux'
-const [page, setPage] = useState(1)
 const AdminProducts = () => {
+  const [page, setPage] = useState(1)
   const { products } = useSelector(state => state.products)
   return (
     <div className='w-full relative flex'>

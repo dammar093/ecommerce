@@ -72,7 +72,7 @@ const Products = ({ title, query }) => {
           query === "best deal" && <div className={`flex gap-2 overflow-x-scroll scroll-smooth scrollbar-hide`} ref={scrollRef}>
             {
               bestDeal.map(item => (
-                <Card item={item} key={item.id} />
+                <Card item={item} key={item._id} />
               ))
             }
           </div>
@@ -81,7 +81,7 @@ const Products = ({ title, query }) => {
           query === "high rated" && <div className={`flex gap-2 overflow-x-scroll scroll-smooth scrollbar-hide`} ref={scrollRef}>
             {
               hightRated.map(item => (
-                <Card item={item} key={item.id} />
+                <Card item={item} key={item._id} />
               ))
             }
           </div>
@@ -90,7 +90,7 @@ const Products = ({ title, query }) => {
           query === "new" && <div className={`flex gap-2 overflow-x-scroll scroll-smooth scrollbar-hide`} ref={scrollRef}>
             {
               newProducts.map(item => (
-                <Card item={item} key={item.id} />
+                <Card item={item} key={item._id} />
               ))
             }
           </div>
@@ -99,7 +99,7 @@ const Products = ({ title, query }) => {
           query === "just for you" && <div className={`flex gap-2 overflow-x-scroll scroll-smooth scrollbar-hide`} ref={scrollRef}>
             {
               products.data.map(item => (
-                <Card item={item} key={item.id} />
+                <Card item={item} key={item._id} />
               ))
             }
           </div>
