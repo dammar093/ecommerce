@@ -66,9 +66,8 @@ const addProduct = asyncHandler(async (req, res) => {
 const getAllProducts = asyncHandler(async(req,res)=>{
   try {
       const products = await Product.find();
-      const total = await Product.countDocuments();
       return res.status(200)
-      .json(new ApiResponse(200,{data:products,total},"product fetched successfuly"))
+      .json(new ApiResponse(200,products,"product fetched successfuly"))
   } catch (error) {
       return res.status(500).json(new ApiResponse(500, {}, "Something went wrong internally"));
   }
@@ -116,11 +115,32 @@ const deleteProducts = asyncHandler(async(req,res)=>{
   .json(new ApiResponse(200,{id:deleteProducts._id},"Deleted successfuly"))
 })
 
+const getProductByPage = asyncHandler(async(req,res)=>{
+  let page = 1
+  if(req.params.page){
+    page = Number(req.params.page)
+  }
+  const total = await Product.countDocuments();
+  const pageSize =7;
+  let skipValue = (page -1) * pageSize
+  // console.log(skipValue);
+  
+  // console.log(total)
+    const products = await Product.find()
+    .skip(skipValue)
+    .limit(pageSize);
+
+
+  return res.status(200)
+      .json(new ApiResponse(200,{data:products,total:total},"product fetched successfuly"))
+})
+
 module.exports = {
   addProduct,
   getAllProducts,
   getBestDealsProguct,
   getHighRatedProduct,
   getNewArrivalProducts,
-  deleteProducts
+  deleteProducts,
+  getProductByPage
 };

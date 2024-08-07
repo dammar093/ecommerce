@@ -1,6 +1,6 @@
 const express = require("express");
 const {verifyJwtToken,adminAuth} = require("../service/auth");
-const { addProduct, getAllProducts, getBestDealsProguct, getHighRatedProduct, getNewArrivalProducts, deleteProducts } = require("../controllers/product");
+const { addProduct, getAllProducts, getBestDealsProguct, getHighRatedProduct, getNewArrivalProducts, deleteProducts, getProductByPage } = require("../controllers/product");
 const upload = require("../service/multer")
 const router = express.Router();
 
@@ -10,7 +10,9 @@ router.post("/",verifyJwtToken,adminAuth,upload.array("images",5),addProduct)
 .get("/best-deal",getBestDealsProguct)
 .get("/high-rated",getHighRatedProduct)
 .get("/new-arrival",getNewArrivalProducts)
-.delete("/",verifyJwtToken,adminAuth,deleteProducts)
+.get("/getproducts/:page",getProductByPage)
+.delete("/:id",verifyJwtToken,adminAuth,deleteProducts)
+
 
 
 module.exports=router;

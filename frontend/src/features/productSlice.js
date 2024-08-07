@@ -2,10 +2,11 @@ import {createSlice} from "@reduxjs/toolkit";
 
 const initialState ={
   newProducts:[],
-  products:{
+  paginateProduct:{
     data:[],
     total:null
   },
+  products:[],
   bestDeal:[],
   hightRated:[],
   search:[],
@@ -39,10 +40,17 @@ const productSlice = createSlice({
     },
     setNewProducts:(state,action)=>{
       state.newProducts = action.payload
+    },
+    setProductsByPage:(state,action)=>{
+      state.paginateProduct.data=action.payload.data
+      state.paginateProduct.total=action.payload.total
+    },
+    removeProduct:(state,action)=>{
+      state.paginateProduct.data = state.paginateProduct.data.filter(item=>item._id !== action.payload)
     }
   }
 });
 
-export const {setProducts,getAllProducts,searchedProducts,searchByCategory,addProductToState,addBestDeal,addHighRated,setNewProducts} = productSlice.actions;
+export const {setProducts,getAllProducts,searchedProducts,searchByCategory,addProductToState,addBestDeal,addHighRated,setNewProducts,setProductsByPage,removeProduct} = productSlice.actions;
 
 export default productSlice.reducer

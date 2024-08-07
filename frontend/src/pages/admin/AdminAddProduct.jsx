@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import SideBar from '../../components/admin/SideBar';
 import Input from '../../components/Input';
 import { useForm } from 'react-hook-form';
@@ -118,7 +118,7 @@ const AdminAddProduct = () => {
       setLoading(false);
     }
   };
-
+  // fetched products
   return (
     <div className='w-full relative flex mb-20'>
       <SideBar />

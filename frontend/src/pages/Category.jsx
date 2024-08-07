@@ -23,7 +23,7 @@ const Category = () => {
         <div className='grid  grid-cols-2  md:grid-cols-5  xl:grid-cols-6 gap-2 w-full mx-auto'>
           {
             products.map(product => (
-              <Card item={product} key={product.id} />
+              <Card item={product} key={product._id} />
             ))
           }
         </div>
