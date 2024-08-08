@@ -236,7 +236,7 @@ const AdminAddProduct = () => {
                       className='w-[60px] p-1 border border-gray-900 rounded-full flex justify-between items-center'
                       key={clr}
                     >
-                      <div className='w-[20px] h-[20px] rounded-full' style={{ backgroundColor: clr }}></div>
+                      <div className='w-[20px] h-[20px] rounded-full border border-gray-600' style={{ backgroundColor: clr }}></div>
                       <RxCross2 className='text-xl cursor-pointer' onClick={() => removeColor(clr)} />
                     </div>
                   ))}
