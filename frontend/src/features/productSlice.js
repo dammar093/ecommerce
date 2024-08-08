@@ -11,6 +11,8 @@ const initialState ={
   hightRated:[],
   search:[],
   searchCategory:[],
+  reltaedProduct:[],
+  product:null
 };
 
 const productSlice = createSlice({
@@ -47,10 +49,16 @@ const productSlice = createSlice({
     },
     removeProduct:(state,action)=>{
       state.paginateProduct.data = state.paginateProduct.data.filter(item=>item._id !== action.payload)
+    },
+    setProductById:(state,action)=>{
+      state.product = action.payload
+    },
+    setRelatedProduct:(state,action)=>{
+      state.reltaedProduct = action.payload
     }
   }
 });
 
-export const {setProducts,getAllProducts,searchedProducts,searchByCategory,addProductToState,addBestDeal,addHighRated,setNewProducts,setProductsByPage,removeProduct} = productSlice.actions;
+export const {setProducts,getAllProducts,searchedProducts,searchByCategory,addProductToState,addBestDeal,addHighRated,setNewProducts,setProductsByPage,removeProduct,setProductById,setRelatedProduct} = productSlice.actions;
 
 export default productSlice.reducer
