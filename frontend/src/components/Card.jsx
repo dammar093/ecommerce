@@ -4,7 +4,7 @@ import Rating from './Rating'
 
 const Card = ({ item }) => {
   return (
-    <Link to={`/product/id=${item._id}`} className='min-w-[170px] md:min-w-[200px] max-w-[220px] h-[300px] bg-white shadow hover:shadow-2xl rounded flex justify-center p-1 flex-col'>
+    <Link to={`/product/${item._id}`} className='min-w-[170px] md:min-w-[200px] max-w-[220px] h-[300px] bg-white shadow hover:shadow-2xl rounded flex justify-center p-1 flex-col'>
       <div className='full h-full overflow-hidden mx-auto'>
         <img className='w-full h-full object-contain rounded-md' src={item.images[0]} alt="" />
       </div>

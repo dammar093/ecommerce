@@ -33,10 +33,7 @@ const Product = () => {
   }
 
   const { id } = useParams()
-  console.log(id);
-
-  const productId = id.split("=")[1]
-  const product = products.find(item => item._id === productId)
+  const product = products.find(item => item._id === id)
   console.log(product);
 
   const handelCart = (item) => {
