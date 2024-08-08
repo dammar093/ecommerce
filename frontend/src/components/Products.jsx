@@ -4,7 +4,7 @@ import Card from './Card';
 
 const Products = ({ title, products }) => {
 
-  console.log(products);
+  // console.log(products);
 
   const scrollRef = useRef(null);
   const scrollNext = () => {
