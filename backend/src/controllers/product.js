@@ -135,6 +135,27 @@ const getProductByPage = asyncHandler(async(req,res)=>{
       .json(new ApiResponse(200,{data:products,total:total},"product fetched successfuly"))
 })
 
+const getProductById = asyncHandler(async(req,res)=>{
+    const {id} = req.params;
+    // console.log(id);
+    const product = await Product.findById({_id:id})
+    if(!product){
+      throw new ApiError(404, "Product no found");
+    }
+    return res.status(200)
+    .json(new ApiResponse(200,product,"Product fetched successfuly"))
+})
+
+const getRelatedProduct = asyncHandler(async(req,res)=>{
+  const {category} = req.params
+  // console.log(category);
+  
+  const relatedProducts = await Product.find({category:{$eq:category}})
+if(!relatedProducts){
+  throw new ApiError(404,"Product not found")
+}
+return res.status(200).json(new ApiResponse(200,relatedProducts,"Related products fetched successfuly"))
+})
 module.exports = {
   addProduct,
   getAllProducts,
@@ -142,5 +163,7 @@ module.exports = {
   getHighRatedProduct,
   getNewArrivalProducts,
   deleteProducts,
-  getProductByPage
+  getProductByPage,
+  getProductById,
+  getRelatedProduct
 };

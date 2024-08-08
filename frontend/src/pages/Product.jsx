@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Button from '../components/Button'
 import Input from '../components/Input'
 import Products from '../components/Products'
@@ -9,6 +9,9 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from '../features/cartSlice'
 import { CgShoppingCart } from "react-icons/cg";
+import { setProductById, setRelatedProduct } from '../features/productSlice';
+import baseUrl from '../baseUrl';
+import axios from 'axios';
 
 const Product = () => {
 
@@ -20,9 +23,42 @@ const Product = () => {
   const dispatch = useDispatch();
   const [color, setColor] = useState('')
   const [size, setSize] = useState('')
-  const products = useSelector(state => state.products.products);
+  const { product, reltaedProduct } = useSelector(state => state.products);
+  console.log(product);
+  console.log(reltaedProduct);
+
+
   const { user } = useSelector(state => state.user);
   const navigate = useNavigate()
+  const { id } = useParams()
+
+  useEffect(() => {
+    // get product
+    async function getProduct() {
+      try {
+        const res = await axios.get(`${baseUrl}/api/v1/products/${id}`)
+        console.log(res);
+
+        dispatch(setProductById(res.data.data))
+      } catch (error) {
+        console.log(error);
+      }
+
+    }
+    getProduct()
+    // get related products
+    async function getRelatedProduct() {
+      try {
+        const res = await axios.get(`${baseUrl}/api/v1/products/related-product/${product.category}`)
+        dispatch(setRelatedProduct(res.data.data))
+      } catch (error) {
+        console.log(error);
+      }
+
+    }
+    getRelatedProduct()
+  }, [id])
+
   const increaseQuantity = () => {
     setQuantity((prev) => prev + 1)
   }
@@ -32,9 +68,8 @@ const Product = () => {
     }
   }
 
-  const { id } = useParams()
-  const product = products.find(item => item._id === id)
-  console.log(product);
+
+
 
   const handelCart = (item) => {
     if (user) {
@@ -201,7 +236,7 @@ const Product = () => {
         </div>
       </div>
       <div className='my-8'>
-        <Products title="Related Products" />
+        <Products title="Related Products" products={reltaedProduct} />
       </div>
     </section>
   )

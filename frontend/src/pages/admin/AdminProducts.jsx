@@ -88,7 +88,7 @@ const AdminProducts = () => {
                     <td className='text-gray-600 font-medium text-md'>{product.stock}</td>
                     <td className='px-2'>
                       <div className='flex justify-between gap-3'>
-                        <Link to="/admin-product/1" className={" bg-[#6c37c9] text-[#f3f3f3] text-[15px] px-2  py-1 flex rounded  items-center capitalize transition-all hover:bg-[#6021b3] w-fit"}><div className='flex items-center gap-1 '><FaRegEye /><span>View</span></div></Link>
+                        <Link to={`/admin-product/${product._id}`} className={" bg-[#6c37c9] text-[#f3f3f3] text-[15px] px-2  py-1 flex rounded  items-center capitalize transition-all hover:bg-[#6021b3] w-fit"}><div className='flex items-center gap-1 '><FaRegEye /><span>View</span></div></Link>
 
                         <Button className={"bg-[red] text-[#f3f3f3] text-[15px] px-2  py-1 flex rounded  items-center capitalize transition-all hover:bg-[#932323] w-fit"}
                           onClick={() => showPopUp(product._id)}
