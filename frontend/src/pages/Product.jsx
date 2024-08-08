@@ -23,10 +23,7 @@ const Product = () => {
   const dispatch = useDispatch();
   const [color, setColor] = useState('')
   const [size, setSize] = useState('')
-  const { product, reltaedProduct } = useSelector(state => state.products);
-  console.log(product);
-  console.log(reltaedProduct);
-
+  const { product, relatedProduct } = useSelector(state => state.products);
 
   const { user } = useSelector(state => state.user);
   const navigate = useNavigate()
@@ -37,7 +34,7 @@ const Product = () => {
     async function getProduct() {
       try {
         const res = await axios.get(`${baseUrl}/api/v1/products/${id}`)
-        console.log(res);
+        // console.log(res);
 
         dispatch(setProductById(res.data.data))
       } catch (error) {
@@ -57,7 +54,7 @@ const Product = () => {
 
     }
     getRelatedProduct()
-  }, [id])
+  }, [id, dispatch, product.category])
 
   const increaseQuantity = () => {
     setQuantity((prev) => prev + 1)
@@ -236,7 +233,7 @@ const Product = () => {
         </div>
       </div>
       <div className='my-8'>
-        <Products title="Related Products" products={reltaedProduct} />
+        <Products title="Related Products" products={relatedProduct} />
       </div>
     </section>
   )

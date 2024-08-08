@@ -11,7 +11,7 @@ const initialState ={
   hightRated:[],
   search:[],
   searchCategory:[],
-  reltaedProduct:[],
+  relatedProduct:[],
   product:null
 };
 
@@ -54,7 +54,7 @@ const productSlice = createSlice({
       state.product = action.payload
     },
     setRelatedProduct:(state,action)=>{
-      state.reltaedProduct = action.payload
+      state.relatedProduct = action.payload
     }
   }
 });
