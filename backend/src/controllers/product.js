@@ -160,6 +160,30 @@ if(!relatedProducts){
 }
 return res.status(200).json(new ApiResponse(200,relatedProducts,"Related products fetched successfuly"))
 })
+
+const getFiltredPRoducts= asyncHandler(async(req,res)=>{
+const {sort,order,page,id} = req.params
+try {
+  const {sort,order,page} = req.params
+  console.log(sort);
+  console.log(order);
+  console.log(page);
+  const skipValue = 12;
+  let total = await Product.countDocuments();
+  let products= await Product.find({}).skip( (Number(page) -1) * skipValue).limit(skipValue);
+  if(sort && order){
+    const sortOrder = order === 'asc' ? 1 : -1;
+   products= await Product.find({}).sort({[sort]:sortOrder}).skip((Number(page) -1) * skipValue).limit(skipValue);
+  }
+  return res.status(200).json(
+    new ApiResponse(200,{data:products,total:total},"products Fetched sucessfuly")
+  )
+  
+} catch (error) {
+  throw new ApiError(500,"something went wrong")
+}
+})
+
 module.exports = {
   addProduct,
   getAllProducts,
@@ -169,5 +193,7 @@ module.exports = {
   deleteProducts,
   getProductByPage,
   getProductById,
-  getRelatedProduct
+  getRelatedProduct,
+  getAllProducts,
+  getFiltredPRoducts
 };
