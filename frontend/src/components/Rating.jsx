@@ -7,7 +7,7 @@ const Rating = ({ rating }) => {
   return (
     <div className='text-[16px] flex '>
       {
-        Array.from({ length: 5 }).map((star, index) => <span className={`${index < rating ? "text-yellow-600" : "text-[#a29e9ed2]"}`}><FaStar /></span>)
+        Array.from({ length: 5 }).map((star, index) => <span key={index} className={`${index < rating ? "text-yellow-600" : "text-[#a29e9ed2]"}`}><FaStar /></span>)
       }
     </div>
   )
