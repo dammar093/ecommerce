@@ -25,7 +25,7 @@ export default function Pagination({ total, url, handler, setPage, page, items }
       <div className="flex flex-1 items-center justify-between">
         <div>
           <p className="text-sm text-gray-700">
-            Showing <span className="font-medium">{(page - 1) * 12 + 1}</span> to <span className="font-medium">{items.length < 12 ? 16 : items.length}</span> of{' '}
+            Showing <span className="font-medium">{(page - 1) * 12 + 1}</span> to <span className="font-medium">{items.length < 12 ? total : items.length * page + 1}</span> of{' '}
             <span className="font-medium">{total}</span> results
           </p>
         </div>
