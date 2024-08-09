@@ -72,7 +72,7 @@ const getCategoriesByPage = asyncHandler(async(req,res)=>{
     page = Number(req.params.page)
   }
   const total = await Category.countDocuments();
-  const pageSize =7;
+  const pageSize =12;
   let skipValue = (page -1) * pageSize
   // console.log(skipValue);
   
