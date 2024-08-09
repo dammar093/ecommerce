@@ -4,7 +4,30 @@ import Header from './components/Header'
 import Container from './components/Container'
 import BottomNavbar from './components/BottomNavbar'
 import ScrollToTop from './components/ScrollToTop'
+import axios from 'axios'
+import baseUrl from './baseUrl'
+import { useDispatch } from 'react-redux'
+import { addUser } from './features/userSlice'
 const App = () => {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    const token = JSON.parse(localStorage.getItem("accessToken"))
+    async function getUser() {
+      try {
+        const res = axios.get(`${baseUrl}/api/v1/users/getUser`, {
+          headers: {
+            Authorization: `Bearer ${token}`
+          },
+          withCredentials: true
+        })
+        dispatch(addUser((await res).data.data))
+      } catch (error) {
+        console.log(error);
+
+      }
+    }
+    getUser()
+  }, [])
   return (
     <>
       <div className='top-0 sticky z-20'>

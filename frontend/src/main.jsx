@@ -5,12 +5,13 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { Provider } from "react-redux"
 import { Home, Login, Search, Signup, Cart, Categories, Category, Shop, About, Contact, Product, Profile, PageNotFund, Orders } from "./pages"
-import { persistor, store } from "./store/store.js"
+// import { persistor, store } from "./store/store.js"
+import store from './store/store.js'
 import AuthLayout from './components/AuthLayout.jsx'
 import Dashbaord from './pages/admin/Dashbaord.jsx'
 import AdminProducts from './pages/admin/AdminProducts.jsx'
 import AdminLayout from './components/admin/AdminLayout.jsx'
-import { PersistGate } from 'redux-persist/integration/react'
+// import { PersistGate } from 'redux-persist/integration/react'
 import IsLogedIn from './components/IsLogenIn.jsx'
 import AdminAddProduct from './pages/admin/AdminAddProduct.jsx'
 import ViewProduct from './pages/admin/ViewProduct.jsx'
@@ -123,9 +124,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <RouterProvider router={router} />
-      </PersistGate>
+      {/* <PersistGate loading={null} persistor={persistor}> */}
+      <RouterProvider router={router} />
+      {/* </PersistGate> */}
     </Provider>
   </React.StrictMode>,
 )

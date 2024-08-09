@@ -197,7 +197,7 @@ const getProductsBySearch = asyncHandler(async(req,res)=>{
     let products = await Product.find({
         $or: [
           { title: { $regex: search, $options: 'i' } }, 
-          // { description: { $regex: search, $options: 'i' } },   
+          { description: { $regex: search, $options: 'i' } },   
           { category: { $regex: search, $options: 'i' } }, 
         ],
       }

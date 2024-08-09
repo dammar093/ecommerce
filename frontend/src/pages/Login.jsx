@@ -3,7 +3,7 @@ import Input from '../components/Input'
 import Button from "../components/Button"
 import { useForm } from "react-hook-form"
 import { FaRegEyeSlash, FaRegEye } from "react-icons/fa6";
-import { Link } from "react-router-dom"
+import { json, Link } from "react-router-dom"
 import avatar from "../assets/logo.png"
 import axios from "axios";
 import { useDispatch } from "react-redux"
@@ -37,6 +37,7 @@ const Login = () => {
                 setLoading(true);
                 dispatch(addUser(res.data.data.loggedInUser));
                 dispatch(setToken(res.data.data.token))
+                localStorage.setItem("accessToken", JSON.stringify(res.data.data.token))
                 setLoading(false)
                 navigate("/")
 

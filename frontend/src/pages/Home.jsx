@@ -24,8 +24,8 @@ const Home = () => {
         console.log(error);
 
       }
-      getHighRatedProducts();
     }
+    getHighRatedProducts();
     // function for getting new arrival products 
     async function newArrivalProducts() {
       try {
