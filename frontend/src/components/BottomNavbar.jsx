@@ -51,6 +51,11 @@ const BottomNavbar = () => {
               {
                 user ?
                   <div className='flex items-center justify-center flex-col rounded-lg py-2 gap-2'>
+                    <Link to={"dashboard"} onClick={() => setShowDropBox(prev => !prev)}>
+                      <span className='text-md font-medium text-gray-700 hover:text-[#AE56EF]'>
+                        Dashboard
+                      </span>
+                    </Link>
                     <Link to={"profile"} onClick={() => setShowDropBox(prev => !prev)}>
                       <span className='text-md font-medium text-gray-700 hover:text-[#AE56EF]'>
                         Profile
@@ -63,11 +68,13 @@ const BottomNavbar = () => {
                             if (res) {
                               dispatch(addUser(null))
                               dispatch(setToken(null))
-                              navigate("/")
                             }
                           })
                           .catch(err => console.log(err))
-                      }}
+                        localStorage.removeItem("accessToken")
+                        navigate("/")
+                      }
+                      }
                     >
                       Logout
                     </Button>

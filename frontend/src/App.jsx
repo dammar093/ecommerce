@@ -7,11 +7,12 @@ import ScrollToTop from './components/ScrollToTop'
 import axios from 'axios'
 import baseUrl from './baseUrl'
 import { useDispatch } from 'react-redux'
-import { addUser } from './features/userSlice'
+import { addUser, setToken } from './features/userSlice'
 const App = () => {
   const dispatch = useDispatch()
   useEffect(() => {
     const token = JSON.parse(localStorage.getItem("accessToken"))
+    dispatch(setToken(token))
     async function getUser() {
       try {
         const res = axios.get(`${baseUrl}/api/v1/users/getUser`, {
@@ -21,6 +22,7 @@ const App = () => {
           withCredentials: true
         })
         dispatch(addUser((await res).data.data))
+
       } catch (error) {
         console.log(error);
 
