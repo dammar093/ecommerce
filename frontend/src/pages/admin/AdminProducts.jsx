@@ -104,7 +104,7 @@ const AdminProducts = () => {
             popup && <PopUp setPopup={setPopup} title="product" url={`${baseUrl}/api/v1/products`} handler={removeProduct} id={id} />
           }
         </div>
-        <Pagination total={paginateProduct.total} setPage={setPage} url={`${baseUrl}/api/v1/products/getproducts`} handler={setProductsByPage} />
+        <Pagination total={paginateProduct.total} setPage={setPage} url={`${baseUrl}/api/v1/products/getproducts`} handler={setProductsByPage} items={paginateProduct.data} page={page} />
       </div>
     </div>
   )

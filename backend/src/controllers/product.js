@@ -168,6 +168,7 @@ try {
   const skipValue = 12;
   let total = await Product.countDocuments();
   let products= await Product.find({}).skip( (Number(page) -1) * skipValue).limit(skipValue);
+  
   if(sort && order){
     const sortOrder = order === 'asc' ? 1 : -1;
    products= await Product.find({}).sort({[sort]:sortOrder}).skip((Number(page) -1) * skipValue).limit(skipValue);

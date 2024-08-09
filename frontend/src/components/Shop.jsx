@@ -16,6 +16,7 @@ const Shop = () => {
   useEffect(() => {
     async function getProducts() {
       const res = await axios.get(`${baseUrl}/api/v1/products/${sort}/${order}/${page}`)
+      console.log(res.data.data);
       dispatch(setProductsByPage(res.data.data))
     }
     getProducts()

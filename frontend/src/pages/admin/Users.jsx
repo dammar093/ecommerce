@@ -95,7 +95,7 @@ const Users = () => {
             popup && <PopUp setPopup={setPopup} title="user" url={`${baseUrl}/api/v1/users`} handler={removeUser} id={id} />
           }
         </div>
-        <Pagination url={`${baseUrl}/api/v1/users`} items={users.data} handler={setUsers} total={users.total} setPage={setPage} />
+        <Pagination url={`${baseUrl}/api/v1/users`} items={users.data} handler={setUsers} total={users.total} setPage={setPage} page={page} />
       </div>
     </div>
   )

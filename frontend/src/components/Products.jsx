@@ -24,7 +24,7 @@ const Products = ({ title, products }) => {
         <h2 className='text-[16px] md:text-xl font-semibold md:font-medium text-gray-600 uppercase my-1'>{title}</h2>
         <div className={`flex gap-2 overflow-x-scroll scroll-smooth scrollbar-hide`} ref={scrollRef}>
           {
-            products.map(product =>
+            products?.map(product =>
               <Card key={product._id} item={product} />
             )
           }
