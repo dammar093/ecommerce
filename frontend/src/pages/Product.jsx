@@ -33,7 +33,7 @@ const Product = () => {
     // get product
     async function getProduct() {
       try {
-        const res = await axios.get(`${baseUrl}/api/v1/products/${id}`)
+        const res = await axios.get(`${baseUrl}/api/v1/products/get-product/${id}`)
         // console.log(res);
 
         dispatch(setProductById(res.data.data))
