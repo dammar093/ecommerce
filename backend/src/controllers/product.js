@@ -3,6 +3,7 @@ const ApiResponse = require("../utils/ApiResponse");
 const ApiError = require("../utils/ApiError");
 const uploadOnCloudinary = require("../service/cloudinary");
 const Product = require("../models/product");
+const {v2} =require("cloudinary")
 
 const addProduct = asyncHandler(async (req, res) => {
   const { title, price, brand, colors, sizes, description, quantity, category, discount } = req.body;
@@ -110,6 +111,9 @@ const deleteProducts = asyncHandler(async(req,res)=>{
   const deletedProduct = await Product.findByIdAndDelete({_id:id});
   if(!deleteProducts){
     throw new ApiError(500,"Failed to delete product")
+  }
+  for(let id of deleteProducts.imagesId){
+    await v2.uploader.destroy(id)
   }
   return res.status(200)
   .json(new ApiResponse(200,{id:deleteProducts._id},"Deleted successfuly"))
