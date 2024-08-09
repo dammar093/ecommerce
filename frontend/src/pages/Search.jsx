@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { lazy, Suspense, useEffect, useState } from 'react'
 import { useParams } from "react-router-dom"
-import Card from '../components/Card'
+const Card = lazy(() => import('./../components/Card'));
 import DropDown from "../components/DropDown"
 import Pagination from '../components/Pagination'
 import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
 import baseUrl from '../baseUrl'
 import { setProductsByPage } from '../features/productSlice'
+import LoaingCard from '../components/LoaingCard'
 
 const Search = () => {
   const [page, setPage] = useState(1)
@@ -46,7 +47,9 @@ const Search = () => {
         <div className='grid  grid-cols-2  md:grid-cols-5  xl:grid-cols-6 gap-2'>
           {
             paginateProduct?.data.map(item => (
-              <Card item={item} key={item._id} />
+              <Suspense key={item._id} fallback={<LoaingCard />}>
+                <Card item={item} />
+              </Suspense>
             ))
           }
         </div>

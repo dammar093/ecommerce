@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { lazy, Suspense, useEffect } from 'react'
 import { useParams } from "react-router-dom"
-import Card from '../components/Card'
+const Card = lazy(() => import('./../components/Card'));
 import Pagination from '../components/Pagination'
 import { useDispatch, useSelector } from 'react-redux'
 import { searchByCategory } from '../features/productSlice'
+import LoaingCard from '../components/LoaingCard';
 
 const Category = () => {
   const { category } = useParams()
@@ -23,7 +24,9 @@ const Category = () => {
         <div className='grid  grid-cols-2  md:grid-cols-5  xl:grid-cols-6 gap-2 w-full mx-auto'>
           {
             products.map(product => (
-              <Card item={product} key={product._id} />
+              <Suspense key={product._id} fallback={<LoaingCard />}>
+                <Card item={product} />
+              </Suspense>
             ))
           }
         </div>

@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useRef, lazy, Suspense } from 'react';
 import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from 'react-icons/md';
-import Card from './Card';
-
+import LoaingCard from './LoaingCard';
+const Card = lazy(() => import('./Card'));
 const Products = ({ title, products }) => {
 
   // console.log(products);
@@ -25,7 +25,9 @@ const Products = ({ title, products }) => {
         <div className={`flex gap-2 overflow-x-scroll scroll-smooth scrollbar-hide`} ref={scrollRef}>
           {
             products?.map(product =>
-              <Card key={product._id} item={product} />
+              <Suspense key={product._id} fallback={<LoaingCard />}>
+                <Card item={product} />
+              </Suspense>
             )
           }
         </div>

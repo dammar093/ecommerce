@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, lazy, Suspense } from 'react'
 import DropDown from './DropDown';
-import Card from './Card';
+const Card = lazy(() => import('./Card'));
 import Pagination from './Pagination';
 import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios';
 import baseUrl from '../baseUrl';
 import { setProductsByPage } from '../features/productSlice';
+import LoaingCard from './LoaingCard';
 
 const Shop = () => {
   const { paginateProduct } = useSelector(state => state.products);
@@ -16,7 +17,7 @@ const Shop = () => {
   useEffect(() => {
     async function getProducts() {
       const res = await axios.get(`${baseUrl}/api/v1/products/${sort}/${order}/${page}`)
-      console.log(res.data.data);
+      // console.log(res.data.data);
       dispatch(setProductsByPage(res.data.data))
     }
     getProducts()
@@ -34,7 +35,9 @@ const Shop = () => {
       <div className='grid  grid-cols-2  md:grid-cols-5  xl:grid-cols-6 gap-2'>
         {
           paginateProduct && paginateProduct?.data.map(item => (
-            <Card item={item} key={item._id} />
+            <Suspense key={item._id} fallback={<LoaingCard />}>
+              <Card item={item} />
+            </Suspense>
 
           ))
         }
