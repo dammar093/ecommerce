@@ -21,7 +21,7 @@ const ViewProduct = () => {
   useEffect(() => {
     async function getProductById() {
       try {
-        const res = await axios.get(`${baseUrl}/api/v1/products/${id}`)
+        const res = await axios.get(`${baseUrl}/api/v1/products/get-product/${id}`)
         console.log(res.data);
 
         dispatch(setProductById(res.data.data))
