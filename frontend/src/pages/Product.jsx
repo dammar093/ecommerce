@@ -144,8 +144,7 @@ const Product = () => {
                       <div style={{ background: `${color}` }}
                         className='w-6 h-6 rounded-full'
                         onClick={() => {
-                          setColor(color);
-                          setColorIndex(index);
+                          setColorIndex(index)
                         }}>
                       </div>
                     </div>
@@ -163,7 +162,6 @@ const Product = () => {
                   product.sizes.map((size, index) => (
                     <div key={size} className={`${index === sizeIndex ? " border-2 border-[#AE56EF]" : "border"} w-8 h-8 text-center text-md rounded flex justify-center items-center cursor-pointer uppercase border`}
                       onClick={() => {
-                        setSize(size);
                         setSizeIndex(index);
                       }}>{size}</div>
                   ))
@@ -202,9 +200,9 @@ const Product = () => {
                 onClick={() => {
                   handelCart({
                     _id: product?._id || '',
-                    color: product?.colors?.[0] || '',
+                    color: product?.colors?.[colorIndex] || '',
                     image: product?.images?.[0] || null,
-                    size: product?.sizes?.[0] || '',
+                    size: product?.sizes?.[sizeIndex] || '',
                     price: Math.round(product?.price - (product?.discountPercentage * product?.price / 100)) || 0,
                     quantity: quantity,
                     title: product?.title || 'Product Title',
