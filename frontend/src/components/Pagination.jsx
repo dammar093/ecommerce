@@ -3,9 +3,10 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 
 
-export default function Pagination({ total, url, handler, setPage }) {
+export default function Pagination({ total, url, handler, setPage, page, items }) {
   const [index, setIndex] = useState(0)
   const dispatch = useDispatch()
+  const [count, setCount] = useState(1)
   async function handlePaginate(page) {
     // console.log(page);
     setPage(page)
@@ -24,7 +25,7 @@ export default function Pagination({ total, url, handler, setPage }) {
       <div className="flex flex-1 items-center justify-between">
         <div>
           <p className="text-sm text-gray-700">
-            Showing <span className="font-medium">1</span> to <span className="font-medium">{total}</span> of{' '}
+            Showing <span className="font-medium">{(page - 1) * 12 + 1}</span> to <span className="font-medium">{items.length < 12 ? 16 : items.length}</span> of{' '}
             <span className="font-medium">{total}</span> results
           </p>
         </div>

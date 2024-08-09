@@ -16,14 +16,13 @@ const Shop = () => {
   useEffect(() => {
     async function getProducts() {
       const res = await axios.get(`${baseUrl}/api/v1/products/${sort}/${order}/${page}`)
-      // console.log(res.data.data);
       dispatch(setProductsByPage(res.data.data))
     }
     getProducts()
   }, [dispatch, sort, setOrder, setSort, order])
   return (
-    <section className='w-full bg-white p-2 mb-[70px] rounde'>
-      <div className='w-full flex justify-between mt-2'>
+    <section className='w-full bg-white p-2 mb-[70px]'>
+      <div className='w-full flex justify-between my-8'>
         <div>
           <h2 className='text-gray-600 font-medium text-2xl '>Products</h2>
         </div>
@@ -39,7 +38,7 @@ const Shop = () => {
           ))
         }
       </div>
-      <Pagination total={paginateProduct.total} url={`${baseUrl}/api/v1/products/${sort}/${order}`} handler={setProductsByPage} setPage={setPage} />
+      <Pagination total={paginateProduct.total} url={`${baseUrl}/api/v1/products/${sort}/${order}`} handler={setProductsByPage} setPage={setPage} items={paginateProduct.data} page={page} />
     </section>
   )
 }
