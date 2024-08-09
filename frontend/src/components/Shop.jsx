@@ -33,13 +33,15 @@ const Shop = () => {
       </div>
       <div className='grid  grid-cols-2  md:grid-cols-5  xl:grid-cols-6 gap-2'>
         {
-          paginateProduct?.data.map(item => (
+          paginateProduct && paginateProduct?.data.map(item => (
             <Card item={item} key={item._id} />
 
           ))
         }
       </div>
-      <Pagination total={paginateProduct.total} url={`${baseUrl}/api/v1/products/${sort}/${order}`} handler={setProductsByPage} setPage={setPage} items={paginateProduct.data} page={page} />
+      {
+        paginateProduct && < Pagination total={paginateProduct.total} url={`${baseUrl}/api/v1/products/${sort}/${order}`} handler={setProductsByPage} setPage={setPage} items={paginateProduct.data} page={page} />
+      }
     </section>
   )
 }
