@@ -54,7 +54,7 @@ const Product = () => {
 
     }
     getRelatedProduct()
-  }, [id, dispatch, product.category])
+  }, [id, dispatch, product])
 
   const increaseQuantity = () => {
     setQuantity((prev) => prev + 1)

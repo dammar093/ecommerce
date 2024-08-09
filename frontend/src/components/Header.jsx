@@ -9,7 +9,7 @@ import { FaRegUser } from "react-icons/fa";
 import Profile from './Profile'
 import Button from "./Button"
 import { useDispatch, useSelector } from 'react-redux';
-import { searchedProducts } from '../features/productSlice';
+import { searchedProducts, setProductsByPage } from '../features/productSlice';
 import axios from 'axios';
 import { addUser, setToken } from '../features/userSlice';
 import baseUrl from '../baseUrl';
@@ -30,9 +30,16 @@ const Header = () => {
       setSearch("")
     }
   }
-  const handelEnter = (e) => {
+  const handelEnter = async (e) => {
     // console.log(e.key);
     if (e.key === 'Enter') {
+      try {
+        // const res = await axios.get(`${baseUrl}/api/v1/products/search/${search}`)
+        // dispatch(setProductsByPage(res.data.data))
+      } catch (error) {
+        console.log(error);
+
+      }
       handleSearch()
     }
   }
@@ -146,7 +153,7 @@ const Header = () => {
                           </Link>
                           <Button className='px-6 py-1 rounded-full bg-[#AE56EF] text-white text-sm font-semibold hover:bg-[#7a40a3] transition-all '
                             onClick={() => {
-                              axios.post(`${baseUrl}/api/v1/users/logout`)
+                              axios.post(`${baseUrl} / api / v1 / users / logout`)
                                 .then(res => {
                                   if (res) {
                                     dispatch(addUser(null))

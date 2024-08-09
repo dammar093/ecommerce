@@ -8,7 +8,7 @@ const {v2} =require("cloudinary")
 const addProduct = asyncHandler(async (req, res) => {
   const { title, price, brand, colors, sizes, description, quantity, category, discount } = req.body;
   const files = req.files;
- console.log(colors,sizes);
+//  console.log(colors,sizes);
 
   if (!title) {
     throw new ApiError("Title is required!", 400);
@@ -50,7 +50,7 @@ const addProduct = asyncHandler(async (req, res) => {
       imagesId: uploadFileId,
       brand,
       category,
-      price: Number(price),
+      price: Math.round(Number(price) - Number(price) * Number(discount)/100),
       discountPercentage: Number(discount),
       stock: Number(quantity),
       description,
@@ -181,6 +181,39 @@ try {
   throw new ApiError(500,"something went wrong")
 }
 })
+// getSearched items
+const getProductsBySearch = asyncHandler(async(req,res)=>{
+  const {search,sort,order,page} = req.params;
+
+  let products = await Product.find({
+        $or: [
+          { title: { $regex: search, $options: 'i' } }, 
+          { description: { $regex: search, $options: 'i' } },   
+          { category: { $regex: search, $options: 'i' } }, 
+        ],
+      }
+    )
+
+    console.log(products);
+    
+  if(!products){
+    throw new ApiError(400,"404 product not found")
+  }
+  if(sort && order){
+  const sortOrder = order === "asc" ? 1: -1
+  products = await Product.find({
+        $or: [
+          { title: { $regex: search, $options: 'i' } }, 
+          { description: { $regex: search, $options: 'i' } },   
+          { category: { $regex: search, $options: 'i' } }, 
+        ],
+      }
+    ).sort({[sort]:sortOrder}).skip((Number(page) - 1) * 12).limit(12)
+  }
+return res.status(200)
+.json(new ApiResponse(200,{data:products,total:products.length},"fetched product successfuly"))
+})
+
 
 module.exports = {
   addProduct,
@@ -193,5 +226,6 @@ module.exports = {
   getProductById,
   getRelatedProduct,
   getAllProducts,
-  getFiltredPRoducts
+  getFiltredPRoducts,
+  getProductsBySearch
 };
