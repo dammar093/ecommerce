@@ -12,17 +12,20 @@ const App = () => {
   const dispatch = useDispatch()
   useEffect(() => {
     const token = JSON.parse(localStorage.getItem("accessToken"))
+
     dispatch(setToken(token))
+
     async function getUser() {
       try {
-        const res = axios.get(`${baseUrl}/api/v1/users/getUser`, {
-          headers: {
-            Authorization: `Bearer ${token}`
-          },
-          withCredentials: true
-        })
-        dispatch(addUser((await res).data.data))
-
+        if (token) {
+          const res = axios.get(`${baseUrl}/api/v1/users/getUser`, {
+            headers: {
+              Authorization: `Bearer ${token}`
+            },
+            withCredentials: true
+          })
+          dispatch(addUser((await res).data.data))
+        }
       } catch (error) {
         console.log(error);
 
