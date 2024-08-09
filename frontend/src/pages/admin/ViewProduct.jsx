@@ -108,7 +108,7 @@ const ViewProduct = () => {
                   <Input
                     type="text"
                     className="w-full focus:border-none capitalize bg-transparent text-gray-600 rounded outline-none"
-                    value={Math.round(product.price - (product.price * product.discountPercentage / 100))}
+                    value={product.price}
                     // readOnly={edit}
                     {...register('price', {
                       required: 'Price is required!',

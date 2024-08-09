@@ -84,7 +84,7 @@ const AdminProducts = () => {
                     }</td>
                     <td className='text-gray-600 font-medium text-md capitalize'>{product.category}</td>
                     <td className='text-gray-600 font-medium text-md capitalize'>{product.brand}</td>
-                    <td className='text-gray-600 font-medium text-md'>Rs. {Math.round(product.price - (product.price * product.discountPercentage / 100))}</td>
+                    <td className='text-gray-600 font-medium text-md'>Rs. {product.price}</td>
                     <td className='text-gray-600 font-medium text-md'>{product.stock}</td>
                     <td className='px-2'>
                       <div className='flex justify-between gap-3'>
