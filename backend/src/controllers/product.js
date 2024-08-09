@@ -162,12 +162,9 @@ return res.status(200).json(new ApiResponse(200,relatedProducts,"Related product
 })
 
 const getFiltredPRoducts= asyncHandler(async(req,res)=>{
-const {sort,order,page,id} = req.params
+
 try {
   const {sort,order,page} = req.params
-  console.log(sort);
-  console.log(order);
-  console.log(page);
   const skipValue = 12;
   let total = await Product.countDocuments();
   let products= await Product.find({}).skip( (Number(page) -1) * skipValue).limit(skipValue);
