@@ -25,7 +25,7 @@ const Header = () => {
   const user = useSelector(state => state.user.user);
   const handleSearch = () => {
     if (search !== '') {
-      navigate(`search/q=${search}`)
+      navigate(`search/${search}`)
       dispatch(searchedProducts(search.toLowerCase().trim()))
       setSearch("")
     }
@@ -34,11 +34,10 @@ const Header = () => {
     // console.log(e.key);
     if (e.key === 'Enter') {
       try {
-        // const res = await axios.get(`${baseUrl}/api/v1/products/search/${search}`)
-        // dispatch(setProductsByPage(res.data.data))
+        const res = await axios.get(`${baseUrl}/api/v1/products/search/${search}/${null}/${null}/1`)
+        dispatch(setProductsByPage(res.data.data))
       } catch (error) {
         console.log(error);
-
       }
       handleSearch()
     }

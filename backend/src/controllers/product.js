@@ -183,9 +183,10 @@ try {
 })
 // getSearched items
 const getProductsBySearch = asyncHandler(async(req,res)=>{
-  const {search,sort,order,page} = req.params;
-
-  let products = await Product.find({
+  const {search,page,sort,order} = req.params;
+  
+  
+  const produtcsCount =  await Product.find({
         $or: [
           { title: { $regex: search, $options: 'i' } }, 
           { description: { $regex: search, $options: 'i' } },   
@@ -193,9 +194,15 @@ const getProductsBySearch = asyncHandler(async(req,res)=>{
         ],
       }
     )
-
-    console.log(products);
-    
+    let products = await Product.find({
+        $or: [
+          { title: { $regex: search, $options: 'i' } }, 
+          // { description: { $regex: search, $options: 'i' } },   
+          { category: { $regex: search, $options: 'i' } }, 
+        ],
+      }
+    ).skip((page-1)*12).limit(12)
+  
   if(!products){
     throw new ApiError(400,"404 product not found")
   }
@@ -211,7 +218,7 @@ const getProductsBySearch = asyncHandler(async(req,res)=>{
     ).sort({[sort]:sortOrder}).skip((Number(page) - 1) * 12).limit(12)
   }
 return res.status(200)
-.json(new ApiResponse(200,{data:products,total:products.length},"fetched product successfuly"))
+.json(new ApiResponse(200,{data:products,total:produtcsCount.length},"fetched product successfuly"))
 })
 
 

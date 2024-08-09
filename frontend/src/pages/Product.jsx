@@ -67,7 +67,6 @@ const Product = () => {
 
 
 
-
   const handelCart = (item) => {
     if (user) {
       dispatch(addToCart(item))
@@ -129,7 +128,7 @@ const Product = () => {
             </div>
             <div className='my-2 flex gap-3 items-center'>
               <span className='text-3xl font-medium text-[#AE56EF]'>Rs.{product.price}</span>
-              <span className='text-2xl font-medium text-gray-600 line-through'>Rs.{Math.round(item.price + item.price * item.discountPercentage / 100)}</span>
+              <span className='text-2xl font-medium text-gray-600 line-through'>Rs.{Math.round(product.price + product.price * product.discountPercentage / 100)}</span>
               {product.discountPercentage > 0 && <span className='text-red-500 font-semibold md:text-lg text-md'>-{product.discountPercentage}%</span>}
             </div>
           </div>

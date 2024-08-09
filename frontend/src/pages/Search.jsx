@@ -14,11 +14,13 @@ const Search = () => {
   const [sort, setSort] = useState(null)
   const dispatch = useDispatch()
   const { q } = useParams();
-  const searchQuery = q.split("=")[1]
+
   const { paginateProduct } = useSelector(state => state.products);
+  const [query, setquery] = useState(null);
+
   useEffect(() => {
     async function getSearchedProducts() {
-      const res = await axios.get(`${baseUrl}/api/v1/products/search/${searchQuery}/${sort}/${order}/${page}`)
+      const res = await axios.get(`${baseUrl}/api/v1/products/search/${q}/${sort}/${order}/${page}`)
       console.log(res.data.data);
       dispatch(setProductsByPage(res.data.data))
     }
@@ -28,7 +30,7 @@ const Search = () => {
   if (paginateProduct?.data.length == 0) {
     return (
       <section className='w-full mb-20 my-4'>
-        <h2 className='text-gray-600 font-semibold uppercase text-center'>No search resulsts of <span className='text-[#AE56EF]'>{searchQuery}</span></h2>
+        <h2 className='text-gray-600 font-semibold uppercase text-center'>No search resulsts of <span className='text-[#AE56EF]'>{q}</span></h2>
       </section>
     )
   }
@@ -36,7 +38,7 @@ const Search = () => {
     <section className=' w-full mb-[70px] my-4'>
       <div className='overflow-x-hidden'>
         <div className='flex justify-between my-4'>
-          <h2 className='text-[16px]  md:text-xl font-semibold md:font-medium text-gray-600 uppercase my-1'>Searh Results <span className='text-[#AE56EF]'> {searchQuery}</span></h2>
+          <h2 className='text-[16px]  md:text-xl font-semibold md:font-medium text-gray-600 uppercase my-1'>Searh Results <span className='text-[#AE56EF]'> {q}</span></h2>
           <div>
             <DropDown setOrder={setOrder} setSort={setSort} />
           </div>
@@ -48,7 +50,7 @@ const Search = () => {
             ))
           }
         </div>
-        <Pagination url={`${baseUrl}/api/v1/products/search/${sort}/${order}`} handler={setProductsByPage} items={paginateProduct?.data} total={paginateProduct.total} page={page} setPage={setPage} />
+        <Pagination url={`${baseUrl}/api/v1/products/search/${q}/${sort}/${order}`} handler={setProductsByPage} items={paginateProduct?.data} total={paginateProduct.total} page={page} setPage={setPage} />
       </div>
     </section>
   )
