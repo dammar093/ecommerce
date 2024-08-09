@@ -7,7 +7,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function DropDown() {
+export default function DropDown({ setOrder, setSort }) {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
@@ -30,41 +30,50 @@ export default function DropDown() {
           <div className="py-1">
             <Menu.Item>
               {({ active }) => (
-                <a
-                  href="#"
+                <span
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
+                    'block px-4 py-2 text-sm cursor-pointer'
                   )}
+                  onClick={() => {
+                    setSort("rating")
+                    setOrder("des")
+                  }}
                 >
                   Best Rating
-                </a>
+                </span>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
-                <a
-                  href="#"
+                <span
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
+                    'block px-4 py-2 text-sm cursor-pointer'
                   )}
+                  onClick={() => {
+                    setSort("price")
+                    setOrder("asc")
+                  }}
                 >
                   Price Low to Hight
-                </a>
+                </span>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
-                <a
-                  href="#"
+                <span
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
+                    'block px-4 py-2 text-sm cursor-pointer'
                   )}
+                  onClick={() => {
+                    setSort("price")
+                    setOrder("des")
+                  }}
                 >
                   Price High to low
-                </a>
+                </span>
               )}
             </Menu.Item>
 

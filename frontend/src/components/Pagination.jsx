@@ -31,7 +31,7 @@ export default function Pagination({ total, url, handler, setPage }) {
         <div>
           <nav className="isolate inline-flex -space-x-px rounded-md shadow-sm gap-1" aria-label="Pagination">
             {
-              Array.from({ length: (Math.ceil(total / 7)) }).map((item, i) => {
+              Array.from({ length: (Math.ceil(total / 12)) }).map((item, i) => {
                 return (
                   <span
                     key={i}
