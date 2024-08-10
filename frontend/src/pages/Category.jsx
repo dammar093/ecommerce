@@ -20,6 +20,7 @@ const Category = () => {
 
 
   useEffect(() => {
+    document.title = category.charAt(0).toUpperCase() + category.slice(1).toLowerCase();
     async function getSearchedProducts() {
       const res = await axios.get(`${baseUrl}/api/v1/products/categories/${category}/${sort}/${order}/${page}`)
       console.log(res.data.data);

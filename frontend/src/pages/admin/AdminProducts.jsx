@@ -29,7 +29,7 @@ const AdminProducts = () => {
   }
 
   useEffect(() => {
-
+    document.title = "Admin Products"
     async function fechProductByPage() {
       try {
         const res = await axios.get(`${baseUrl}/api/v1/products/getproducts/${page}`, {
@@ -38,7 +38,7 @@ const AdminProducts = () => {
           },
           withCredentials: true
         })
-        console.log(res.data.data);
+        // console.log(res.data.data);
 
         dispatch(setProductsByPage(res.data.data))
       } catch (error) {

@@ -20,6 +20,7 @@ const Search = () => {
   const [query, setquery] = useState(null);
 
   useEffect(() => {
+    document.title = q.charAt(0).toUpperCase() + q.slice(1).toLowerCase();
     async function getSearchedProducts() {
       const res = await axios.get(`${baseUrl}/api/v1/products/search/${q}/${sort}/${order}/${page}`)
       console.log(res.data.data);

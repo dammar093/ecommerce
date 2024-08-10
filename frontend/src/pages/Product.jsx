@@ -26,6 +26,7 @@ const Product = () => {
   const { id } = useParams();
 
   useEffect(() => {
+    document.title = product?.title
     async function getProduct() {
       try {
         const res = await axios.get(`${baseUrl}/api/v1/products/get-product/${id}`);

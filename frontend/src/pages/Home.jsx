@@ -14,6 +14,7 @@ const Home = () => {
   // console.log("high:", hightRated);
 
   useEffect(() => {
+    document.title = "Hamro Mart"
     // funcion for getting high rated products
     async function getHighRatedProducts() {
       try {

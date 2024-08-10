@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import SideBar from '../../components/admin/SideBar'
 
 const AdminOrders = () => {
+  useEffect(() => {
+    document.title = "Admin Orders"
+  }, [])
   return (
     <div className='w-full relative flex'>
       <div>

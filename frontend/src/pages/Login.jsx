@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Input from '../components/Input'
 import Button from "../components/Button"
 import { useForm } from "react-hook-form"
@@ -22,6 +22,9 @@ const Login = () => {
   const handelPassword = (e) => {
     setPassword(e.target.value)
   }
+  useEffect(() => {
+    document.title = "Login"
+  }, [])
   return (
     <section className='w-full my-8'>
       <div className='w-full md:w-[500px] p-4 mx-auto bg-white rounded'>

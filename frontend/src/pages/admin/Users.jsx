@@ -18,6 +18,7 @@ const Users = () => {
   const { users, total } = useSelector(state => state.users)
   console.log("data:: ", users.data);
   useEffect(() => {
+    document.title = "Users"
     axios.get(`${baseUrl}/api/v1/users/${page}`, {
       headers: {
         "Authorization": `Bearer ${token}`

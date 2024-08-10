@@ -14,7 +14,11 @@ const Cart = () => {
   // console.log(cartProducts.length);
   // console.log(cartProducts);
 
+  useEffect(() => {
+    document.title = "Cart"
+  }, [])
   return (
+
     cartProducts.length > 0 ? (
       <section className='w-full min-h-screen mb-12 md:mb-0'>
         <h1 className='text-xl font-medium text-gray-600 uppercase my-4'>Your Cart</h1>

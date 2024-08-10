@@ -27,6 +27,7 @@ const Profile = () => {
   const { token } = useSelector(state => state.user)
   // Set initial values
   useEffect(() => {
+    document.title = user.fullName
     if (user) {
       setFullName(user?.fullName || '');
       setUsername(user?.username || '');

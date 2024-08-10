@@ -27,6 +27,7 @@ const AdminCategories = () => {
   }
 
   useEffect(() => {
+    document.title = "Admin Categories"
     async function getAllCategories() {
       try {
         const res = await axios.get(`${baseUrl}/api/v1/categories/getcategories/${page}`, {

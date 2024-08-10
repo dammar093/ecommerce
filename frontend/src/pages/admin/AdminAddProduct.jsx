@@ -118,6 +118,9 @@ const AdminAddProduct = () => {
       setLoading(false);
     }
   };
+  useEffect(() => {
+    document.title = "Admin Add Product"
+  })
   // fetched products
   return (
     <div className='w-full relative flex mb-20'>

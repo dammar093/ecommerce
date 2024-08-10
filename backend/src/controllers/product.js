@@ -227,7 +227,6 @@ const  getProductBycategory = asyncHandler(async(req,res)=>{
   
   const produtcsCount =  await Product.find({category:category} )
   let products = await Product.find({category:category}  ).skip((page-1)*12).limit(12)
-  console.log(products);
   
   if(!products){
     throw new ApiError(400,"404 product not found")
