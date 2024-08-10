@@ -221,6 +221,24 @@ return res.status(200)
 .json(new ApiResponse(200,{data:products,total:produtcsCount.length},"fetched product successfuly"))
 })
 
+//get product by category
+const  getProductBycategory = asyncHandler(async(req,res)=>{
+  const {category,page,sort,order} = req.params;
+  
+  const produtcsCount =  await Product.find({category:category} )
+  let products = await Product.find({category:category}  ).skip((page-1)*12).limit(12)
+  console.log(products);
+  
+  if(!products){
+    throw new ApiError(400,"404 product not found")
+  }
+  if(sort && order){
+  const sortOrder = order === "asc" ? 1: -1
+  products = await Product.find({category:category}).sort({[sort]:sortOrder}).skip((Number(page) - 1) * 12).limit(12)
+  }
+return res.status(200)
+.json(new ApiResponse(200,{data:products,total:produtcsCount.length},"fetched product successfuly"))
+})
 
 module.exports = {
   addProduct,
@@ -234,5 +252,6 @@ module.exports = {
   getRelatedProduct,
   getAllProducts,
   getFiltredPRoducts,
-  getProductsBySearch
+  getProductsBySearch,
+  getProductBycategory
 };
