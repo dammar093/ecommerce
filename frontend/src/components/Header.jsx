@@ -23,22 +23,21 @@ const Header = () => {
   const navigate = useNavigate()
   const cart = useSelector(state => state.cart.cart);
   const user = useSelector(state => state.user.user);
-  const handleSearch = () => {
+  const handleSearch = async () => {
     if (search !== '') {
-      navigate(`search/${search}`)
-      dispatch(searchedProducts(search.toLowerCase().trim()))
-      setSearch("")
-    }
-  }
-  const handelEnter = async (e) => {
-    // console.log(e.key);
-    if (e.key === 'Enter') {
       try {
         const res = await axios.get(`${baseUrl}/api/v1/products/search/${search}/${null}/${null}/1`)
         dispatch(setProductsByPage(res.data.data))
+        setSearch("")
+        navigate(`search/${search}`)
       } catch (error) {
         console.log(error);
       }
+    }
+  }
+  const handelEnter = (e) => {
+    // console.log(e.key);
+    if (e.key === 'Enter') {
       handleSearch()
     }
   }
