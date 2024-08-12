@@ -247,18 +247,13 @@ const AdminAddProduct = () => {
               </div>
               <div className='md:w-[28%] w-full'>
                 <div className='w-full h-10 rounded-md bg-slate-200 text-gray-600 flex items-center'>
-                  <select
+                  <Input
                     className='w-full h-full uppercase bg-transparent'
+                    placeholder="Enter size eg: M,X, Xl and 23"
                     value={size}
                     onChange={(e) => setSize(e.target.value)}
-                  >
-                    <option value=''>Select size</option>
-                    <option value='sm'>SM</option>
-                    <option value='m'>M</option>
-                    <option value='xl'>XL</option>
-                    <option value='2xl'>2XL</option>
-                    <option value='3xl'>3XL</option>
-                  </select>
+                  />
+
                   <Button
                     className='bg-[#AE56EF] h-full hover:bg-[#8d48be] text-[#f3f3f3] p-1 rounded'
                     type='button'
