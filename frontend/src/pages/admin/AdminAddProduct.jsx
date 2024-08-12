@@ -248,8 +248,8 @@ const AdminAddProduct = () => {
               <div className='md:w-[28%] w-full'>
                 <div className='w-full h-10 rounded-md bg-slate-200 text-gray-600 flex items-center'>
                   <Input
-                    className='w-full h-full uppercase bg-transparent'
-                    placeholder="Enter size eg: M,X, Xl and 23"
+                    className='w-full h-full uppercase bg-transparent px-2'
+                    placeholder="Enter size eg: M,X or 23"
                     value={size}
                     onChange={(e) => setSize(e.target.value)}
                   />
