@@ -172,7 +172,7 @@ const ViewProduct = () => {
                     {...register('title', {
                       required: 'Title is required!',
                     })}
-                    // onChange={handleInputChange(setFullName)}
+
                     id={"title"}
                   />
 
@@ -210,7 +210,7 @@ const ViewProduct = () => {
                       {...register('discount', {
                         required: 'Discount Percentage is required!',
                       })}
-                      // onChange={handleInputChange(setFullName)}
+
                       id={"discount"}
                     />
                   </div>
@@ -232,7 +232,7 @@ const ViewProduct = () => {
                       {...register('stock', {
                         required: 'Stock is required!',
                       })}
-                      // onChange={handleInputChange(setFullName)}
+
                       id={"stock"}
                     />
                   </div>
@@ -249,7 +249,7 @@ const ViewProduct = () => {
                       {...register('brand', {
                         required: 'Brand required!',
                       })}
-                      // onChange={handleInputChange(setFullName)}
+
                       id={"brand"}
                     />
                   </div>
