@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Logo from './Logo'
 import { Link, Navigate, NavLink, useNavigate } from 'react-router-dom'
 import Input from './Input'
@@ -23,6 +23,8 @@ const Header = () => {
   const navigate = useNavigate()
   const cart = useSelector(state => state.cart.cart);
   const user = useSelector(state => state.user.user);
+  const { categories } = useSelector(state => state.categories)
+  const [categoryIndex, setCategoryIndex] = useState(0)
   const handleSearch = async () => {
     if (search !== '') {
       try {
@@ -42,6 +44,20 @@ const Header = () => {
     }
   }
   const buttonRef = useRef()
+  useEffect(() => {
+    let interval = setInterval(() => {
+      setCategoryIndex(prev => {
+        const newIndex = prev + 1;
+        if (newIndex > categories.length - 1) {
+          return 0;
+        }
+        return newIndex;
+      });
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [categoryIndex, categories.length]);
+
   return (
     <header className='w-full h-14 md:h-16 md:py-1 bg-[#f2f2f2] shadow-md  z-10'>
       <Container>
@@ -72,12 +88,13 @@ const Header = () => {
             <div className='w-full flex items-center bg-slate-300 rounded-r-full rounded-l-full '>
               <div className='w-full flex items-center justify-between  '>
                 <Input
-                  className='w-[80%] md:w-[85%] h-8 bg-transparent rounded-l-full text-[12px] text-gray-700 px-4 outline-none focus:border-[1px]'
+
+                  className={`w-[80%] md:w-[85%] h-8 bg-transparent rounded-l-full text-[12px] text-gray-700 px-4 outline-none focus:border-[1px] capitalize transition-all ease-in delay-75`}
                   ref={searchRef}
                   value={search}
                   onChange={(e) => setSearch(e.target.value.toLowerCase())}
                   onKeyDown={handelEnter}
-                  placeholder="Search in Hamro Mart"
+                  placeholder={categories[categoryIndex]?.title}
                 />
                 <div
                   className='bg-[#AE56EF] 
