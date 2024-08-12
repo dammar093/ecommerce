@@ -6,30 +6,31 @@ const Product = require("../models/product");
 const {v2} =require("cloudinary")
 
 const addProduct = asyncHandler(async (req, res) => {
-  const { title, price, brand, colors, sizes, description, quantity, category, discount } = req.body;
+  const { title, price, brand, colors, sizes, description, quantity, category, discount,stock } = req.body;
   const files = req.files;
 //  console.log(colors,sizes);
 
   if (!title) {
-    throw new ApiError("Title is required!", 400);
+    throw new ApiError(400,"Title is required!");
   }
   if (!description) {
-    throw new ApiError("Description is required!", 400);
+    throw new ApiError(400,"Description is required!");
   }
   if (!price) {
-    throw new ApiError("Price is required!", 400);
+    throw new ApiError(400,"Price is required!");
   }
   if (!brand) {
-    throw new ApiError("Brand is required!", 400);
+    throw new ApiError(400,"Brand is required!", );
   }
   if (!category) {
-    throw new ApiError("Category is required!", 400);
+    throw new ApiError(400,"Category is required!");
   }
+ 
   if (!quantity) {
-    throw new ApiError("Quantity is required!", 400);
+    throw new ApiError(400,"Quantity is required!");
   }
   if (!files || files.length === 0) {
-    throw new ApiError("Images are required!", 400);
+    throw new ApiError(400,"Images are required!");
   }
  // Convert colors and sizes to arrays if they are strings
   const colorArray = typeof colors === 'string' ? colors.trim().split(',') : colors;
@@ -50,7 +51,7 @@ const addProduct = asyncHandler(async (req, res) => {
       imagesId: uploadFileId,
       brand,
       category,
-      price: Math.round(Number(price) - Number(price) * Number(discount)/100),
+      price: price,
       discountPercentage: Number(discount),
       stock: Number(quantity),
       description,
@@ -239,6 +240,36 @@ return res.status(200)
 .json(new ApiResponse(200,{data:products,total:produtcsCount.length},"fetched product successfuly"))
 })
 
+// upadate product details
+const upadateProduct = asyncHandler(async(req,res)=>{
+  const { title, price, brand, colors, sizes, description, quantity, category, discount,id,stock } = req.body;
+  // console.log(req.body);
+  
+  
+  const product = await Product.findByIdAndUpdate(
+    {_id:id},
+    {
+    $set:{
+      title:title,
+      price:price,
+      discountPercentage:discount,
+      stock:stock,
+      category:category,
+      brand:brand,
+      description:description,
+      colors:colors,
+      sizes:sizes
+    }
+  },
+  {new:true})
+
+  if(!product){
+    throw new ApiError(404,"Product not found")
+  }
+
+  return res.status(200).json(new ApiResponse(200,product,"Product update sucessfully"))
+})
+
 module.exports = {
   addProduct,
   getAllProducts,
@@ -252,5 +283,6 @@ module.exports = {
   getAllProducts,
   getFiltredPRoducts,
   getProductsBySearch,
-  getProductBycategory
+  getProductBycategory,
+  upadateProduct
 };

@@ -1,6 +1,6 @@
 const express = require("express");
 const {verifyJwtToken,adminAuth} = require("../service/auth");
-const { addProduct, getAllProducts, getBestDealsProguct, getHighRatedProduct, getNewArrivalProducts, deleteProducts, getProductByPage, getProductById, getRelatedProduct ,getFiltredPRoducts, getProductsBySearch, getProductBycategory} = require("../controllers/product");
+const { addProduct, getAllProducts, getBestDealsProguct, getHighRatedProduct, getNewArrivalProducts, deleteProducts, getProductByPage, getProductById, getRelatedProduct ,getFiltredPRoducts, getProductsBySearch, getProductBycategory, upadateProduct} = require("../controllers/product");
 const upload = require("../service/multer")
 const router = express.Router();
 
@@ -17,6 +17,7 @@ router.post("/",verifyJwtToken,adminAuth,upload.array("images",5),addProduct)
 .get("/:sort/:order/:page",getFiltredPRoducts)
 .get("/search/:search/:sort/:order/:page",getProductsBySearch)
 .get("/categories/:category/:sort/:order/:page",getProductBycategory)
+.patch("/",verifyJwtToken,adminAuth,upadateProduct)
 
 
 

@@ -18,8 +18,9 @@ const Card = ({ item }) => {
           }
         </div>
         <div className='flex gap-2 items-center'>
-          <span className='text-gray-700 font-medium text-[14px]'>Rs.{item.price}</span>
-          <span className='text-gray-600 line-through text-[12px] '>Rs.{Math.round(item.price + item.price * item.discountPercentage / 100)}</span>
+          <span className='text-gray-700 font-medium text-[14px]'>
+            Rs.{Math.round(item.price - item.price * item.discountPercentage / 100)}</span>
+          <span className='text-gray-600 line-through text-[12px] '>Rs.{item.price}</span>
           {
             item.discountPercentage > 0 && <div className='rounded text-md text-red-500'><span>-{item.discountPercentage}%</span></div>
           }

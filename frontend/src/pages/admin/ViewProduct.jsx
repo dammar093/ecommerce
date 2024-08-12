@@ -3,11 +3,11 @@ import SideBar from '../../components/admin/SideBar'
 import { useForm } from 'react-hook-form';
 import Input from '../../components/Input';
 import Loading from '../../components/Loading';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import baseUrl from '../../baseUrl';
 import { useDispatch, useSelector } from 'react-redux';
-import { setProductById } from '../../features/productSlice';
+import { addProductToState, setProductById } from '../../features/productSlice';
 import { RxCross2 } from 'react-icons/rx';
 import Button from '../../components/Button';
 import { IoAddCircleOutline } from 'react-icons/io5';
@@ -19,6 +19,7 @@ const ViewProduct = () => {
   const dispatch = useDispatch()
   const { id } = useParams();
   const { product } = useSelector(state => state.products)
+  const { token } = useSelector(state => state.user)
   // console.log(product);
   const { categories } = useSelector(state => state.categories)
   const [title, setTitle] = useState(null)
@@ -33,7 +34,7 @@ const ViewProduct = () => {
   const [sizes, setSizes] = useState([])
   const [description, setDescription] = useState(null)
   const [edit, setEdit] = useState(true)
-
+  const navigate = useNavigate()
 
   useEffect(() => {
     async function getProduct() {
@@ -69,7 +70,7 @@ const ViewProduct = () => {
       setValue('description', product?.description || '')
       setValue('stock', product?.stock || 0)
       setValue('colors', product?.colors || [])
-      setValue('sizez', product?.sizes || [])
+      setValue('sizes', product?.sizes || [])
       setValue('brand', product?.brand || '')
       setValue('category', product?.category || '')
     }
@@ -78,10 +79,26 @@ const ViewProduct = () => {
 
   // fucntion to update products data
   const updateProduct = async (data) => {
-    console.log(sizes, colors);
+
     data.colors = colors;
     data.sizes = sizes;
-    console.log(data)
+    // console.log(data)
+    setLoading(true)
+    try {
+      const res = await axios.patch(`${baseUrl}/api/v1/products`, data, {
+        headers: {
+          "Authorization": `Bearer ${token}`,
+        },
+        withCredentials: true
+      })
+      dispatch(addProductToState(res.data.data))
+      navigate("/admin-products")
+      setLoading(prev => !prev)
+    } catch (error) {
+      console.log(error);
+      setLoading(false)
+
+    }
 
   };
 
@@ -145,6 +162,7 @@ const ViewProduct = () => {
               }
             </div>
             <form className='px-2' method='post' onSubmit={handleSubmit(updateProduct)}>
+              <input type="text" hidden value={product._id} {...register('id')} />
               <div className='mt-2'>
                 <div className='w-full border-b border-gray-600 text-gray-600 px-2'>
                   <label className='font-semibold' htmlFor='title'>Product Name</label>
@@ -173,12 +191,13 @@ const ViewProduct = () => {
                       {...register('price', {
                         required: 'Price is required!',
                       })}
-                      // onChange={handleInputChange(setFullName)}
+                      onChange={(e) => setPrice(Number(e.target.value))}
                       id={"price"}
                     />
                   </div>
                   {errors.price && <p className="text-red-500">{errors.price.message}</p>}
                 </div>
+
                 <div className='w-full md:w-fit'>
                   <div className='w-full border-b border-gray-600 text-gray-600 px-2'>
 
@@ -196,6 +215,10 @@ const ViewProduct = () => {
                     />
                   </div>
                   {errors.discount && <p className="text-red-500">{errors.discount.message}</p>}
+                </div>
+                <div className='text-gray-600'>
+                  <label className='font-semibold' htmlFor='stock'>Price After discount</label>
+                  <p className='border-b border-gray-800'>Rs. {Math.round(price - price * discountPercentage / 100)}</p>
                 </div>
                 <div className='w-full md:w-fit'>
                   <div className='w-full border-b border-gray-600 text-gray-600 px-2'>
