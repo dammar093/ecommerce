@@ -3,7 +3,7 @@ import Button from './Button'
 import Loading from './Loading'
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+
 
 const PopUp = ({ setPopup, url, id, title, handler }) => {
   const [loading, setLoading] = useState(false)

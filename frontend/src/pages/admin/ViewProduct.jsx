@@ -5,7 +5,6 @@ import Input from '../../components/Input';
 import Loading from '../../components/Loading';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-import baseUrl from '../../baseUrl';
 import { useDispatch, useSelector } from 'react-redux';
 import { addProductToState, setProductById } from '../../features/productSlice';
 import { RxCross2 } from 'react-icons/rx';
@@ -39,7 +38,7 @@ const ViewProduct = () => {
   useEffect(() => {
     async function getProduct() {
       try {
-        const res = await axios.get(`${baseUrl}/api/v1/products/get-product/${id}`);
+        const res = await axios.get(`/api/v1/products/get-product/${id}`);
         // console.log(res.data);
 
         dispatch(setProductById(res.data.data));
@@ -85,7 +84,7 @@ const ViewProduct = () => {
     // console.log(data)
     setLoading(true)
     try {
-      const res = await axios.patch(`${baseUrl}/api/v1/products`, data, {
+      const res = await axios.patch(`/api/v1/products`, data, {
         headers: {
           "Authorization": `Bearer ${token}`,
         },
@@ -185,7 +184,8 @@ const ViewProduct = () => {
                   <div className='w-full border-b border-gray-600 text-gray-600 px-2'>
                     <label className='font-semibold' htmlFor='price'>Price</label>
                     <Input
-                      type="text"
+                      type="number"
+                      min={0}
                       className="w-full focus:border-none capitalize bg-transparent text-gray-600 rounded outline-none"
                       readOnly={edit}
                       {...register('price', {
@@ -203,7 +203,7 @@ const ViewProduct = () => {
 
                     <label className='font-semibold' htmlFor='stock'>Discount Percentage</label>
                     <Input
-                      type="text"
+                      type="number"
                       className="w-full focus:border-none capitalize bg-transparent text-gray-600 rounded outline-none"
                       readOnly={edit}
                       min={0}
@@ -225,7 +225,7 @@ const ViewProduct = () => {
 
                     <label className='font-semibold' htmlFor='stock'>Stock</label>
                     <Input
-                      type="text"
+                      type="number"
                       className="w-full focus:border-none capitalize bg-transparent text-gray-600 rounded outline-none"
 
                       readOnly={edit}

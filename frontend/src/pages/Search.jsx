@@ -5,7 +5,6 @@ import DropDown from "../components/DropDown"
 import Pagination from '../components/Pagination'
 import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
-import baseUrl from '../baseUrl'
 import { setProductsByPage } from '../features/productSlice'
 import LoaingCard from '../components/LoaingCard'
 
@@ -22,7 +21,7 @@ const Search = () => {
   useEffect(() => {
     document.title = q.charAt(0).toUpperCase() + q.slice(1).toLowerCase();
     async function getSearchedProducts() {
-      const res = await axios.get(`${baseUrl}/api/v1/products/search/${q}/${sort}/${order}/${page}`)
+      const res = await axios.get(`/api/v1/products/search/${q}/${sort}/${order}/${page}`)
       console.log(res.data.data);
       dispatch(setProductsByPage(res.data.data))
     }
@@ -54,7 +53,7 @@ const Search = () => {
             ))
           }
         </div>
-        <Pagination url={`${baseUrl}/api/v1/products/search/${q}/${sort}/${order}`} handler={setProductsByPage} items={paginateProduct?.data} total={paginateProduct.total} page={page} setPage={setPage} />
+        <Pagination url={`/api/v1/products/search/${q}/${sort}/${order}`} handler={setProductsByPage} items={paginateProduct?.data} total={paginateProduct.total} page={page} setPage={setPage} />
       </div>
     </section>
   )

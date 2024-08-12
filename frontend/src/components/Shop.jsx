@@ -4,7 +4,6 @@ const Card = lazy(() => import('./Card'));
 import Pagination from './Pagination';
 import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios';
-import baseUrl from '../baseUrl';
 import { setProductsByPage } from '../features/productSlice';
 import LoaingCard from './LoaingCard';
 
@@ -16,7 +15,7 @@ const Shop = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     async function getProducts() {
-      const res = await axios.get(`${baseUrl}/api/v1/products/${sort}/${order}/${page}`)
+      const res = await axios.get(`/api/v1/products/${sort}/${order}/${page}`)
       // console.log(res.data.data);
       dispatch(setProductsByPage(res.data.data))
     }
@@ -43,7 +42,7 @@ const Shop = () => {
         }
       </div>
       {
-        paginateProduct && < Pagination total={paginateProduct.total} url={`${baseUrl}/api/v1/products/${sort}/${order}`} handler={setProductsByPage} setPage={setPage} items={paginateProduct.data} page={page} />
+        paginateProduct && < Pagination total={paginateProduct.total} url={`/api/v1/products/${sort}/${order}`} handler={setProductsByPage} setPage={setPage} items={paginateProduct.data} page={page} />
       }
     </section>
   )

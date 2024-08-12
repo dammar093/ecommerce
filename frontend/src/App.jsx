@@ -5,7 +5,6 @@ import Container from './components/Container'
 import BottomNavbar from './components/BottomNavbar'
 import ScrollToTop from './components/ScrollToTop'
 import axios from 'axios'
-import baseUrl from './baseUrl'
 import { useDispatch } from 'react-redux'
 import { addUser, setToken } from './features/userSlice'
 const App = () => {
@@ -18,7 +17,7 @@ const App = () => {
     async function getUser() {
       try {
         if (token) {
-          const res = axios.get(`${baseUrl}/api/v1/users/getUser`, {
+          const res = axios.get(`/api/v1/users/getUser`, {
             headers: {
               Authorization: `Bearer ${token}`
             },

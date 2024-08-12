@@ -51,7 +51,7 @@ const addProduct = asyncHandler(async (req, res) => {
       imagesId: uploadFileId,
       brand,
       category,
-      price: price,
+      price: Number(price),
       discountPercentage: Number(discount),
       stock: Number(quantity),
       description,
@@ -251,8 +251,8 @@ const upadateProduct = asyncHandler(async(req,res)=>{
     {
     $set:{
       title:title,
-      price:price,
-      discountPercentage:discount,
+      price:Number(price),
+      discountPercentage:Number(discount),
       stock:stock,
       category:category,
       brand:brand,

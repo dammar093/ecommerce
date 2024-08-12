@@ -8,7 +8,6 @@ import { FiEdit } from 'react-icons/fi'
 import { FaRegEye } from 'react-icons/fa'
 import Pagination from '../../components/Pagination'
 import { useDispatch, useSelector } from 'react-redux'
-import baseUrl from '../../baseUrl'
 import { removeProduct, setProductsByPage } from '../../features/productSlice'
 import axios from 'axios'
 import PopUp from '../../components/PopUp'
@@ -23,7 +22,7 @@ const AdminProducts = () => {
 
   const showPopUp = (id) => {
     setPopup(prev => !prev)
-    console.log(id);
+    // console.log(id);
 
     setId(id)
   }
@@ -32,7 +31,7 @@ const AdminProducts = () => {
     document.title = "Admin Products"
     async function fechProductByPage() {
       try {
-        const res = await axios.get(`${baseUrl}/api/v1/products/getproducts/${page}`, {
+        const res = await axios.get(`/api/v1/products/getproducts/${page}`, {
           headers: {
             "Authorization": `Bearer ${token}`
           },
@@ -101,10 +100,10 @@ const AdminProducts = () => {
             </tbody>
           </table>
           {
-            popup && <PopUp setPopup={setPopup} title="product" url={`${baseUrl}/api/v1/products`} handler={removeProduct} id={id} />
+            popup && <PopUp setPopup={setPopup} title="product" url={`/api/v1/products`} handler={removeProduct} id={id} />
           }
         </div>
-        <Pagination total={paginateProduct.total} setPage={setPage} url={`${baseUrl}/api/v1/products/getproducts`} handler={setProductsByPage} items={paginateProduct.data} page={page} />
+        <Pagination total={paginateProduct.total} setPage={setPage} url={`/api/v1/products/getproducts`} handler={setProductsByPage} items={paginateProduct.data} page={page} />
       </div>
     </div>
   )

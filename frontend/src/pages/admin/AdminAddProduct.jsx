@@ -10,7 +10,6 @@ import Button from '../../components/Button';
 import { RxCross2 } from 'react-icons/rx';
 import { IoAddCircleOutline } from 'react-icons/io5';
 import axios from 'axios';
-import baseUrl from '../../baseUrl';
 import { useNavigate } from 'react-router-dom';
 import { addProductToState } from '../../features/productSlice';
 
@@ -102,7 +101,7 @@ const AdminAddProduct = () => {
 
     try {
       setLoading(true);
-      const res = await axios.post(`${baseUrl}/api/v1/products`, formData, {
+      const res = await axios.post(`/api/v1/products`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',
