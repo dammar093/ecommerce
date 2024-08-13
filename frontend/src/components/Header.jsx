@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Logo from './Logo'
-import { Link, Navigate, NavLink, useNavigate } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import Input from './Input'
 import { CiSearch } from "react-icons/ci";
 import Container from './Container';
@@ -9,7 +9,7 @@ import { FaRegUser } from "react-icons/fa";
 import Profile from './Profile'
 import Button from "./Button"
 import { useDispatch, useSelector } from 'react-redux';
-import { searchedProducts, setProductsByPage } from '../features/productSlice';
+import { setProductsByPage } from '../features/productSlice';
 import axios from 'axios';
 import { addUser, setToken } from '../features/userSlice';
 
@@ -134,7 +134,7 @@ const Header = () => {
                       <FaOpencart />
                       {
                         user && cart.length > 0 && <div className='w-4 h-4 rounded-full bg-[#AE56EF] absolute flex items-center justify-center -top-2 left-2 p-2 '>
-                          <span className='text-[9px] text-white'>{cart.reduce((acc, item) => item.quantity + acc, 0)}</span>
+                          <span className='text-[9px] text-white'>{cart.reduce((acc, item) => item?.product.quantity + acc, 0)}</span>
                         </div>
                       }
                     </div>

@@ -2,6 +2,7 @@ const express = require("express");
 const userRouter = require("./src/routes/user");
 const categoryRouter = require("./src/routes/category")
 const productRouter = require("./src/routes/product")
+const cartRouter = require("./src/routes/cart")
 const cors = require("cors")
 const app = express();
 const cookieParser = require("cookie-parser")
@@ -23,4 +24,5 @@ app.use(cookieParser())
 app.use("/api/v1/users",userRouter);
 app.use("/api/v1/categories",categoryRouter)
 app.use("/api/v1/products",productRouter)
+app.use("/api/v1/carts",cartRouter)
 module.exports = app;

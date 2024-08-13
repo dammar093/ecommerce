@@ -7,8 +7,11 @@ import ScrollToTop from './components/ScrollToTop'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { addUser, setToken } from './features/userSlice'
+import { setCart } from './features/cartSlice'
 const App = () => {
   const dispatch = useDispatch()
+
+  // get current user or logged in user
   useEffect(() => {
     const token = JSON.parse(localStorage.getItem("accessToken"))
 
@@ -31,6 +34,19 @@ const App = () => {
       }
     }
     getUser()
+
+    async function getCart() {
+      const res = await axios.get("/api/v1/carts", {
+        headers: {
+          "Authorization": `Beares ${token}`
+        },
+        withCredentials: true
+      })
+      console.log(res.data.data);
+
+      dispatch(setCart(res.data.data))
+    }
+    getCart()
   }, [])
   return (
     <>

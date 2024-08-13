@@ -23,6 +23,7 @@ const Product = () => {
   const { user } = useSelector(state => state.user);
   const navigate = useNavigate();
   const { id } = useParams();
+  const { token } = useSelector(state => state.user)
 
   useEffect(() => {
     document.title = product?.title
@@ -60,9 +61,24 @@ const Product = () => {
     }
   };
 
-  const handelCart = (item) => {
+  const handelCart = async (item) => {
     if (user) {
-      dispatch(addToCart(item));
+
+      try {
+        const res = await axios.post("/api/v1/carts", item, {
+          headers: {
+            "Authorization": `Bearer ${token}`
+          },
+          withCredentials: true
+        })
+        console.log(res.data);
+
+        dispatch(addToCart(res.data.data))
+      } catch (error) {
+        console.log(error);
+
+      }
+      // dispatch(addToCart(item));
     } else {
       navigate("/login");
     }
