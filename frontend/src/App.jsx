@@ -35,18 +35,6 @@ const App = () => {
     }
     getUser()
 
-    async function getCart() {
-      const res = await axios.get("/api/v1/carts", {
-        headers: {
-          "Authorization": `Beares ${token}`
-        },
-        withCredentials: true
-      })
-      console.log(res.data.data);
-
-      dispatch(setCart(res.data.data))
-    }
-    getCart()
   }, [])
   return (
     <>

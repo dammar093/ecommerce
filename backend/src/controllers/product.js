@@ -4,6 +4,7 @@ const ApiError = require("../utils/ApiError");
 const uploadOnCloudinary = require("../service/cloudinary");
 const Product = require("../models/product");
 const {v2} =require("cloudinary")
+const  quickSortProductAfterDiscount = require("../utils/quickSort")
 
 const addProduct = asyncHandler(async (req, res) => {
   const { title, price, brand, colors, sizes, description, quantity, category, discount,stock } = req.body;
@@ -134,8 +135,6 @@ const getProductByPage = asyncHandler(async(req,res)=>{
     const products = await Product.find()
     .skip(skipValue)
     .limit(pageSize);
-
-
   return res.status(200)
       .json(new ApiResponse(200,{data:products,total:total},"product fetched successfuly"))
 })
@@ -174,6 +173,9 @@ try {
     const sortOrder = order === 'asc' ? 1 : -1;
    products= await Product.find({}).sort({[sort]:sortOrder}).skip((Number(page) -1) * skipValue).limit(skipValue);
   }
+  if(sort === "price"){
+    products = quickSortProductAfterDiscount(products,order)
+  }
   return res.status(200).json(
     new ApiResponse(200,{data:products,total:total},"products Fetched sucessfuly")
   )
@@ -185,8 +187,7 @@ try {
 // getSearched items
 const getProductsBySearch = asyncHandler(async(req,res)=>{
   const {search,page,sort,order} = req.params;
-  
-  
+
   const produtcsCount =  await Product.find({
         $or: [
           { title: { $regex: search, $options: 'i' } }, 
@@ -203,7 +204,7 @@ const getProductsBySearch = asyncHandler(async(req,res)=>{
         ],
       }
     ).skip((page-1)*12).limit(12)
-  
+ 
   if(!products){
     throw new ApiError(400,"404 product not found")
   }
@@ -217,6 +218,9 @@ const getProductsBySearch = asyncHandler(async(req,res)=>{
         ],
       }
     ).sort({[sort]:sortOrder}).skip((Number(page) - 1) * 12).limit(12)
+  }
+  if(sort === "price"){
+      products = quickSortProductAfterDiscount(products,order)
   }
 return res.status(200)
 .json(new ApiResponse(200,{data:products,total:produtcsCount.length},"fetched product successfuly"))
@@ -235,6 +239,10 @@ const  getProductBycategory = asyncHandler(async(req,res)=>{
   if(sort && order){
   const sortOrder = order === "asc" ? 1: -1
   products = await Product.find({category:category}).sort({[sort]:sortOrder}).skip((Number(page) - 1) * 12).limit(12)
+  }
+  if(sort === "price"){
+      products = quickSortProductAfterDiscount(products,order)
+      
   }
 return res.status(200)
 .json(new ApiResponse(200,{data:products,total:produtcsCount.length},"fetched product successfuly"))
