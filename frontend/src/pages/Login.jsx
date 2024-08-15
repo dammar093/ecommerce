@@ -25,39 +25,44 @@ const Login = () => {
   useEffect(() => {
     document.title = "Login"
   }, [])
+
+  async function hadnleLogin(data) {
+    try {
+      const res = await axios.post(`/api/v1/users/login`, data)
+      setLoading(true)
+      dispatch(addUser(res.data.data.loggedInUser));
+      dispatch(setToken(res.data.data.token))
+      localStorage.setItem("accessToken", JSON.stringify(res.data.data.token))
+      setLoading(false)
+      navigate("/")
+    } catch (error) {
+      setLoading(false)
+      setError(error.response.data.message);
+
+    }
+
+
+  }
   return (
     <section className='w-full my-8'>
       <div className='w-full md:w-[500px] p-4 mx-auto bg-white rounded'>
-        {
-          error && (
-            <p className="text-red-500">{error}</p>
-          )
-        }
-        <form method='post'
-          onSubmit={handleSubmit((data) => {
-            axios.post(`/api/v1/users/login`, data)
-              .then(res => {
-                setLoading(true);
-                dispatch(addUser(res.data.data.loggedInUser));
-                dispatch(setToken(res.data.data.token))
-                localStorage.setItem("accessToken", JSON.stringify(res.data.data.token))
-                setLoading(false)
-                navigate("/")
 
-              })
-              .catch(err => {
-                setLoading(false)
-              })
-          })}
-        >
+        <form method='post'
+          onSubmit={handleSubmit(hadnleLogin)} >
           <div className=' mx-auto mt-4  h-[100px] w-[100px] overflow-hidden flex justify-center items-end  relative'>
             <img className='absolute top-0 left-0 w-full h-full object-cover' src={avatar} alt={"avatar"} />
           </div>
+          {
+            error && (
+              <p className="text-red-500 text-center">{error}</p>
+            )
+          }
           <div className=' mt-4'>
             <div className='w-full h-10 rounded-md bg-slate-300 text-gray-600'>
               <Input
                 type="email"
                 className="w-full h-full bg-transparent text-gray-600 rounded outline-none px-2"
+                onInput={() => setError(null)}
                 placeholder="Enter your email"
                 {...register('email', {
                   required: 'Email is required !',
@@ -102,7 +107,7 @@ const Login = () => {
           </div>
           <div className='my-4 w-full'>
             <Button
-              className="w-full h-10 rounded px-2 bg-[#AE56EF] hover:bg-[#8d48be] text-white font-semibold
+              className="w-full h-10 rounded-full px-2 bg-[#AE56EF] hover:bg-[#8d48be] text-white font-semibold
               flex justify-center items-center"
               type="submit"
             >
@@ -111,8 +116,8 @@ const Login = () => {
           </div>
           <p className='text-md text-gray-600 whitespace-nowrap'>Didn't have an account? <Link className='text-blue-600 hover:underline' to={"/signup"}>create account</Link></p>
         </form>
-      </div>
-    </section>
+      </div >
+    </section >
   )
 }
 

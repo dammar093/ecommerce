@@ -170,7 +170,7 @@ const Signup = () => {
           </div>
           <div className='my-4 w-full'>
             <Button
-              className={`w-full h-10 rounded px-2 ${loading ? "vcursor-not-allowed bg-[#bf89e5]" : " bg-[#AE56EF] hover:bg-[#8d48be]"} text-white font-semibold uppercase flex justify-center items-center`}
+              className={`w-full h-10 rounded-full px-2 ${loading ? "vcursor-not-allowed bg-[#bf89e5]" : " bg-[#AE56EF] hover:bg-[#8d48be]"} text-white font-semibold uppercase flex justify-center items-center`}
               type="submit"
               disbaled={loading ? false : true}
             >

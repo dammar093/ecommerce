@@ -86,12 +86,12 @@ const login = asyncHandler(async(req,res)=>{
     })
   
     if(!user){
-      throw new ApiError(401, "Invalid email or password!" )
+      return res.status(401).json( new ApiResponse(401,{}, "Invalid email or password!" ))
     }
     
   const validUser =  bcrypt.compareSync(password,user.password)
   if(!validUser){
-    throw new ApiError(401, "Invalid emial or password!")
+    return res.status(401).json( new ApiResponse(401,{}, "Invalid email or password!" ))
   }
   const loggedInUser = await User.findById(user._id).select("-password");
   // console.log(loggedInUser);

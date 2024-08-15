@@ -36,20 +36,22 @@ const App = () => {
     getUser()
 
     // get cart
-    const getAllcart = async () => {
-      try {
-        const res = await axios.get("/api/v1/carts", {
-          headers: {
-            "Authorization": `Bearer ${token}`
-          }
-        })
-        dispatch(setCart(res.data.data))
-      } catch (error) {
-        console.log(error);
+    if (token) {
+      const getAllcart = async () => {
+        try {
+          const res = await axios.get("/api/v1/carts", {
+            headers: {
+              "Authorization": `Bearer ${token}`
+            }
+          })
+          dispatch(setCart(res.data.data))
+        } catch (error) {
+          console.log(error);
 
+        }
       }
+      getAllcart()
     }
-    getAllcart()
 
   }, [])
   return (
