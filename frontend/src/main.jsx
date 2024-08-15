@@ -20,6 +20,7 @@ import AdminAddCategory from './pages/admin/AdminAddCategory.jsx'
 import Users from './pages/admin/Users.jsx'
 import AdminOrders from './pages/admin/AdminOrders.jsx'
 import ViewOrder from "./pages/admin/ViewOrder.jsx"
+import PlaceOrder from './pages/PlaceOrder.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -72,6 +73,10 @@ const router = createBrowserRouter([
       {
         path: "cart",
         element: <AuthLayout><Cart /></AuthLayout>
+      },
+      {
+        path: "place-order",
+        element: <AuthLayout><PlaceOrder /></AuthLayout>
       },
       {
         path: "profile",

@@ -8,10 +8,11 @@ import { useDispatch, useSelector } from "react-redux"
 import { removeFromCart, decrementQuantity, incrementQuantity, setQuntityByValue } from '../features/cartSlice';
 import EmptyCart from '../components/EmptyCart';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 const Cart = () => {
+  const navigate = useNavigate()
   const dispatch = useDispatch();
   const cartProducts = useSelector(state => state.cart.cart);
-
   const { token } = useSelector(state => state.user)
   // console.log(cartProducts.length);
   // console.log(cartProducts);
@@ -154,7 +155,9 @@ const Cart = () => {
               <CheckoutPrice title="Tax" price={12} style="border-b-2 border-gray-300 border-solid " />
               <CheckoutPrice title="order total" price={1332} style="border-none" />
               <div className='w-full'>
-                <Button className="bg-[#AE56EF] uppercase w-full py-2 px-4 rounded font-semibold text-white hover:bg-[#8042ac]">Check Out</Button>
+                <Button className="bg-[#AE56EF] uppercase w-full py-2 px-4 rounded font-semibold text-white hover:bg-[#8042ac]"
+                  onClick={() => navigate("/place-order")}
+                >Check Out</Button>
               </div>
             </div>
           </div>
