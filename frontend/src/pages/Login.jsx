@@ -82,6 +82,7 @@ const Login = () => {
           <div className='mt-4'>
             <div className='w-full h-10  rounded-md bg-slate-300 text-gray-600 flex justify-between items-center'>
               <Input
+                autoComplete="off"
                 type={showEye ? "password" : "text"}
                 className="w-[85%] h-full bg-transparent text-gray-600 rounded outline-none px-2"
                 placeholder="Enter your password"

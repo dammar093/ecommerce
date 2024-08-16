@@ -8,7 +8,7 @@ const Input = ({ label, type = "text", className = "", ...props }, ref) => {
         label && <label htmlFor={id}>{label}</label>
       }
       <input
-        className={`focus:border-gray-600 focus:border ${className}`}
+        className={`focus:border-gray-600 focus:border placeholder:text-gray-600 ${className}`}
         type={type}
         ref={ref}
         id={id}

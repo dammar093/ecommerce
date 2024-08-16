@@ -91,11 +91,11 @@ const Cart = () => {
       <section className='w-full min-h-screen mb-12 md:mb-0'>
         <h1 className='text-xl font-medium text-gray-600 uppercase my-4'>Your Cart</h1>
         <div className='w-full'>
-          <div className='w-full bg-white p-2 grid grid-cols-1 md:grid-cols-2 gap-2'>
+          <div className='w-full  p-2 grid grid-cols-1 md:grid-cols-2 gap-2'>
             <div className=' w-full grid grid-cols-1 gap-2 h-fit'>
               {
                 cartProducts.map(item => (
-                  <div className='w-full p-2 grid grid-cols-1 gap-8 shadow' key={item._id}>
+                  <div className='w-full p-2 grid grid-cols-1 gap-8 shadow bg-white' key={item._id}>
                     <div className='flex gap-2 w-full relative'>
                       <div className='w-[150px] h-[150px] rounded'>
                         <img className='w-full h-full object-contain rounded' src={item?.product.image} alt={item?.product.title} />
@@ -150,12 +150,9 @@ const Cart = () => {
               <div>
                 <h3 className='text-gray-600 font-semibold uppercase'>order summary</h3>
               </div>
-              <CheckoutPrice title="subtotal" price={cartProducts.reduce((acc, item) => item?.product.price * item?.product.quantity + acc, 0)} style="border-b-2 border-gray-300 border-solid " />
-              <CheckoutPrice title="shipping charge" price={120} style="border-b-2 border-gray-300 border-solid " />
-              <CheckoutPrice title="Tax" price={12} style="border-b-2 border-gray-300 border-solid " />
-              <CheckoutPrice title="order total" price={1332} style="border-none" />
+              <CheckoutPrice title="subtotal" price={cartProducts.reduce((acc, item) => item?.product.price * item?.product.quantity + acc, 0)} />
               <div className='w-full'>
-                <Button className="bg-[#AE56EF] uppercase w-full py-2 px-4 rounded font-semibold text-white hover:bg-[#8042ac]"
+                <Button className="bg-[#AE56EF] uppercase w-full py-2 px-4 rounded-full font-semibold text-white hover:bg-[#8042ac]"
                   onClick={() => navigate("/place-order")}
                 >Check Out</Button>
               </div>
