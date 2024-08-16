@@ -4,6 +4,7 @@ import cartReducer from "../features/cartSlice";
 import userReducer  from "../features/userSlice"
 import usersReducer  from "../features/usersSlice"
 import categoryReducer from "../features/categorySlice"
+import orderReducer from "../features/orderSlice"
 import {persistReducer,persistStore} from "redux-persist"
 import storage from "redux-persist/lib/storage";
 import {version} from "react"
@@ -39,7 +40,8 @@ const store = configureStore({
     cart:cartReducer,
     user:userReducer,
     categories:categoryReducer,
-    users:usersReducer
+    users:usersReducer,
+    orders:orderReducer
   }
 })
 

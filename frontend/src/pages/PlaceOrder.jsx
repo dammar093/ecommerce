@@ -3,12 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import CryptoJS from 'crypto-js';
 import Button from '../components/Button';
 import { AiOutlineClose } from 'react-icons/ai';
-import { removeFromCart } from '../features/cartSlice';
+import { removeFromCart, setCart } from '../features/cartSlice';
 import axios from 'axios';
 import Input from '../components/Input';
 import { useForm } from 'react-hook-form';
 import Loading from '../components/Loading';
 import Esewa from './Esewa';
+import { addOrder } from '../features/orderSlice';
 
 
 const PlaceOrder = () => {
@@ -36,6 +37,27 @@ const PlaceOrder = () => {
       dispatch(removeFromCart(res.data.data.id))
     } catch (error) {
       console.log(error);
+    }
+  }
+  const handleOrder = async (data) => {
+    let totalAmount = cart.reduce((acc, item) => item?.product.price * item?.product.quantity + acc, 0)
+    data.products = cart
+    data.totalAmount = totalAmount
+    console.log(data);
+
+    try {
+      const res = await axios.post("/api/v1/orders", data, {
+        headers: {
+          "Authorization": `Bearer ${token}`
+        },
+        withCredentials: true
+      })
+      dispatch(addOrder(res.data.data))
+      dispatch(setCart([]))
+      setShowEsewa(true)
+    } catch (error) {
+      console.log(error);
+
     }
   }
   return (
@@ -72,10 +94,7 @@ const PlaceOrder = () => {
       </div>
       <div className='w-full md:w-[49%] p-2 py-4 bg-[#f3f3f3] h-fit rounded-sm'>
         <h2 className='text-gray-600 text-lg font-medium'>Shipping Details</h2>
-        <form className='mt-5 w-full' method='post' onSubmit={handleSubmit((data) => {
-          console.log(data);
-
-        })}>
+        <form className='mt-5 w-full' method='post' onSubmit={handleSubmit(handleOrder)}>
           <input type="hidden" value={user._id} {...register("id")} />
           <div className='flex gap-1 flex-wrap'>
             <Input
@@ -101,7 +120,7 @@ const PlaceOrder = () => {
                 placeholder="Enter your mobile number"
                 {...register('contact', {
                   required: 'Contact number is required !',
-
+                  minLength: 10
                 })}
               />
 

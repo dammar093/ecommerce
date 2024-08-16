@@ -7,7 +7,7 @@ const cartSchema = new mongoose.Schema(
       require:true
     },
     addedBy:{
-      type:mongoose.Schema.ObjectId,
+      type:mongoose.Schema.Types.ObjectId,
       ref:"User",
     }
   },
