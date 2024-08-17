@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import CryptoJS from 'crypto-js';
 import Button from '../components/Button';
 import { AiOutlineClose } from 'react-icons/ai';
 import { removeFromCart, setCart } from '../features/cartSlice';
@@ -19,11 +18,13 @@ const PlaceOrder = () => {
   const dispatch = useDispatch();
   const { cart } = useSelector(state => state.cart)
   const { register, handleSubmit, formState: { errors } } = useForm()
+  const [data, setData] = useState(null)
   // console.log(uuid);
 
   useEffect(() => {
     document.title = "Place Order";
   }, []);
+
 
   const deleteCart = async (id) => {
     try {
@@ -42,8 +43,7 @@ const PlaceOrder = () => {
   const handleOrder = async (data) => {
     let totalAmount = cart.reduce((acc, item) => item?.product.price * item?.product.quantity + acc, 0)
     data.products = cart
-    data.totalAmount = totalAmount
-    console.log(data);
+    data.totalAmount = totalAmount;
 
     try {
       const res = await axios.post("/api/v1/orders", data, {
@@ -52,9 +52,14 @@ const PlaceOrder = () => {
         },
         withCredentials: true
       })
-      dispatch(addOrder(res.data.data))
+      dispatch(addOrder(res.data.data._doc))
+      setData(res.data.data)
       dispatch(setCart([]))
-      setShowEsewa(true)
+      console.log(res.data.data._doc);
+
+      if (res.data.data) {
+        setShowEsewa(true)
+      }
     } catch (error) {
       console.log(error);
 
@@ -66,7 +71,7 @@ const PlaceOrder = () => {
         {
           cart.map(cartItem => {
             return (
-              <div className='bg-[#f5f5f3] flex gap-2 shadow-sm mt-1 rounded-sm p-2'>
+              <div className='bg-[#f5f5f3] flex gap-2 shadow-sm mt-1 rounded-sm p-2' key={cartItem?.product._id}>
                 <div className='md:w-[10vw] md:h-[10vw] w-[150px] h-[150px] overflow-hidden rounded p-1'>
                   <img className='w-full h-full object-contain' src={cartItem?.product.image} alt={cartItem?.product.title} />
                 </div>
@@ -159,7 +164,6 @@ const PlaceOrder = () => {
             <Button
               className={`w-full h-10 rounded-full px-2 ${loading ? "vcursor-not-allowed bg-[#bf89e5]" : " bg-[#AE56EF] hover:bg-[#8d48be]"} text-white font-semibold  flex justify-center items-center`}
               type="submit"
-              disbaled={loading ? false : true}
             >
               {loading ? (<Loading />) : "Proceed to pay"}
             </Button>
@@ -167,7 +171,7 @@ const PlaceOrder = () => {
         </form>
       </div>
 
-      {showEsewa && <Esewa />}
+      {showEsewa && <Esewa data={data} />}
 
     </section>
   );

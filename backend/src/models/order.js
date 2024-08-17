@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 const orderSchema = new mongoose.Schema(
   {
-    products:{
+    orders:{
       type:[Object],
       require:true
     },
@@ -21,11 +21,16 @@ const orderSchema = new mongoose.Schema(
     },
     status:{
       type:String,
-      default:"pendings"
+      default:"pending"
     },
     user:{
       type: mongoose.Schema.Types.ObjectId,
       ref:"User"
+    },
+    paymentMethod:{
+      type: String,
+      enum: ['esewa'],
+      default:"esewa"
     }
   },
   {

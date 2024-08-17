@@ -8,7 +8,10 @@ const constants ={
   cloudinaryCloudName : process.env.CLOUDINARY_CLOUD_NAME,
   cloudinaryApiKey : process.env.CLOUDINARY_API_KEY,
   coudinaryApiSecretKey : process.env.CLOUDINARY_API_SECRET,
-  jwtSecret:process.env.JWT_SECRET
+  jwtSecret:process.env.JWT_SECRET,
+  eSewaUrl:process.env.ESEWA_URL,
+  eSewaProductCode:process.env.ESEWA_PRODUCT_CODE,
+  eSewaSecretKey:process.env.ESEWA_SECRET_KEY
 }
 
 module.exports = constants

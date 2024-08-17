@@ -21,6 +21,8 @@ import Users from './pages/admin/Users.jsx'
 import AdminOrders from './pages/admin/AdminOrders.jsx'
 import ViewOrder from "./pages/admin/ViewOrder.jsx"
 import PlaceOrder from './pages/PlaceOrder.jsx'
+import EsewaSucess from './pages/EsewaSucess.jsx'
+import EsewaFail from './pages/EsewaFail.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -118,6 +120,14 @@ const router = createBrowserRouter([
       {
         path: "admin-orders/:id",
         element: <AdminLayout><ViewOrder /></AdminLayout>
+      },
+      {
+        path: "http://localhost:5173/esewa/success",
+        element: <EsewaSucess />
+      },
+      {
+        path: "http://localhost:5173/esewa/fail",
+        element: <EsewaFail />
       },
       {
         path: "*",
