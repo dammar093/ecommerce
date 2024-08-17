@@ -71,7 +71,7 @@ const PlaceOrder = () => {
         {
           cart.map(cartItem => {
             return (
-              <div className='bg-[#f5f5f3] flex gap-2 shadow-sm mt-1 rounded-sm p-2' key={cartItem?.product._id}>
+              <div className='bg-[#f5f5f3] flex gap-2 shadow-sm mt-1 rounded-sm p-2 relative' key={cartItem?.product._id}>
                 <div className='md:w-[10vw] md:h-[10vw] w-[150px] h-[150px] overflow-hidden rounded p-1'>
                   <img className='w-full h-full object-contain' src={cartItem?.product.image} alt={cartItem?.product.title} />
                 </div>
@@ -86,7 +86,7 @@ const PlaceOrder = () => {
                     Quantity: <span className='font-medium'>{cartItem?.product.quantity}</span>
                   </div>
                 </div>
-                <div className='w-fit'>
+                <div className='w-fit absolute top-1 right-1'>
                   <button className='text-2xl text-red-600 font-semibold'
                     onClick={() => deleteCart(cartItem._id)}
                   ><AiOutlineClose />
