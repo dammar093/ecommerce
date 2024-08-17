@@ -49,7 +49,7 @@ const Product = () => {
     }
 
     getProduct();
-  }, [id, dispatch]);
+  }, [id, dispatch, product]);
 
   const increaseQuantity = () => {
     setQuantity(prev => prev + 1);
@@ -89,7 +89,7 @@ const Product = () => {
   };
 
   return (
-    <section className='my-4 w-full mb-[70px]'>
+    product && <section className='my-4 w-full mb-[70px]'>
       <div className='w-full flex flex-wrap'>
         <div className='w-full md:w-1/2 bg-white py-2 h-fit'>
           <div className='w-full md:h-[350px] p-1 flex items-center justify-center'>
@@ -143,7 +143,10 @@ const Product = () => {
               <p>{product?.description || 'No description available'}</p>
             </div>
             <div className='my-2 flex gap-3 items-center'>
-              <span className='text-3xl font-medium text-[#AE56EF]'> Rs.{Math.round(product.price - product.price * product.discountPercentage / 100)}</span>
+              <span className='text-3xl font-medium text-[#AE56EF]'>
+                Rs.
+                {Math.round(product.price - product.price * product.discountPercentage / 100)}
+              </span>
               <span className='text-2xl font-medium text-gray-600 line-through'>Rs.{product.price} </span>
               {product?.discountPercentage > 0 && <span className='text-red-500 font-semibold md:text-lg text-md'>-{product.discountPercentage}%</span>}
             </div>
