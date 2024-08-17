@@ -5,7 +5,7 @@ const Order = require("../models/order");
 const Cart = require("../models/cart");
 const { createSignature } = require("../utils/eSewaSignture");
 const { eSewaProductCode, eSewaUrl } = require("../config/config");
-const {v4 : uuidv4 } = require("uuid")
+
 
 const createOrder = asyncHandler(async(req,res)=>{
   const {totalAmount,products,id,contact,address} = req.body
@@ -24,7 +24,6 @@ const createOrder = asyncHandler(async(req,res)=>{
       contact:contact,
       address:address
     })
-    let uuid = uuidv4()
     let signature = createSignature(totalAmount,order._id)
     console.log("signature",signature);
     const cart = await Cart.deleteMany({addedBy:id});
@@ -42,12 +41,11 @@ const verifyEsewa = asyncHandler(async(req,res)=>{
     await Order.findByIdAndUpdate({_id:decodedData.transaction_uuid},
       {
         $set:{
-          status:"paid"
+          paymentStatus:"paid"
         }
       }
     )
   }
- 
- res.redirect("http://localhost:5173")
+  res.redirect("http://localhost:5173")
 })
 module.exports = {createOrder,verifyEsewa}

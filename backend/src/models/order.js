@@ -19,7 +19,7 @@ const orderSchema = new mongoose.Schema(
       type:String,
       require:true
     },
-    status:{
+    paymentStatus:{
       type:String,
       default:"pending"
     },
@@ -31,6 +31,10 @@ const orderSchema = new mongoose.Schema(
       type: String,
       enum: ['esewa'],
       default:"esewa"
+    },
+    orderStatus:{
+      type:String,
+      default:"pending"
     }
   },
   {
