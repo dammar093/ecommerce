@@ -13,10 +13,13 @@ const orderSlice = createSlice({
   reducers:{
     addOrder:(state,action)=>{
       state.orders.data= [...state.orders.data,action.payload]
+    },
+    setOrders:(state,action)=>{
+     state.orders.data = action.payload
     }
   }
 })
 
-export const {addOrder} = orderSlice.actions
+export const {addOrder,setOrders} = orderSlice.actions
 
 export default orderSlice.reducer

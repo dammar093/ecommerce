@@ -6,7 +6,7 @@ const Cart = require("../models/cart");
 const { createSignature } = require("../utils/eSewaSignture");
 const { eSewaProductCode, eSewaUrl } = require("../config/config");
 
-
+//create order
 const createOrder = asyncHandler(async(req,res)=>{
   const {totalAmount,products,id,contact,address} = req.body
 
@@ -34,6 +34,7 @@ const createOrder = asyncHandler(async(req,res)=>{
   }
 })
 
+// verify esewa data
 const verifyEsewa = asyncHandler(async(req,res)=>{
   const {data} = req.query
   const decodedData = JSON.parse(atob(data))
@@ -48,4 +49,18 @@ const verifyEsewa = asyncHandler(async(req,res)=>{
   }
   res.redirect("http://localhost:5173")
 })
-module.exports = {createOrder,verifyEsewa}
+
+// get All orders
+const getOrderById = asyncHandler(async(req,res)=>{
+  
+  try {
+    const orders = await Order.find({user:req?.user._id}).populate('user').exec();
+    console.log(orders);
+    
+    return res.status(200).json(new ApiResponse(200,orders,"Get order successfuly"))
+  } catch (error) {
+    throw new ApiError(500,"get order failed")
+  }
+  
+})
+module.exports = {createOrder,verifyEsewa,getOrderById}
