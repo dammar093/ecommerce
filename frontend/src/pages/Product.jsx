@@ -49,7 +49,7 @@ const Product = () => {
     }
 
     getProduct();
-  }, [id, dispatch, product]);
+  }, [id, dispatch]);
 
   const increaseQuantity = () => {
     setQuantity(prev => prev + 1);
@@ -239,7 +239,7 @@ const Product = () => {
           {
             product?.reviews.map(review => {
               return (
-                <Review review={review} rating={product?.averageRating} key={review._id} />
+                <Review className review={review} rating={product?.averageRating} key={review._id} />
               )
             })
           }

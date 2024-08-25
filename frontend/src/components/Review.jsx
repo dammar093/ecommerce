@@ -19,7 +19,7 @@ const Review = ({ review, rating }) => {
                 </div>
                 <span className='text-sm text-gray-600'>{new Date(review?.createdAt).toUTCString()}</span>
               </div>
-              <div>
+              <div className='my-1'>
                 <Rating rating={rating} />
                 <p className='text-md text-gray-500'>{review?.review}</p>
               </div>

@@ -5,10 +5,12 @@ const Review = require("../models/review");
 
 
 const addReview = asyncHandler(async (req, res) => {
-  const { user, product, rating, review } = req.body
+  const { product, rating, review } = req.body
+  console.log(req.body);
+
   try {
     const reviewData = await Review.create({
-      user: user,
+      user: req.user._id,
       product: product,
       rating: rating,
       review: review
