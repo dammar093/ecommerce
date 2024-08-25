@@ -39,10 +39,6 @@ const productSchema = new mongoose.Schema(
     imagesId: {
       type: [String],
     },
-    rating: {
-      type: Number,
-      default: 0,
-    },
     category: {
       type: String,
       required: true,
@@ -53,6 +49,6 @@ const productSchema = new mongoose.Schema(
   }
 );
 
-const Product = mongoose.model("product", productSchema);
+const Product = mongoose.model("Product", productSchema);
 
 module.exports = Product;

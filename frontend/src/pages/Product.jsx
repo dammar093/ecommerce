@@ -133,9 +133,9 @@ const Product = () => {
               </div>
 
               {
-                product?.rating > 0 && <div className='flex items-center gap-2'>
-                  <Rating rating={product.rating} />
-                  <span className='text-gray-600'>(100)</span>
+                product?.averageRating > 0 && <div className='flex items-center gap-2'>
+                  <Rating rating={product?.averageRating} />
+                  <span className='text-gray-600'>({product?.averageRating})</span>
                 </div>
               }
             </div>
@@ -235,11 +235,15 @@ const Product = () => {
           </div>
         </div>
         <div className='my-8 w-full'>
-          <h3 className='my-2 text-gray-600 font-medium text-xl'>Reviews <span>(10)</span></h3>
-          <Review />
-          <Review />
-          <Review />
-          <Review />
+          <h3 className='my-2 text-gray-600 font-medium text-xl'>Reviews <span>({product?.reviews.length})</span></h3>
+          {
+            product?.reviews.map(review => {
+              return (
+                <Review review={review} rating={product?.averageRating} key={review._id} />
+              )
+            })
+          }
+
         </div>
       </div>
       <div className='my-8'>

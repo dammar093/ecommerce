@@ -56,7 +56,7 @@ const Header = () => {
     }, 2000);
 
     return () => clearInterval(interval);
-  }, [categoryIndex, categories.length]);
+  }, [categoryIndex, categories.length, categories]);
 
   return (
     <header className='w-full h-14 md:h-16 md:py-1 bg-[#f2f2f2] shadow-md  z-10'>

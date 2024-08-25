@@ -12,9 +12,10 @@ const Card = ({ item }) => {
         <h2 className='whitespace-nowrap text-ellipsis overflow-hidden capitalize text-gray-700 text-[16px]'>{item.title}</h2>
         <p className='text-sm text-gray-600 whitespace-nowrap text-ellipsis overflow-hidden'>{item.desc}</p>
         <div className='flex items-center gap-1 text-[12px]'>
+
           {
-            item.rating > 0 && <span><Rating rating={item.rating} />
-              <span className=' text-gray-600'>(100)</span></span>
+            item?.averageRating > 0 && <span className='flex gap-1'><Rating rating={item?.averageRating} />
+              <span className=' text-gray-600'>({item?.averageRating})</span></span>
           }
         </div>
         <div className='flex gap-2 items-center'>

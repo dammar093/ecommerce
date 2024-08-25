@@ -4,6 +4,7 @@ const categoryRouter = require("./src/routes/category")
 const productRouter = require("./src/routes/product")
 const cartRouter = require("./src/routes/cart")
 const orderRouter = require("./src/routes/order")
+const reviewRouter = require("./src/routes/review")
 const cors = require("cors")
 const app = express();
 const cookieParser = require("cookie-parser")
@@ -27,4 +28,5 @@ app.use("/api/v1/categories",categoryRouter)
 app.use("/api/v1/products",productRouter)
 app.use("/api/v1/carts",cartRouter)
 app.use("/api/v1/orders", orderRouter);
+app.use("/api/v1/reviews",reviewRouter);
 module.exports = app;
