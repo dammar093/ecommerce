@@ -147,7 +147,7 @@ const Orders = () => {
                                 ></textarea>
                               </div>
                               {(errors?.itemId === item?.product._id) && <p className='text-red-600'>{errors?.review}</p>}
-                              <div>
+                              <div className='my-1'>
 
                                 <Button className="bg-[#AE56EF] hover:bg-[#7b14c5] px-4 py-1 rounded-sm text-sm text-[#f3f3f3]"
                                   onClick={() => handleReview(item?.product._id, order._id)}
