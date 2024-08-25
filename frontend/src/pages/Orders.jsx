@@ -21,7 +21,8 @@ const Orders = () => {
         const res = await axios.get("/api/v1/orders/user-order", {
           headers: {
             "Authorization": `Bearer ${token}`
-          }
+          },
+          withCredentials: true
         })
         dispatch(setOrders(res.data.data))
       } catch (error) {
@@ -171,10 +172,10 @@ const Orders = () => {
               </div>
 
               <div className='text-gray-600 font-medium capitalize'>
-                Order Status : <span className={order.orderStatus !== "delivered" ? "text-red-500" : "text-green-500"}>{order.orderStatus}</span>
+                Order Status : <span className={`${order.orderStatus !== "delivered" ? "text-red-500" : "text-green-500"} font-semibold`}>{order.orderStatus}</span>
               </div>
               <div className='text-gray-600 font-medium capitalize'>
-                Payment Status : <span className={order.paymentStatus !== "paid" ? "text-red-500" : "text-green-500"}>{order.paymentStatus}</span>
+                Payment Status : <span className={`${order.paymentStatus !== "paid" ? "text-red-500" : "text-green-500"} font-semibold`}>{order.paymentStatus}</span>
               </div>
               <div className='text-gray-600 font-medium capitalize'>
                 Payment Method : {order.paymentMethod}

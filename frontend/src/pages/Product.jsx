@@ -225,6 +225,8 @@ const Product = () => {
                     price: Math.round(product?.price - (product?.discountPercentage * product?.price / 100)) || 0,
                     quantity: quantity,
                     title: product?.title || 'Product Title',
+                    brand: product?.brand,
+                    category: product?.category
                   });
                 }}
               >
