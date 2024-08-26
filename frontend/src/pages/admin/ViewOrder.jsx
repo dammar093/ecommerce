@@ -42,11 +42,11 @@ const ViewOrder = () => {
     }
   }
   return (
-    order && <div className='w-full relative flex bg-white mb-20 px-2 py-4'>
+    order && <div className='w-full relative flex   px-2 '>
       <div>
         <SideBar />
       </div>
-      <div className='m-0 mt-2 md:ml-[13vw] w-full '>
+      <div className='m-0 mt-2 md:ml-[13vw] w-full bg-white mb-20 py-4 px-2 '>
         <div>
           <div className='text-md font-medium text-[#AE56EF]'>Order Id: ###{order?._id}</div>
           <div>
