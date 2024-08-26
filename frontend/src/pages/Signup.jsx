@@ -49,7 +49,6 @@ const Signup = () => {
                 headers: {
                   "Content-Type": "multipart/form-data",
                 },
-                timeout: 6000
               })
                 .then(res => {
                   setLoading(false)
@@ -173,7 +172,6 @@ const Signup = () => {
             <Button
               className={`w-full h-10 rounded-full px-2 ${loading ? "vcursor-not-allowed bg-[#bf89e5]" : " bg-[#AE56EF] hover:bg-[#8d48be]"} text-white font-semibold uppercase flex justify-center items-center`}
               type="submit"
-              disbaled={loading ? false : true}
             >
               {loading ? (<Loading />) : "Signup"}
             </Button>
