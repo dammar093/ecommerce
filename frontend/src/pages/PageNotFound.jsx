@@ -7,8 +7,8 @@ const PageNotFund = () => {
   }, [])
   return (
     <Container>
-      <div className='w-full h-[500px] flex justify-center items-center'>
-        <img className='w-full h-[70%] object-scale-down' src={page} alt="" />
+      <div className='w-full h-[80vh] flex justify-center items-center text-3xl font-semibold text-slate-600 animate-pulse uppercase'>
+        404 page not found
       </div>
     </Container>
   )
