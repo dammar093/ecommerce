@@ -8,7 +8,7 @@ router
   .post("/", verifyJwtToken, createOrder)
   .get("/esewa", verifyEsewa)
   .get("/user-order", verifyJwtToken, getOrderByUserId)
-  .get("/:page", verifyJwtToken, adminAuth, getAllOrders)
+  .get("/page/:page", verifyJwtToken, adminAuth, getAllOrders)
   .get("/:id", verifyJwtToken, adminAuth, getOrderById)
   .patch("/", verifyJwtToken, adminAuth, updateOrderStatus)
   .delete("/:id", verifyJwtToken, adminAuth, deleteOrder)

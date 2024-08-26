@@ -15,7 +15,7 @@ const Card = ({ item }) => {
 
           {
             item?.averageRating > 0 && <span className='flex gap-1'><Rating rating={item?.averageRating} />
-              <span className=' text-gray-600'>({item?.averageRating})</span></span>
+              <span className=' text-gray-600'>({item?.reviews.length})</span></span>
           }
         </div>
         <div className='flex gap-2 items-center'>

@@ -78,8 +78,12 @@ const getAllOrders = asyncHandler(async (req, res) => {
 })
 const getOrderById = asyncHandler(async (req, res) => {
   const { id } = req.params;
+  // console.log(id);
+
   try {
     const order = await Order.findById({ _id: id }).populate("user", "fullName email")
+    // console.log(order);
+
     return res.status(200).json(new ApiResponse(200, order, "successfully get order"))
   } catch (error) {
     throw new ApiError(500, "server error")
@@ -87,7 +91,7 @@ const getOrderById = asyncHandler(async (req, res) => {
 })
 const updateOrderStatus = asyncHandler(async (req, res) => {
   const { id, status } = req.body
-  console.log(req.body);
+  // console.log(req.body);
 
   try {
     const order = await Order.findByIdAndUpdate({ _id: id },

@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import SideBar from '../../components/admin/SideBar'
 import { useParams } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import axios from "axios";
-import baseUrl from '../../baseUrl';
+import baseUrl from "../../baseUrl"
+
 const ViewOrder = () => {
   const { id } = useParams()
   const { token } = useSelector(state => state.user)
   const [order, setOrder] = useState({})
-  const dispatch = useDispatch()
+  // console.log("order", order);
+
   useEffect(() => {
+
     async function getOrder() {
       try {
         const res = await axios.get(`${baseUrl}/api/v1/orders/${id}`, {
@@ -18,14 +21,14 @@ const ViewOrder = () => {
           },
           withCredentials: true
         })
-        dispatch(setOrder(res.data.data))
+        console.log(res.data);
+        setOrder(res.data.data)
       } catch (error) {
         console.log(error);
-
       }
     }
     getOrder()
-  }, [id, dispatch])
+  }, [id])
 
   const handleOrder = async (e) => {
     console.log(e.target.value);
@@ -43,11 +46,11 @@ const ViewOrder = () => {
     }
   }
   return (
-    order && <div className='w-full relative flex   px-2 '>
+    order && <div className='w-full relative px-2'>
       <div>
         <SideBar />
       </div>
-      <div className='m-0 mt-2 md:ml-[13vw] w-full bg-white mb-20 '>
+      <div className='m-0 mt-2 md:ml-[13vw]  flex bg-white mb-20 md:p-4  p-2'>
         <div>
           <div className='text-md font-medium text-[#AE56EF]'>Order Id: ###{order?._id}</div>
           <div>

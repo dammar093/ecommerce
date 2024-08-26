@@ -136,7 +136,7 @@ const Product = () => {
               {
                 product?.averageRating > 0 && <div className='flex items-center gap-2'>
                   <Rating rating={product?.averageRating} />
-                  <span className='text-gray-600'>({product?.averageRating})</span>
+                  <span className='text-gray-600'>({product?.reviews.length})</span>
                 </div>
               }
             </div>

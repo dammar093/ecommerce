@@ -111,7 +111,7 @@ const Orders = () => {
           orders?.data.map(order => (
             <div key={order._id} className='bg-[#f3f3f3] p-4 rounded-sm w-full mx-auto shadow-sm mt-1'>
               <div className='text-lg font-medium text-gray-600'>Order Id: ###{order._id}</div>
-              <div className='grid grid-cols-1 md:grid-flow-col-2 gap-2 mt-2'>
+              <div className='grid grid-cols-1 md:grid-flow-col-2 gap-2 mt-2 w-full'>
                 {
                   order?.orders.map(item => (
                     <div key={item.product._id}>
@@ -120,7 +120,7 @@ const Orders = () => {
                         <div className='md:w-20 md:h-20 w-[100px] h-[100px] p-1'>
                           <img className='w-full h-full object-contain' src={item?.product.image} alt="" />
                         </div>
-                        <div>
+                        <div className='w-full'>
                           <div>
                             <h1 className='text-gray-600'>{String(item?.product.title)}</h1>
                           </div>

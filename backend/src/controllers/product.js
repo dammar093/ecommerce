@@ -98,7 +98,7 @@ const getAllProducts = asyncHandler(async (req, res) => {
         return {
           ...product.toObject(),
           reviews,
-          averageRating,
+          averageRating: averageRating.toFixed(1),
         };
       })
     );
@@ -125,7 +125,7 @@ const getBestDealsProguct = asyncHandler(async (req, res) => {
         return {
           ...product.toObject(),
           reviews,
-          averageRating,
+          averageRating: averageRating.toFixed(1),
         };
       })
     );
@@ -154,7 +154,7 @@ const getHighRatedProduct = asyncHandler(async (req, res) => {
         return {
           ...product.toObject(),
           reviews,
-          averageRating,
+          averageRating: averageRating.toFixed(1),
         };
       })
     );
@@ -183,7 +183,7 @@ const getNewArrivalProducts = asyncHandler(async (req, res) => {
         return {
           ...product.toObject(),
           reviews,
-          averageRating,
+          averageRating: averageRating.toFixed(1),
         };
       })
     );
@@ -237,7 +237,7 @@ const getProductByPage = asyncHandler(async (req, res) => {
       return {
         ...product.toObject(),
         reviews,
-        averageRating,
+        averageRating: averageRating.toFixed(1),
       };
     })
   );
@@ -275,7 +275,7 @@ const getProductById = asyncHandler(async (req, res) => {
     const productData = {
       ...product.toObject(), // Convert Mongoose document to plain object
       reviews,
-      averageRating
+      averageRating: averageRating.toFixed(1),
     };
 
     return res
@@ -307,7 +307,7 @@ const getRelatedProduct = asyncHandler(async (req, res) => {
         return {
           ...product.toObject(),
           reviews,
-          averageRating,
+          averageRating: averageRating.toFixed(1),
         };
       })
     );
@@ -344,7 +344,7 @@ const getFiltredPRoducts = asyncHandler(async (req, res) => {
         return {
           ...product.toObject(),
           reviews,
-          averageRating,
+          averageRating: averageRating.toFixed(1),
         };
       })
     );
@@ -400,7 +400,7 @@ const getProductsBySearch = asyncHandler(async (req, res) => {
         return {
           ...product.toObject(),
           reviews,
-          averageRating,
+          averageRating: averageRating.toFixed(1),
         };
       })
     );
@@ -450,7 +450,7 @@ const getProductBycategory = asyncHandler(async (req, res) => {
         return {
           ...product.toObject(),
           reviews,
-          averageRating,
+          averageRating: averageRating.toFixed(1),
         };
       })
     );
@@ -488,7 +488,6 @@ const upadateProduct = asyncHandler(async (req, res) => {
     colors,
     sizes,
     description,
-    quantity,
     category,
     discount,
     id,

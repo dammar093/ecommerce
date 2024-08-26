@@ -12,6 +12,7 @@ import Pagination from '../../components/Pagination';
 import baseUrl from '../../baseUrl';
 
 const AdminOrders = () => {
+
   const [popup, setPopup] = useState(false)
   const [id, setId] = useState(null)
   const [page, setPage] = useState(1)
@@ -23,13 +24,13 @@ const AdminOrders = () => {
     document.title = "Admin Orders";
     async function getOrders() {
       try {
-        const res = await axios.get(`${baseUrl}/api/v1/orders/${page}`, {
+        const res = await axios.get(`${baseUrl}/api/v1/orders/page/${page}`, {
           headers: {
             "Authorization": `Bearer ${token}`
           },
           withCredentials: true
         })
-        console.log(res.data);
+        // console.log(res.data);
         dispatch(setOrders(res.data.data))
       } catch (error) {
         console.log(error);
@@ -74,7 +75,7 @@ const AdminOrders = () => {
                       {
                         order?.orders?.map(orderItem => (
                           <img className='md:w-10 md:h-10 h-8 w-8 rounded object-contain'
-                            src={orderItem?.product.image} alt={orderItem?.product?.title} />
+                            src={orderItem?.product.image} alt={orderItem?.product?.title} key={orderItem?.product?._id} />
                         ))
                       }
                     </td>
@@ -98,7 +99,7 @@ const AdminOrders = () => {
                     <td className='text-slate-600   '> {new Date(order?.createdAt).toUTCString()}
                     </td>
                     <td className='flex gap-1 p-2'>
-                      <Link to={`/admin-ordersByPage/${order?._id}`}><div className={"bg-[#AE56EF] text-[#f3f3f3] text-[15px] px-2  py-1 flex gap-1 rounded  items-center capitalize transition-all hover:bg-[#830ed6] w-fit"}> <FaRegEye /><span>View</span></div></Link>
+                      <Link to={`/admin-orders/${order?._id}`}><div className={"bg-[#AE56EF] text-[#f3f3f3] text-[15px] px-2  py-1 flex gap-1 rounded  items-center capitalize transition-all hover:bg-[#830ed6] w-fit"}> <FaRegEye /><span>View</span></div></Link>
                       <Button className={"bg-[red] text-[#f3f3f3] text-[15px] px-2  py-1 flex rounded  items-center capitalize transition-all hover:bg-[#932323] w-fit"}
                         onClick={() => showPopUp(order?._id)}
                       ><div className='flex items-center gap-1 '> <MdOutlineDelete /><span>Delete</span></div></Button>
@@ -109,10 +110,10 @@ const AdminOrders = () => {
             </tbody>
           </table>
         </div>
-        <Pagination total={orders?.total} url={`${baseUrl}/api/v1/ordersByPage`} handler={setOrders} setPage={setPage} page={page} items={orders?.data} />
+        <Pagination total={orders?.total} url={`${baseUrl}/api/v1/orders/page`} handler={setOrders} setPage={setPage} page={page} items={orders?.data} />
       </div>
       {
-        popup && <PopUp setPopup={setPopup} title="order" url={`${baseUrl}/api/v1/orders`} handler={removeOrder} id={id} />
+        popup && <PopUp setPopup={setPopup} title="order" url={`${baseUrl}/api/v1/orders/page`} handler={removeOrder} id={id} />
       }
     </div>
   )
