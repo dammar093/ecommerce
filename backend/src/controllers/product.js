@@ -171,7 +171,7 @@ const getHighRatedProduct = asyncHandler(async (req, res) => {
 });
 const getNewArrivalProducts = asyncHandler(async (req, res) => {
   try {
-    const products = await Product.find().sort({ discountPercentage: "desc" });
+    const products = await Product.find().sort({ createdAt: -1 });
     const productData = await Promise.all(
       products.map(async (product) => {
         const reviews = await Review.find({ product: product._id });

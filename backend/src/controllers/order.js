@@ -5,7 +5,26 @@ const Order = require("../models/order");
 const Cart = require("../models/cart");
 const { createSignature } = require("../utils/eSewaSignture");
 const { eSewaProductCode, eSewaUrl } = require("../config/config");
+const Product = require("../models/product")
 
+//getproduts
+async function getProduct(id, quantity) {
+  // console.log("id::", id);
+
+  const product = await Product.findById({ _id: id })
+  // console.log("product::", product);
+
+  updateProduct(id, quantity, product.stock)
+}
+
+async function updateProduct(id, quantity, stock) {
+  const newStock = stock - quantity;
+  await Product.findByIdAndUpdate({ _id: id }, {
+    $set: {
+      stock: newStock
+    }
+  })
+}
 //create order
 const createOrder = asyncHandler(async (req, res) => {
   const { totalAmount, products, id, contact, address } = req.body
@@ -29,7 +48,7 @@ const createOrder = asyncHandler(async (req, res) => {
     const cart = await Cart.deleteMany({ addedBy: id });
     return res.status(200).json(new ApiResponse(200, { ...order, signature: signature, url: eSewaUrl, code: eSewaProductCode }, "Order place successfuly"))
   } catch (error) {
-    console.log(error);
+    throw new ApiError(500, "problem in esewa")
 
   }
 })
@@ -47,6 +66,16 @@ const verifyEsewa = asyncHandler(async (req, res) => {
       }
     )
   }
+  const order = await Order.findById({ _id: decodedData.transaction_uuid })
+  const products = order?.orders?.map(item => {
+    const product = { id: item?.product._id, quantity: item?.product.quantity }
+    return product
+  })
+
+  products.map(product => {
+    getProduct(product.id, product.quantity)
+  })
+
   res.redirect("http://localhost:5173")
 })
 
@@ -68,7 +97,7 @@ const getAllOrders = asyncHandler(async (req, res) => {
   let skipValue = (page - 1) * pageSize;
   try {
     const total = await Order.countDocuments()
-    const orders = await Order.find({}).skip(skipValue).limit(12).populate('user', 'fullName email').exec();
+    const orders = await Order.find({}).skip(skipValue).limit(12).sort({ createdAt: -1 }).populate('user', 'fullName email').exec();
     // console.log(orders);
 
     return res.status(200).json(new ApiResponse(200, { data: orders, total }, "Get order successfuly"))
@@ -104,6 +133,7 @@ const updateOrderStatus = asyncHandler(async (req, res) => {
         new: true
       }
     )
+
     return res.status(200).json(new ApiResponse(200, order, "successfully get order"))
   } catch (error) {
     throw new ApiError(500, "server errror")

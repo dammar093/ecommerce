@@ -208,15 +208,19 @@ const Product = () => {
             </div>
 
             <div>
+
               <Button
                 type="button"
-                className="px-6 py-2 bg-[#AE56EF] 
+                className={`px-6 py-2  
                 rounded-full text-white
-                hover:bg-[#793da4] transition-all uppercase
+                ${product?.stock == 0 ? "bg-[#b985de]" : " bg-[#AE56EF] hover:bg-[#793da4] "}
+              
+                transition-all uppercase
                 flex font-semibold
                 justify-center
                 items-center
-                gap-1"
+                gap-1 `}
+                disabled={product?.stock == 0 ? true : false}
                 onClick={() => {
                   handelCart({
                     _id: product?._id || '',
