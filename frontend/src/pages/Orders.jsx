@@ -103,12 +103,12 @@ const Orders = () => {
     </div>)
   }
   return (
-    orders && <section className='w-full mt-4'>
+    orders && <section className='w-full mt-4 mb-20'>
       <h2 className='text-2xl font-medium text-gray-600'>Your Orders</h2>
       <div className='w-full mt-6'>
         {
           orders?.data.map(order => (
-            <div key={order._id} className='bg-[#f3f3f3] p-4 rounded-sm w-[90%] mx-auto shadow-sm mt-1'>
+            <div key={order._id} className='bg-[#f3f3f3] p-4 rounded-sm w-full mx-auto shadow-sm mt-1'>
               <div className='text-lg font-medium text-gray-600'>Order Id: ###{order._id}</div>
               <div className='grid grid-cols-1 md:grid-flow-col-2 gap-2 mt-2'>
                 {
