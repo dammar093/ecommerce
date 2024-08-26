@@ -23,7 +23,7 @@ const Shop = () => {
     getProducts()
   }, [dispatch, sort, setOrder, setSort, order])
   return (
-    <section className='w-full bg-white p-2 mb-[70px]'>
+    <section className='w-full  p-2 mb-[70px]'>
       <div className='w-full flex justify-between my-8'>
         <div>
           <h2 className='text-gray-600 font-medium text-2xl '>Products</h2>
