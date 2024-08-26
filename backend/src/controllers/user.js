@@ -181,7 +181,7 @@ const getAllUsers = asyncHandler(async (req, res) => {
   const total = await User.countDocuments();
   // console.log(total);
 
-  const users = await User.find().skip(skipValue).limit(12);
+  const users = await User.find().select("-password").skip(skipValue).limit(12);
   // console.log(users);
 
   return res.status(200).json(new ApiResponse(200, { data: users, total: total }, "Users fetched successfuly"));

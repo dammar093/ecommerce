@@ -19,21 +19,8 @@ const Users = () => {
   console.log("data:: ", users.data);
   useEffect(() => {
     document.title = "Users"
-    axios.get(`${baseUrl}/api/v1/users/${page}`, {
-      headers: {
-        "Authorization": `Bearer ${token}`
-      },
-      withCredentials: true
-    })
-      .then(res => {
-        // console.log(res.data.data)
-        dispatch(setUsers(res.data.data))
-      })
-      .catch(err => {
-        console.log(err);
 
-      })
-  }, [dispatch, setUsers, setPopup, popup]);
+  }, []);
 
 
   // show popup

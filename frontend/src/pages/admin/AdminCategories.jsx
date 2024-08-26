@@ -64,7 +64,7 @@ const AdminCategories = () => {
               <tr>
                 <th className='text-left px-2'>Image</th>
                 <th className='text-left px-2'>Category</th>
-                <th>Total Products</th>
+                {/* <th>Total Products</th> */}
                 <th className='px-2'>Actions</th>
               </tr>
             </thead>
@@ -72,12 +72,12 @@ const AdminCategories = () => {
               {
                 paginateCategory?.data?.map((category) => (
                   <tr className='odd:bg-white even:bg-slate-200' key={category._id}>
-                    <td className=''>
+                    <td className='px-4'>
                       <img className='md:w-10 md:h-10 h-8 w-8 rounded-full object-cover' src={category.image} alt={category.title} />
                     </td>
                     <td className='text-gray-600 font-medium text-md capitalize'>{category.title}</td>
-                    <td className='text-gray-600 font-medium text-md text-center'>120</td>
-                    <td className='px-2'>
+                    {/* <td className='text-gray-600 font-medium text-md text-center'>120</td> */}
+                    <td className='p-2 float-right'>
                       <div className='flex justify-center'>
                         <Button className={`bg-[red] text-[#f3f3f3] text-[15px] px-2  py-1 flex rounded  items-center capitalize transition-all hover:bg-[#932323] w-fit`}
                           onClick={(e) => showPopUp(e, category._id)}

@@ -36,8 +36,18 @@ const getAllProducts = asyncHandler(async (req, res) => {
   }
 });
 
+const countReview = asyncHandler(async (req, res) => {
+  try {
+    const totalReview = await Review.countDocuments()
+    return res.status(200).json(new ApiResponse(200, { total: totalReview }, "total"))
+  } catch (error) {
+    throw new ApiError(500, "server error")
+  }
+})
+
 
 module.exports = {
   getAllProducts,
-  addReview
+  addReview,
+  countReview
 }

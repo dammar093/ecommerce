@@ -63,9 +63,12 @@ const getOrderByUserId = asyncHandler(async (req, res) => {
 })
 // get All orders 
 const getAllOrders = asyncHandler(async (req, res) => {
+  const { page } = req.params
+  const pageSize = 12;
+  let skipValue = (page - 1) * pageSize;
   try {
     const total = await Order.countDocuments()
-    const orders = await Order.find({}).populate('user', 'fullName email').exec();
+    const orders = await Order.find({}).skip(skipValue).limit(12).populate('user', 'fullName email').exec();
     // console.log(orders);
 
     return res.status(200).json(new ApiResponse(200, { data: orders, total }, "Get order successfuly"))
@@ -108,9 +111,25 @@ const deleteOrder = asyncHandler(async (req, res) => {
   const { id } = req.params
   try {
     const deletedOrder = await Order.findByIdAndDelete({ _id: id })
-    return res.status(200).json(new ApiResponse(200, deleteOrder, "delete order"))
+    return res.status(200).json(new ApiResponse(200, deletedOrder, "delete order"))
   } catch (error) {
     throw new ApiError(500, "server errror")
   }
 })
-module.exports = { createOrder, verifyEsewa, getOrderByUserId, getAllOrders, getOrderById, updateOrderStatus, deleteOrder }
+
+const orderDetails = asyncHandler(async (req, res) => {
+  try {
+    const deliver = await Order.find({ orderStatus: "delivered" })
+    const pending = await Order.find({ orderStatus: "pending" })
+    const cancelled = await Order.find({ orderStatus: "cancelled" })
+    const orders = await Order.find({ paymentStatus: "paid" })
+    const totalIncome = orders.reduce((acc, order) => order.totalAmount + acc, 0)
+    // console.log(totalIncome);
+    return res.status(200).json(new ApiResponse(200, { totalSell: totalIncome, deliver: deliver.length, pending: pending.length, cancelled: cancelled.length }, "total sell"))
+  } catch (error) {
+    throw new ApiError(500, "server error")
+  }
+})
+
+
+module.exports = { createOrder, verifyEsewa, getOrderByUserId, getAllOrders, getOrderById, updateOrderStatus, deleteOrder, orderDetails }

@@ -1,13 +1,14 @@
-import {combineReducers, configureStore} from "@reduxjs/toolkit";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import poductReducer from "../features/productSlice";
 import cartReducer from "../features/cartSlice";
-import userReducer  from "../features/userSlice"
-import usersReducer  from "../features/usersSlice"
+import userReducer from "../features/userSlice"
+import usersReducer from "../features/usersSlice"
 import categoryReducer from "../features/categorySlice"
 import orderReducer from "../features/orderSlice"
-import {persistReducer,persistStore} from "redux-persist"
+import countReducer from "../features/countSlice"
+import { persistReducer, persistStore } from "redux-persist"
 import storage from "redux-persist/lib/storage";
-import {version} from "react"
+import { version } from "react"
 
 
 // const rootReducer =combineReducers({
@@ -35,13 +36,14 @@ import {version} from "react"
 // export const persistor = persistStore(store)
 
 const store = configureStore({
-  reducer:{
-    products:poductReducer,
-    cart:cartReducer,
-    user:userReducer,
-    categories:categoryReducer,
-    users:usersReducer,
-    orders:orderReducer
+  reducer: {
+    products: poductReducer,
+    cart: cartReducer,
+    user: userReducer,
+    categories: categoryReducer,
+    users: usersReducer,
+    orders: orderReducer,
+    count: countReducer
   }
 })
 

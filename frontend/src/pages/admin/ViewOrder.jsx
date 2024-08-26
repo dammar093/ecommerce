@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import SideBar from '../../components/admin/SideBar'
 import { useParams } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import axios from "axios";
 import baseUrl from '../../baseUrl';
 const ViewOrder = () => {
   const { id } = useParams()
   const { token } = useSelector(state => state.user)
   const [order, setOrder] = useState({})
+  const dispatch = useDispatch()
   useEffect(() => {
     async function getOrder() {
       try {
@@ -17,14 +18,14 @@ const ViewOrder = () => {
           },
           withCredentials: true
         })
-        setOrder(res.data.data)
+        dispatch(setOrder(res.data.data))
       } catch (error) {
         console.log(error);
 
       }
     }
     getOrder()
-  }, [id])
+  }, [id, dispatch])
 
   const handleOrder = async (e) => {
     console.log(e.target.value);
@@ -46,7 +47,7 @@ const ViewOrder = () => {
       <div>
         <SideBar />
       </div>
-      <div className='m-0 mt-2 md:ml-[13vw] w-full bg-white mb-20 py-4 px-2 '>
+      <div className='m-0 mt-2 md:ml-[13vw] w-full bg-white mb-20 '>
         <div>
           <div className='text-md font-medium text-[#AE56EF]'>Order Id: ###{order?._id}</div>
           <div>

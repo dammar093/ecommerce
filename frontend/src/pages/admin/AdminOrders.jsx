@@ -23,7 +23,7 @@ const AdminOrders = () => {
     document.title = "Admin Orders";
     async function getOrders() {
       try {
-        const res = await axios.get(`${baseUrl}/api/v1/orders`, {
+        const res = await axios.get(`${baseUrl}/api/v1/orders/${page}`, {
           headers: {
             "Authorization": `Bearer ${token}`
           },
@@ -68,9 +68,9 @@ const AdminOrders = () => {
             <tbody>
               {
                 orders?.data.map(order => (
-                  <tr className='odd:bg-white even:bg-slate-200' key={order?._id}>
-                    <td className='text-slate-600  p-2'>###{order?._id}</td>
-                    <td className='text-slate-600  p-2 flex gap-1'>
+                  <tr className='odd:bg-white even:bg-slate-200 ' key={order?._id}>
+                    <td className='text-slate-600  '>###{order?._id}</td>
+                    <td className='text-slate-600 flex items-center gap-1 p-2'>
                       {
                         order?.orders?.map(orderItem => (
                           <img className='md:w-10 md:h-10 h-8 w-8 rounded object-contain'
@@ -78,27 +78,27 @@ const AdminOrders = () => {
                         ))
                       }
                     </td>
-                    <td className='text-slate-600  p-2 '> Rs.{order?.totalAmount}
+                    <td className='text-slate-600   '> Rs.{order?.totalAmount}
                     </td>
-                    <td className={`${order?.paymentStatus !== "paid" ? "text-red-500" : "text-green-600"}  p-2 capitalize font-semibold`}>
+                    <td className={`${order?.paymentStatus !== "paid" ? "text-red-500" : "text-green-600"}   capitalize font-semibold`}>
                       {
                         order?.paymentStatus
                       }
                     </td>
-                    <td className='text-slate-600  p-2 '>
+                    <td className='text-slate-600   '>
                       {
                         order?.paymentMethod
                       }
                     </td>
-                    <td className={`${order?.orderStatus !== "delivered" ? "text-red-500" : "text-green-600"}  p-2 capitalize font-semibold`}>
+                    <td className={`${order?.orderStatus !== "delivered" ? "text-red-500" : "text-green-600"}   capitalize font-semibold`}>
                       {
                         order?.orderStatus
                       }
                     </td>
-                    <td className='text-slate-600  p-2 '> {new Date(order?.createdAt).toUTCString()}
+                    <td className='text-slate-600   '> {new Date(order?.createdAt).toUTCString()}
                     </td>
-                    <td className='flex gap-2 px-2'>
-                      <Link to={`/admin-orders/${order?._id}`}><div className={"bg-[#AE56EF] text-[#f3f3f3] text-[15px] px-2  py-1 flex gap-1 rounded  items-center capitalize transition-all hover:bg-[#830ed6] w-fit"}> <FaRegEye /><span>View</span></div></Link>
+                    <td className='flex gap-1 p-2'>
+                      <Link to={`/admin-ordersByPage/${order?._id}`}><div className={"bg-[#AE56EF] text-[#f3f3f3] text-[15px] px-2  py-1 flex gap-1 rounded  items-center capitalize transition-all hover:bg-[#830ed6] w-fit"}> <FaRegEye /><span>View</span></div></Link>
                       <Button className={"bg-[red] text-[#f3f3f3] text-[15px] px-2  py-1 flex rounded  items-center capitalize transition-all hover:bg-[#932323] w-fit"}
                         onClick={() => showPopUp(order?._id)}
                       ><div className='flex items-center gap-1 '> <MdOutlineDelete /><span>Delete</span></div></Button>
@@ -109,7 +109,7 @@ const AdminOrders = () => {
             </tbody>
           </table>
         </div>
-        <Pagination total={orders?.total} url={`${baseUrl}/api/v1/orders`} handler={setOrders} setPage={setPage} page={page} items={orders?.data} />
+        <Pagination total={orders?.total} url={`${baseUrl}/api/v1/ordersByPage`} handler={setOrders} setPage={setPage} page={page} items={orders?.data} />
       </div>
       {
         popup && <PopUp setPopup={setPopup} title="order" url={`${baseUrl}/api/v1/orders`} handler={removeOrder} id={id} />
