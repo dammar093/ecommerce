@@ -97,7 +97,11 @@ const Orders = () => {
     }))
     setErrors(prev => ({ ...prev, review: "", itemId: null }))
   }
-
+  if (orders?.data.length <= 0) {
+    return (<div className='w-full h-[80vh] flex justify-center items-center text-3xl font-semibold text-slate-600 uppercase animate-pulse'>
+      No order available
+    </div>)
+  }
   return (
     orders && <section className='w-full mt-4'>
       <h2 className='text-2xl font-medium text-gray-600'>Your Orders</h2>
