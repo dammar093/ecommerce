@@ -96,7 +96,7 @@ const AdminOrders = () => {
                     </td>
                     <td className='text-slate-600  p-2 '> {new Date(order?.createdAt).toUTCString()}
                     </td>
-                    <td className='flex gap-2'>
+                    <td className='flex gap-2 px-2'>
                       <Link to={`/admin-orders/${order?._id}`}><div className={"bg-[#AE56EF] text-[#f3f3f3] text-[15px] px-2  py-1 flex gap-1 rounded  items-center capitalize transition-all hover:bg-[#830ed6] w-fit"}> <FaRegEye /><span>View</span></div></Link>
                       <Button className={"bg-[red] text-[#f3f3f3] text-[15px] px-2  py-1 flex rounded  items-center capitalize transition-all hover:bg-[#932323] w-fit"}
                         onClick={() => showPopUp(order?._id)}
