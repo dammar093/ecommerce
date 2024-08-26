@@ -47,8 +47,9 @@ const Signup = () => {
               // console.log(data);
               axios.post(`/api/v1/users/signup`, data, {
                 headers: {
-                  "Content-Type": "multipart/form-data"
-                }
+                  "Content-Type": "multipart/form-data",
+                },
+                timeout: 6000
               })
                 .then(res => {
                   setLoading(false)

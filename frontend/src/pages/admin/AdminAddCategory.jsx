@@ -78,9 +78,9 @@ const AdminAddCategory = () => {
       <div>
         <SideBar />
       </div>
-      <div className='m-0 mt-2 md:ml-[13vw] w-full '>
+      <div className='m-0 mt-2 md:ml-[13vw] w-full bg-[#f3f3f3] py-4'>
         <h2 className='text-2xl font-semibold text-gray-600 uppercase text-center'>Add Category</h2>
-        <div className='w-full bg-[#f3f3f3] mt-3'>
+        <div className='w-full  mt-3'>
           <form className='w-full' method='post' encType='multipart/form-data' onSubmit={handleSubmit(handleCategory)}>
             <div className='w-full md:w-1/2 mx-auto'>
               <div className='w-full mx-auto'>
