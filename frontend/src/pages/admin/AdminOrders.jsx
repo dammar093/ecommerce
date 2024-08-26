@@ -9,6 +9,7 @@ import { MdOutlineDelete } from 'react-icons/md';
 import { FaRegEye } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import Pagination from '../../components/Pagination';
+import baseUrl from '../../baseUrl';
 
 const AdminOrders = () => {
   const [popup, setPopup] = useState(false)
@@ -22,7 +23,7 @@ const AdminOrders = () => {
     document.title = "Admin Orders";
     async function getOrders() {
       try {
-        const res = await axios.get("/api/v1/orders", {
+        const res = await axios.get(`${baseUrl}/api/v1/orders`, {
           headers: {
             "Authorization": `Bearer ${token}`
           },
@@ -108,10 +109,10 @@ const AdminOrders = () => {
             </tbody>
           </table>
         </div>
-        <Pagination total={orders?.total} url={`/api/v1/orders`} handler={setOrders} setPage={setPage} page={page} items={orders?.data} />
+        <Pagination total={orders?.total} url={`${baseUrl}/api/v1/orders`} handler={setOrders} setPage={setPage} page={page} items={orders?.data} />
       </div>
       {
-        popup && <PopUp setPopup={setPopup} title="order" url={`/api/v1/orders`} handler={removeOrder} id={id} />
+        popup && <PopUp setPopup={setPopup} title="order" url={`${baseUrl}/api/v1/orders`} handler={removeOrder} id={id} />
       }
     </div>
   )

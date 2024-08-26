@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setOrders } from '../features/orderSlice'
 import Button from '../components/Button'
 import { FaStar } from 'react-icons/fa6'
+import baseUrl from '../baseUrl'
 
 const Orders = () => {
   const { token } = useSelector(state => state.user)
@@ -18,7 +19,7 @@ const Orders = () => {
     document.title = "Orders"
     async function getOrders() {
       try {
-        const res = await axios.get("/api/v1/orders/user-order", {
+        const res = await axios.get(`${baseUrl}/api/v1/orders/user-order`, {
           headers: {
             "Authorization": `Bearer ${token}`
           },
@@ -46,7 +47,7 @@ const Orders = () => {
     }
 
     try {
-      await axios.post("/api/v1/reviews", {
+      await axios.post(`${baseUrl}/api/v1/reviews`, {
         product: itemId,
         review: itemReview,
         rating: itemRating,

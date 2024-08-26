@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { removeProduct, setProductsByPage } from '../../features/productSlice'
 import axios from 'axios'
 import PopUp from '../../components/PopUp'
+import baseUrl from '../../baseUrl'
 
 const AdminProducts = () => {
   const [page, setPage] = useState(1)
@@ -30,7 +31,7 @@ const AdminProducts = () => {
     document.title = "Admin Products"
     async function fechProductByPage() {
       try {
-        const res = await axios.get(`/api/v1/products/getproducts/${page}`, {
+        const res = await axios.get(`${baseUrl}/api/v1/products/getproducts/${page}`, {
           headers: {
             "Authorization": `Bearer ${token}`
           },
@@ -99,10 +100,10 @@ const AdminProducts = () => {
             </tbody>
           </table>
         </div>
-        <Pagination total={paginateProduct.total} setPage={setPage} url={`/api/v1/products/getproducts`} handler={setProductsByPage} items={paginateProduct.data} page={page} />
+        <Pagination total={paginateProduct.total} setPage={setPage} url={`${baseUrl}/api/v1/products/getproducts`} handler={setProductsByPage} items={paginateProduct.data} page={page} />
       </div>
       {
-        popup && <PopUp setPopup={setPopup} title="product" url={`/api/v1/products`} handler={removeProduct} id={id} />
+        popup && <PopUp setPopup={setPopup} title="product" url={`${baseUrl}/api/v1/products`} handler={removeProduct} id={id} />
       }
     </div>
   )

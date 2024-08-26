@@ -12,6 +12,7 @@ import Button from '../../components/Button';
 import { IoAddCircleOutline } from 'react-icons/io5';
 import { MdOutlineCancel, MdOutlineModeEditOutline } from 'react-icons/md';
 import { FaRegSave } from 'react-icons/fa';
+import baseUrl from '../../baseUrl';
 const ViewProduct = () => {
   const { register, setValue, handleSubmit, formState: { errors } } = useForm()
   const [loading, setLoading] = useState(false)
@@ -38,7 +39,7 @@ const ViewProduct = () => {
   useEffect(() => {
     async function getProduct() {
       try {
-        const res = await axios.get(`/api/v1/products/get-product/${id}`);
+        const res = await axios.get(`${baseUrl}/api/v1/products/get-product/${id}`);
         // console.log(res.data);
 
         dispatch(setProductById(res.data.data));
@@ -84,7 +85,7 @@ const ViewProduct = () => {
     // console.log(data)
     setLoading(true)
     try {
-      const res = await axios.patch(`/api/v1/products`, data, {
+      const res = await axios.patch(`${baseUrl}/api/v1/products`, data, {
         headers: {
           "Authorization": `Bearer ${token}`,
         },

@@ -8,6 +8,7 @@ import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { addUser, setToken } from './features/userSlice'
 import { setCart } from './features/cartSlice'
+import baseUrl from './baseUrl'
 const App = () => {
   const dispatch = useDispatch()
 
@@ -20,7 +21,7 @@ const App = () => {
     async function getUser() {
       try {
         if (token) {
-          const res = axios.get(`/api/v1/users/getUser`, {
+          const res = axios.get(`${baseUrl}/api/v1/users/getUser`, {
             headers: {
               Authorization: `Bearer ${token}`
             },
@@ -39,7 +40,7 @@ const App = () => {
     if (token) {
       const getAllcart = async () => {
         try {
-          const res = await axios.get("/api/v1/carts", {
+          const res = await axios.get(`${baseUrl}/api/v1/carts`, {
             headers: {
               "Authorization": `Bearer ${token}`
             }

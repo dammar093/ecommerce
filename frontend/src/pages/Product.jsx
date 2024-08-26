@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../features/cartSlice';
 import { CgShoppingCart } from "react-icons/cg";
 import { setProductById, setRelatedProduct } from '../features/productSlice';
+import baseUrl from "../baseUrl"
 import axios from 'axios';
 
 const Product = () => {
@@ -29,7 +30,7 @@ const Product = () => {
     document.title = product?.title
     async function getProduct() {
       try {
-        const res = await axios.get(`/api/v1/products/get-product/${id}`);
+        const res = await axios.get(`${baseUrl}/api/v1/products/get-product/${id}`);
         dispatch(setProductById(res.data.data));
 
         // Fetch related products after setting the product
@@ -41,7 +42,7 @@ const Product = () => {
 
     async function getRelatedProduct(category) {
       try {
-        const res = await axios.get(`/api/v1/products/related-product/${category}`);
+        const res = await axios.get(`${baseUrl}/api/v1/products/related-product/${category}`);
         dispatch(setRelatedProduct(res.data.data));
       } catch (error) {
         console.error(error);
@@ -65,7 +66,7 @@ const Product = () => {
     if (user) {
 
       try {
-        const res = await axios.post("/api/v1/carts", item, {
+        const res = await axios.post(`${baseUrl}/api/v1/carts`, item, {
           headers: {
             "Authorization": `Bearer ${token}`
           },

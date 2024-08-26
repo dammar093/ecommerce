@@ -9,6 +9,7 @@ import { useForm } from 'react-hook-form';
 import Loading from '../components/Loading';
 import Esewa from './Esewa';
 import { addOrder } from '../features/orderSlice';
+import baseUrl from '../baseUrl';
 
 
 const PlaceOrder = () => {
@@ -28,7 +29,7 @@ const PlaceOrder = () => {
 
   const deleteCart = async (id) => {
     try {
-      const res = await axios.delete(`/api/v1/carts/${id}`, {
+      const res = await axios.delete(`${baseUrl}/api/v1/carts/${id}`, {
         headers: {
           "Authorization": `Bearer ${token}`
         },
@@ -46,7 +47,7 @@ const PlaceOrder = () => {
     data.totalAmount = totalAmount;
 
     try {
-      const res = await axios.post("/api/v1/orders", data, {
+      const res = await axios.post(`${baseUrl}/api/v1/orders`, data, {
         headers: {
           "Authorization": `Bearer ${token}`
         },

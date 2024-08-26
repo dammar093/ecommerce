@@ -3,6 +3,7 @@ import SideBar from '../../components/admin/SideBar'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import axios from "axios";
+import baseUrl from '../../baseUrl';
 const ViewOrder = () => {
   const { id } = useParams()
   const { token } = useSelector(state => state.user)
@@ -10,7 +11,7 @@ const ViewOrder = () => {
   useEffect(() => {
     async function getOrder() {
       try {
-        const res = await axios.get(`/api/v1/orders/${id}`, {
+        const res = await axios.get(`${baseUrl}/api/v1/orders/${id}`, {
           headers: {
             "Authorization": `Bearer ${token}`
           },
@@ -28,7 +29,7 @@ const ViewOrder = () => {
   const handleOrder = async (e) => {
     console.log(e.target.value);
     try {
-      const res = await axios.patch("/api/v1/orders", { id: order?._id, status: e.target.value }, {
+      const res = await axios.patch(`${baseUrl}/api/v1/orders`, { id: order?._id, status: e.target.value }, {
         headers: {
           "Authorization": `Bearer ${token}`
         },

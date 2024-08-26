@@ -12,6 +12,7 @@ import { IoAddCircleOutline } from 'react-icons/io5';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { addProductToState } from '../../features/productSlice';
+import baseUrl from '../../baseUrl';
 
 const AdminAddProduct = () => {
   const { register, setValue, handleSubmit, formState: { errors } } = useForm();
@@ -101,7 +102,7 @@ const AdminAddProduct = () => {
 
     try {
       setLoading(true);
-      const res = await axios.post(`/api/v1/products`, formData, {
+      const res = await axios.post(`${baseUrl}/api/v1/products`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',

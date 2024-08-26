@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
 import { setProductsByPage } from '../features/productSlice'
 import LoaingCard from '../components/LoaingCard'
+import baseUrl from '../baseUrl';
 
 const Search = () => {
   const [page, setPage] = useState(1)
@@ -21,7 +22,7 @@ const Search = () => {
   useEffect(() => {
     document.title = q.charAt(0).toUpperCase() + q.slice(1).toLowerCase();
     async function getSearchedProducts() {
-      const res = await axios.get(`/api/v1/products/search/${q}/${sort}/${order}/${page}`)
+      const res = await axios.get(`${baseUrl}/api/v1/products/search/${q}/${sort}/${order}/${page}`)
       console.log(res.data.data);
       dispatch(setProductsByPage(res.data.data))
     }
@@ -53,7 +54,7 @@ const Search = () => {
             ))
           }
         </div>
-        <Pagination url={`/api/v1/products/search/${q}/${sort}/${order}`} handler={setProductsByPage} items={paginateProduct?.data} total={paginateProduct.total} page={page} setPage={setPage} />
+        <Pagination url={`${baseUrl}/api/v1/products/search/${q}/${sort}/${order}`} handler={setProductsByPage} items={paginateProduct?.data} total={paginateProduct.total} page={page} setPage={setPage} />
       </div>
     </section>
   )

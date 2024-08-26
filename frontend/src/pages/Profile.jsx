@@ -9,6 +9,7 @@ import { MdOutlineModeEditOutline, MdOutlineCancel } from "react-icons/md";
 import { FaRegSave } from "react-icons/fa";
 import axios from "axios"
 import { addUser } from '../features/userSlice';
+import baseUrl from '../baseUrl';
 
 
 const Profile = () => {
@@ -74,7 +75,7 @@ const Profile = () => {
   // update avatar image
   const handleAvatar = () => {
     setLoading(true)
-    axios.patch(`/api/v1/users/update-avatar`, { avatar: file }, {
+    axios.patch(`${baseUrl}/api/v1/users/update-avatar`, { avatar: file }, {
       headers: {
         "Authorization": `Bearer ${token}`,
         "Content-Type": "multipart/form-data"

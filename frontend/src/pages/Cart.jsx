@@ -9,6 +9,7 @@ import { removeFromCart, decrementQuantity, incrementQuantity, setQuntityByValue
 import EmptyCart from '../components/EmptyCart';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import baseUrl from '../baseUrl';
 const Cart = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ const Cart = () => {
   // increment quantity 
   async function increaseQuntity(id) {
     try {
-      const res = await axios.patch(`/api/v1/carts/${id}`, { flag: "increment" }, {
+      const res = await axios.patch(`${baseUrl}/api/v1/carts/${id}`, { flag: "increment" }, {
         headers: {
           "Authorization": `Bearer ${token}`
         },
@@ -41,7 +42,7 @@ const Cart = () => {
   // decrement quantity
   async function decreaseQuntity(id) {
     try {
-      const res = await axios.patch(`/api/v1/carts/${id}`, { flag: "decrement" }, {
+      const res = await axios.patch(`${baseUrl}/api/v1/carts/${id}`, { flag: "decrement" }, {
         headers: {
           "Authorization": `Bearer ${token}`
         },
@@ -57,7 +58,7 @@ const Cart = () => {
   // update quantity by value
   async function updateQuanityByValue(e, id) {
     try {
-      const res = await axios.patch(`/api/v1/carts/${id}`, { flag: "value", value: e.target.value }, {
+      const res = await axios.patch(`/${baseUrl}api/v1/carts/${id}`, { flag: "value", value: e.target.value }, {
         headers: {
           "Authorization": `Bearer ${token}`
         },
@@ -74,7 +75,7 @@ const Cart = () => {
   // delete cart
   const deleteCart = async (id) => {
     try {
-      const res = await axios.delete(`/api/v1/carts/${id}`, {
+      const res = await axios.delete(`${baseUrl}/api/v1/carts/${id}`, {
         headers: {
           "Authorization": `Bearer ${token}`
         },

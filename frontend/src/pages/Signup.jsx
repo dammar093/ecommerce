@@ -8,6 +8,7 @@ import { IoCloudUploadOutline } from "react-icons/io5";
 import avatarimg from "../assets/signin.gif"
 import axios from "axios"
 import Loading from '../components/Loading'
+import baseUrl from '../baseUrl'
 
 const Signup = () => {
 
@@ -45,7 +46,7 @@ const Signup = () => {
             try {
               data.avatar = file
               // console.log(data);
-              axios.post(`/api/v1/users/signup`, data, {
+              axios.post(`${baseUrl}/api/v1/users/signup`, data, {
                 headers: {
                   "Content-Type": "multipart/form-data",
                 },
