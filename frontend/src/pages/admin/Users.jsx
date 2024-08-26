@@ -91,12 +91,13 @@ const Users = () => {
 
             </tbody>
           </table>
-          {
-            popup && <PopUp setPopup={setPopup} title="user" url={`/api/v1/users`} handler={removeUser} id={id} />
-          }
+
         </div>
         <Pagination url={`/api/v1/users`} items={users.data} handler={setUsers} total={users.total} setPage={setPage} page={page} />
       </div>
+      {
+        popup && <PopUp setPopup={setPopup} title="user" url={`/api/v1/users`} handler={removeUser} id={id} />
+      }
     </div>
   )
 }

@@ -3,19 +3,20 @@ import SideBar from '../../components/admin/SideBar'
 import PopUp from '../../components/PopUp';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
-import { setOrders } from '../../features/orderSlice';
+import { removeOrder, setOrders } from '../../features/orderSlice';
 import Button from '../../components/Button';
 import { MdOutlineDelete } from 'react-icons/md';
 import { FaRegEye } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import Pagination from '../../components/Pagination';
 
 const AdminOrders = () => {
   const [popup, setPopup] = useState(false)
+  const [id, setId] = useState(null)
+  const [page, setPage] = useState(1)
   const { token } = useSelector(state => state.user)
   const dispatch = useDispatch()
   const { orders } = useSelector(state => state.orders)
-  console.log(orders.data);
-
 
   useEffect(() => {
     document.title = "Admin Orders";
@@ -30,18 +31,26 @@ const AdminOrders = () => {
         console.log(res.data);
         dispatch(setOrders(res.data.data))
       } catch (error) {
+        console.log(error);
 
       }
     }
     getOrders()
-  }, [token])
+  }, [token, page, id, popup])
+
+  const showPopUp = (id) => {
+    setPopup(prev => !prev)
+    // console.log(id);
+
+    setId(id)
+  }
   return (
     orders && <div className='w-full relative flex'>
       <div>
         <SideBar />
       </div>
       <div className='m-0 mt-2 md:ml-[13vw] w-full '>
-        <div className='w-full overflow-x-scroll scroll-smooth mt-3'>
+        <div className='w-full overflow-x-scroll scroll-smooth mt-3 relative'>
           <table className="table-auto min-w-[80vw] w-full border-spacing-2 px-5">
             <thead className='text-[#f3f3f3] bg-[#AE56Ef] font-medium px-5'>
               <tr>
@@ -88,9 +97,9 @@ const AdminOrders = () => {
                     <td className='text-slate-600  p-2 '> {new Date(order?.createdAt).toUTCString()}
                     </td>
                     <td className='flex gap-2'>
-                      <Link to={`/admin-orders/${order._id}`}><div className={"bg-[#AE56EF] text-[#f3f3f3] text-[15px] px-2  py-1 flex gap-1 rounded  items-center capitalize transition-all hover:bg-[#830ed6] w-fit"}> <FaRegEye /><span>View</span></div></Link>
+                      <Link to={`/admin-orders/${order?._id}`}><div className={"bg-[#AE56EF] text-[#f3f3f3] text-[15px] px-2  py-1 flex gap-1 rounded  items-center capitalize transition-all hover:bg-[#830ed6] w-fit"}> <FaRegEye /><span>View</span></div></Link>
                       <Button className={"bg-[red] text-[#f3f3f3] text-[15px] px-2  py-1 flex rounded  items-center capitalize transition-all hover:bg-[#932323] w-fit"}
-                        onClick={() => showPopUp(product._id)}
+                        onClick={() => showPopUp(order?._id)}
                       ><div className='flex items-center gap-1 '> <MdOutlineDelete /><span>Delete</span></div></Button>
                     </td>
                   </tr>
@@ -98,11 +107,12 @@ const AdminOrders = () => {
               }
             </tbody>
           </table>
-          {
-            popup && <PopUp setPopup={setPopup} title="product" url={`/api/v1/products`} handler={removeProduct} id={id} />
-          }
         </div>
+        <Pagination total={orders?.total} url={`/api/v1/orders`} handler={setOrders} setPage={setPage} page={page} items={orders?.data} />
       </div>
+      {
+        popup && <PopUp setPopup={setPopup} title="order" url={`/api/v1/orders`} handler={removeOrder} id={id} />
+      }
     </div>
   )
 }

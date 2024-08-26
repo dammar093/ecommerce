@@ -17,10 +17,13 @@ const orderSlice = createSlice({
     setOrders: (state, action) => {
       state.orders.data = action.payload.data
       state.orders.total = action.payload.total
+    },
+    removeOrder: (state, action) => {
+      state.orders.data = state.orders.data?.filter(order => order._id !== action.payload)
     }
   }
 })
 
-export const { addOrder, setOrders } = orderSlice.actions
+export const { addOrder, setOrders, removeOrder } = orderSlice.actions
 
 export default orderSlice.reducer

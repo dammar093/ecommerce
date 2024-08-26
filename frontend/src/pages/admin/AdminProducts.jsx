@@ -48,7 +48,7 @@ const AdminProducts = () => {
   }, [dispatch, setPopup, removeProduct, popup])
 
   return (
-    <div className='w-full relative flex'>
+    <div className='w-full relative flex '>
       <div>
         <SideBar />
       </div>
@@ -98,12 +98,12 @@ const AdminProducts = () => {
               }
             </tbody>
           </table>
-          {
-            popup && <PopUp setPopup={setPopup} title="product" url={`/api/v1/products`} handler={removeProduct} id={id} />
-          }
         </div>
         <Pagination total={paginateProduct.total} setPage={setPage} url={`/api/v1/products/getproducts`} handler={setProductsByPage} items={paginateProduct.data} page={page} />
       </div>
+      {
+        popup && <PopUp setPopup={setPopup} title="product" url={`/api/v1/products`} handler={removeProduct} id={id} />
+      }
     </div>
   )
 }

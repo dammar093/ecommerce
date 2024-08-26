@@ -88,12 +88,12 @@ const AdminCategories = () => {
               }
             </tbody>
           </table>
-          {
-            popup && <PopUp setPopup={setPopup} title="category" url={`/api/v1/categories/delete-category`} handler={removeCategory} id={id} />
-          }
         </div>
         <Pagination total={paginateCategory.total} url={`/api/v1/categories/getcategories`} handler={addCategoryBypage} setPage={setPage} page={page} items={paginateCategory?.data} />
       </div >
+      {
+        popup && <PopUp setPopup={setPopup} title="category" url={`/api/v1/categories/delete-category`} handler={removeCategory} id={id} />
+      }
     </div >
   )
 }

@@ -103,4 +103,14 @@ const updateOrderStatus = asyncHandler(async (req, res) => {
   }
 
 })
-module.exports = { createOrder, verifyEsewa, getOrderByUserId, getAllOrders, getOrderById, updateOrderStatus }
+
+const deleteOrder = asyncHandler(async (req, res) => {
+  const { id } = req.params
+  try {
+    const deletedOrder = await Order.findByIdAndDelete({ _id: id })
+    return res.status(200).json(new ApiResponse(200, deleteOrder, "delete order"))
+  } catch (error) {
+    throw new ApiError(500, "server errror")
+  }
+})
+module.exports = { createOrder, verifyEsewa, getOrderByUserId, getAllOrders, getOrderById, updateOrderStatus, deleteOrder }
