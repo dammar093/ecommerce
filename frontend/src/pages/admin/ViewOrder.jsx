@@ -28,7 +28,7 @@ const ViewOrder = () => {
       }
     }
     getOrder()
-  }, [id])
+  }, [id, order, token])
 
   const handleOrder = async (e) => {
     console.log(e.target.value);

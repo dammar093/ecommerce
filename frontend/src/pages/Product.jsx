@@ -27,11 +27,11 @@ const Product = () => {
   const { token } = useSelector(state => state.user)
 
   useEffect(() => {
-    document.title = product?.title
     async function getProduct() {
       try {
         const res = await axios.get(`${baseUrl}/api/v1/products/get-product/${id}`);
         dispatch(setProductById(res.data.data));
+        document.title = res?.data?.data.title
 
         // Fetch related products after setting the product
         getRelatedProduct(res.data.data.category);
