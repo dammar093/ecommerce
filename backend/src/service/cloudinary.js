@@ -1,9 +1,7 @@
 const { v2 } = require("cloudinary");
 const fs = require("fs");
-
-
 const config = require("../config/config");
-const { error } = require("console");
+
 v2.config({
     cloud_name: config.cloudinaryCloudName,
     api_key: config.cloudinaryApiKey,
@@ -11,16 +9,16 @@ v2.config({
 });
 
 const uploadOnCloudinary = async (localFilePath) => {
+    console.log("file", localFilePath);
+
     try {
         if (!localFilePath) return null
-        //upload the file on cloudinary
         const response = await v2.uploader.upload(localFilePath, {
             resource_type: "auto"
         })
-        // console.log(response);
-        // file has been uploaded successfull
-        // console.log("file is uploaded on cloudinary ", response.url);
+        console.log("response", response);
         fs.unlinkSync(localFilePath)
+
         return response;
 
     } catch (error) {
