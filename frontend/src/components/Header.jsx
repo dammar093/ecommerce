@@ -123,7 +123,7 @@ const Header = () => {
                 </div>
                 <div>
                   <NavLink className={({ isActive }) => isActive ? "text-[#AE56EF] text-sm uppercase  font-medium transition-all" : " text-[#222222] text-sm uppercase transition-all font-medium hover:text-[#AE56EF]"} to="order" >
-                    <span>Orders </span>
+                    <span>My Orders </span>
                   </NavLink>
                 </div>
 

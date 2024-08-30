@@ -56,7 +56,7 @@ export default function DropDown({ setOrder, setSort }) {
                     setOrder("asc")
                   }}
                 >
-                  Price Low to Hight
+                  Price Low to High
                 </span>
               )}
             </Menu.Item>
