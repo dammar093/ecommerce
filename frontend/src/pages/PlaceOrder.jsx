@@ -72,7 +72,7 @@ const PlaceOrder = () => {
         {
           cart.map(cartItem => {
             return (
-              <div className='bg-[#f5f5f3] flex gap-2 shadow-sm mt-1 rounded-sm p-2 relative' key={cartItem?.product._id}>
+              <div className='bg-white flex gap-2 shadow-md mt-1 rounded-sm p-2 relative' key={cartItem?.product._id}>
                 <div className='md:w-[10vw] md:h-[10vw] w-[150px] h-[150px] overflow-hidden rounded p-1'>
                   <img className='w-full h-full object-contain' src={cartItem?.product.image} alt={cartItem?.product.title} />
                 </div>
