@@ -8,8 +8,8 @@ function AnalyticalLine() {
   const isSmallScreen = useMediaQuery('(max-width:600px)');
   const isMediumScreen = useMediaQuery('(min-width:1024px) and (max-width:1024px)');
   const isLargeScreen = useMediaQuery('(min-width:960px)');
-  const sellData = [0, 0, 0, 0, 0, 0, 0, 0, totalDeliverd];
-  const incomeData = [0, 0, 0, 0, 0, 0, 0, 0, totalSell];
+  const sellData = [0, 0, 0, 0, 0, 0, 0, totalDeliverd];
+  const incomeData = [0, 0, 0, 0, 0, 0, 0, totalSell];
   const xLabels = [
     'January',
     'February',
@@ -19,7 +19,6 @@ function AnalyticalLine() {
     'June',
     'July',
     'August',
-    'September',
   ];
 
   const getChartDimensions = () => {
