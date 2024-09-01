@@ -23,7 +23,7 @@ const Card = ({ item }) => {
             Rs.{Math.round(item.price - item.price * item.discountPercentage / 100)}</span>
           <span className='text-gray-600 line-through text-[12px] '>Rs.{item.price}</span>
           {
-            item.discountPercentage > 0 && <div className='rounded text-md text-red-500'><span>-{item.discountPercentage}%</span></div>
+            item.discountPercentage > 0 && <div className='rounded text-[12px] text-red-500 bg-red-200 px-1'><span>-{item.discountPercentage}% off</span></div>
           }
         </div>
       </div>

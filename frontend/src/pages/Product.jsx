@@ -149,7 +149,7 @@ const Product = () => {
                 {Math.round(product.price - product.price * product.discountPercentage / 100)}
               </span>
               <span className='text-2xl font-medium text-gray-600 line-through'>Rs.{product.price} </span>
-              {product?.discountPercentage > 0 && <span className='text-red-500 font-semibold md:text-lg text-md'>-{product.discountPercentage}%</span>}
+              {product?.discountPercentage > 0 && <span className='text-red-500 bg-red-200 px-2 rounded font-semibold md:text-lg text-md'>-{product.discountPercentage}% of</span>}
             </div>
           </div>
           {
