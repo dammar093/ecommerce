@@ -1,0 +1,1084 @@
+[{
+  "_id": {
+    "$oid": "66cbf99058e22631ad9f620d"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66b2349ea48010549ef8b644",
+        "color": "#1d1b1b",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722954906/q9cabymtahnjuwnnczey.jpg",
+        "size": "",
+        "price": 6,
+        "quantity": 1,
+        "title": "Amazfit GTS 3 Smart Watch 42mm for Android iPhone, Alexa Built-In, GPS, 12-Day Battery Life, Fitness Sports Watch with 150 Sports Modes, AMOLED Display, Sleep Heart Rate Health Tracker, Black",
+        "brand": "GTS",
+        "category": "smart watch"
+      },
+      "addedBy": "66ae142d4a03f3daa111a834",
+      "_id": "66cbf95f58e22631ad9f620a",
+      "createdAt": "2024-08-26T03:41:19.545Z",
+      "updatedAt": "2024-08-26T03:41:19.545Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 6,
+  "contact": "9809498493",
+  "address": "Bhimdatta -14 , Tilkeni",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66ae142d4a03f3daa111a834"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "delivered",
+  "createdAt": {
+    "$date": "2024-08-26T03:42:08.257Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-27T01:00:35.817Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cbfaa058e22631ad9f6375"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66b23018a48010549ef8b60d",
+        "color": "#ea1f1f",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722953749/qo8uuldqobaeeflhyuve.jpg",
+        "size": "3xl",
+        "price": 4,
+        "quantity": 2,
+        "title": "Champion Men'S Tshirt, Classic Graphic Tshirt Soft And Comfortable T-Shirts For Men, Script Logo Reg. Or Big & Tall",
+        "brand": "Champion",
+        "category": "fashion"
+      },
+      "addedBy": "66ae142d4a03f3daa111a834",
+      "_id": "66cbfa8158e22631ad9f6369",
+      "createdAt": "2024-08-26T03:46:09.135Z",
+      "updatedAt": "2024-08-26T03:46:09.135Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 8,
+  "contact": "9809498493",
+  "address": "Bhimdatta -14 , Tilkeni",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66ae142d4a03f3daa111a834"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "delivered",
+  "createdAt": {
+    "$date": "2024-08-26T03:46:40.468Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-26T06:11:31.149Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cbfb3158e22631ad9f643a"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66b22d8d89be75e40de56668",
+        "color": "#6e6f67",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722953098/xo23v3i0hynn5qr6dced.jpg",
+        "size": "",
+        "price": 11,
+        "quantity": 1,
+        "title": "SAMSUNG Galaxy S24 Ultra Cell Phone, 256GB AI Smartphone, Unlocked Android, 50MP Zoom Camera, Long Battery Life, S Pen, US Version, 2024, Titanium Violet",
+        "brand": "Samsung",
+        "category": "mobile"
+      },
+      "addedBy": "66ae142d4a03f3daa111a834",
+      "_id": "66cbfb1e58e22631ad9f6437",
+      "createdAt": "2024-08-26T03:48:46.596Z",
+      "updatedAt": "2024-08-26T03:48:46.596Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 11,
+  "contact": "9612434312",
+  "address": "Bhimdatta -14 , Tilkeni",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66ae142d4a03f3daa111a834"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "delivered",
+  "createdAt": {
+    "$date": "2024-08-26T03:49:05.860Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-27T01:03:48.690Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cc2057cf088b035b49eaec"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66b22ee6a48010549ef8b5ea",
+        "color": "",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722953442/dzv6l0klffch8kej8hzs.jpg",
+        "size": "",
+        "price": 11,
+        "quantity": 1,
+        "title": "SAMSUNG 55-Inch Class Crystal UHD 4K DU7200 Series HDR Smart TV w/Object Tracking Sound Lite, PurColor, Motion Xcelerator, Mega Contrast, Q-Symphony (UN55DU7200, 2024 Model)",
+        "brand": "Samsung",
+        "category": "electronic"
+      },
+      "addedBy": "66cc2001cf088b035b49e99e",
+      "_id": "66cc2021cf088b035b49ea49",
+      "createdAt": "2024-08-26T06:26:41.907Z",
+      "updatedAt": "2024-08-26T06:26:41.907Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 11,
+  "contact": "9809498493",
+  "address": "Bhimdatta 18, Kanchanpur",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66cc2001cf088b035b49e99e"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "delivered",
+  "createdAt": {
+    "$date": "2024-08-26T06:27:35.944Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-26T06:29:12.559Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cc2184cf088b035b49edee"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66b369a02e5062b9acaa89fb",
+        "color": "",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723034013/feajvjt73lxe0ypzh6ms.jpg",
+        "size": "",
+        "price": 20,
+        "quantity": 1,
+        "title": "Cycle",
+        "brand": "Huffy",
+        "category": "cycle"
+      },
+      "addedBy": "66cc2001cf088b035b49e99e",
+      "_id": "66cc217bcf088b035b49edeb",
+      "createdAt": "2024-08-26T06:32:27.615Z",
+      "updatedAt": "2024-08-26T06:32:27.615Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 20,
+  "contact": "9809498493",
+  "address": "Kanchanpur, Nepal",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66cc2001cf088b035b49e99e"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "delivered",
+  "createdAt": {
+    "$date": "2024-08-26T06:32:36.824Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-26T09:58:37.541Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cc21b7cf088b035b49eea2"
+  },
+  "orders": [
+    {
+      "_id": "66cbfb9b58e22631ad9f6578",
+      "product": {
+        "_id": "66b235b5a48010549ef8b655",
+        "color": "",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722955186/bwhioifc9oa6iwpkrcga.jpg",
+        "size": "",
+        "price": 4,
+        "quantity": 2,
+        "title": "Nike Air Jordan 4 Retro Big Kids",
+        "brand": "Nike",
+        "category": "shoes"
+      },
+      "addedBy": "66ae142d4a03f3daa111a834",
+      "createdAt": "2024-08-26T03:50:51.750Z",
+      "updatedAt": "2024-08-26T03:50:51.750Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 8,
+  "contact": "9809498493",
+  "address": "Kanchanpur, Nepal",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66cc2001cf088b035b49e99e"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "delivered",
+  "createdAt": {
+    "$date": "2024-08-26T06:33:27.927Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-27T01:04:08.254Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cc2212cf088b035b49f0b9"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66b36d702e5062b9acaa8ae6",
+        "color": "",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723034990/c4ittltzo4qbtvf1mo5b.jpg",
+        "size": "",
+        "price": 4,
+        "quantity": 1,
+        "title": "Java for Web Development: Create Full-Stack Java Applications with Servlets, JSP Pages, MVC Pattern and Database Connectivity (English Edition)",
+        "brand": "Java",
+        "category": "stationary"
+      },
+      "addedBy": "66cc2001cf088b035b49e99e",
+      "_id": "66cc220ccf088b035b49f0b6",
+      "createdAt": "2024-08-26T06:34:52.399Z",
+      "updatedAt": "2024-08-26T06:34:52.399Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 4,
+  "contact": "9809498493",
+  "address": "Kanchanpur, Nepal",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66cc2001cf088b035b49e99e"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "delivered",
+  "createdAt": {
+    "$date": "2024-08-26T06:34:58.592Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-26T09:57:43.201Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cc2255cf088b035b49f214"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66b36e9f2e5062b9acaa8b54",
+        "color": "",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723035292/l1wlh9us70ernojqtj2f.jpg",
+        "size": "",
+        "price": 5,
+        "quantity": 1,
+        "title": "Nutella Biscuits, 20 Count Cookies, Hazelnut Spread with Cocoa, Kids Snacks, 9.7 oz​",
+        "brand": "Nutella",
+        "category": "grocery"
+      },
+      "addedBy": "66cc2001cf088b035b49e99e",
+      "_id": "66cc224dcf088b035b49f211",
+      "createdAt": "2024-08-26T06:35:57.942Z",
+      "updatedAt": "2024-08-26T06:35:57.942Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 5,
+  "contact": "9809498493",
+  "address": "Bhimdatta 18, Kanchanpur",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66cc2001cf088b035b49e99e"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "delivered",
+  "createdAt": {
+    "$date": "2024-08-26T06:36:05.160Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-27T01:04:27.082Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cc22a3cf088b035b49f367"
+  },
+  "orders": [
+    {
+      "_id": "66cbfb9b58e22631ad9f6578",
+      "product": {
+        "_id": "66b235b5a48010549ef8b655",
+        "color": "",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722955186/bwhioifc9oa6iwpkrcga.jpg",
+        "size": "",
+        "price": 4,
+        "quantity": 1,
+        "title": "Nike Air Jordan 4 Retro Big Kids",
+        "brand": "Nike",
+        "category": "shoes"
+      },
+      "addedBy": "66ae142d4a03f3daa111a834",
+      "createdAt": "2024-08-26T03:50:51.750Z",
+      "updatedAt": "2024-08-26T03:50:51.750Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 4,
+  "contact": "9809498493",
+  "address": "Bhimdatta -14 , Tilkeni",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66ae142d4a03f3daa111a834"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "delivered",
+  "createdAt": {
+    "$date": "2024-08-26T06:37:23.847Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-27T01:04:49.660Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cc2302cf088b035b49f570"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66b36cfa2e5062b9acaa8acb",
+        "color": "",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723034873/flz7vgiwilf1jw2hjxrd.jpg",
+        "size": "",
+        "price": 5,
+        "quantity": 1,
+        "title": "Beginning Node.js, Express & MongoDB Development",
+        "brand": "Node.Js",
+        "category": "stationary"
+      },
+      "addedBy": "66aba658f82c2557d15208c0",
+      "_id": "66cc22f9cf088b035b49f56d",
+      "createdAt": "2024-08-26T06:38:49.944Z",
+      "updatedAt": "2024-08-26T06:38:49.944Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 5,
+  "contact": "9809498493",
+  "address": "Bhimdatta 18, Kanchanpur",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66aba658f82c2557d15208c0"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "delivered",
+  "createdAt": {
+    "$date": "2024-08-26T06:38:58.285Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-27T01:05:07.086Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cc2375cf088b035b49f9a9"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66b2349ea48010549ef8b644",
+        "color": "#e2eec9",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722954906/q9cabymtahnjuwnnczey.jpg",
+        "size": "",
+        "price": 6,
+        "quantity": 1,
+        "title": "Amazfit GTS 3 Smart Watch 42mm for Android iPhone, Alexa Built-In, GPS, 12-Day Battery Life, Fitness Sports Watch with 150 Sports Modes, AMOLED Display, Sleep Heart Rate Health Tracker, Black",
+        "brand": "GTS",
+        "category": "smart watch"
+      },
+      "addedBy": "66aba658f82c2557d15208c0",
+      "_id": "66cc236dcf088b035b49f9a6",
+      "createdAt": "2024-08-26T06:40:45.332Z",
+      "updatedAt": "2024-08-26T06:40:45.332Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 6,
+  "contact": "9809498493",
+  "address": "Bhimdatta 18, Kanchanpur",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66aba658f82c2557d15208c0"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "delivered",
+  "createdAt": {
+    "$date": "2024-08-26T06:40:53.661Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-27T01:05:36.300Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cc2423cf088b035b49fc44"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66b3700d2e5062b9acaa8bd0",
+        "color": "",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723035658/xdmxjfadfsylaqmjexi1.jpg",
+        "size": "",
+        "price": 17,
+        "quantity": 1,
+        "title": "Keyboard",
+        "brand": "MageGee",
+        "category": "laptop"
+      },
+      "addedBy": "66cc2001cf088b035b49e99e",
+      "_id": "66cc241dcf088b035b49fc41",
+      "createdAt": "2024-08-26T06:43:41.805Z",
+      "updatedAt": "2024-08-26T06:43:41.805Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 17,
+  "contact": "9809498493",
+  "address": "Kanchanpur, Nepal",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66cc2001cf088b035b49e99e"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "delivered",
+  "createdAt": {
+    "$date": "2024-08-26T06:43:47.069Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-27T01:06:30.010Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cc2456cf088b035b49fd0b"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66b36de52e5062b9acaa8b29",
+        "color": "",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723035107/ofwuzvefckm9sntyy0gz.jpg",
+        "size": "",
+        "price": 14,
+        "quantity": 1,
+        "title": "Iberia Basmati Rice Jar, 2 Pounds, Extra Long Grain, Naturally Aged Indian White Basmati Rice, Natural Basmati Rice in Food Grade Jar.",
+        "brand": "Basmati",
+        "category": "grocery"
+      },
+      "addedBy": "66cc2001cf088b035b49e99e",
+      "_id": "66cc2450cf088b035b49fd08",
+      "createdAt": "2024-08-26T06:44:32.477Z",
+      "updatedAt": "2024-08-26T06:44:32.477Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 14,
+  "contact": "9809498493",
+  "address": "Kanchanpur, Nepal",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66cc2001cf088b035b49e99e"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "delivered",
+  "createdAt": {
+    "$date": "2024-08-26T06:44:38.332Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-27T01:06:40.802Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cc6fe8faa91aa83f808e6e"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66cc461e5f306228ce66e3f0",
+        "color": "",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724663322/wkufu9ckfqg9sgigofmx.jpg",
+        "size": "",
+        "price": 4,
+        "quantity": 1,
+        "title": "Sari",
+        "brand": "Grater",
+        "category": "sari"
+      },
+      "addedBy": "66aba658f82c2557d15208c0",
+      "_id": "66cc6fd4faa91aa83f808d81",
+      "createdAt": "2024-08-26T12:06:44.045Z",
+      "updatedAt": "2024-08-26T12:06:44.045Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 4,
+  "contact": "9809498493",
+  "address": "Bhimdatta 18, Kanchanpur",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66aba658f82c2557d15208c0"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "pending",
+  "createdAt": {
+    "$date": "2024-08-26T12:07:04.028Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-26T12:07:33.124Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cc721f16ba9eb2cff2319f"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66cc7158336829341af108c6",
+        "color": "",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724674388/bhtdjsjoo2vjvh97jtwp.jpg",
+        "size": "",
+        "price": 7,
+        "quantity": 1,
+        "title": "Mixing Bowls with Airtight Lids Set, 26PCS Stainless Steel Khaki Bowls with Grater Attachments, Non-Slip Bottoms & Kitchen",
+        "brand": "Huffy",
+        "category": "kitchen"
+      },
+      "addedBy": "66aba658f82c2557d15208c0",
+      "_id": "66cc721216ba9eb2cff2319c",
+      "createdAt": "2024-08-26T12:16:18.608Z",
+      "updatedAt": "2024-08-26T12:16:18.608Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 7,
+  "contact": "9809498493",
+  "address": "Bhimdatta 18, Kanchanpur",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66aba658f82c2557d15208c0"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "pending",
+  "createdAt": {
+    "$date": "2024-08-26T12:16:31.854Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-26T12:16:59.135Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cee4f033184a27956b92c4"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66b36aba2e5062b9acaa8a24",
+        "color": "",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723034294/y57n6bkrgl7zbbv8sgna.jpg",
+        "size": "",
+        "price": 17,
+        "quantity": 1,
+        "title": "Keyboard",
+        "brand": "MageGee",
+        "category": "laptop"
+      },
+      "addedBy": "66aba658f82c2557d15208c0",
+      "_id": "66cee49f33184a27956b9088",
+      "createdAt": "2024-08-28T08:49:35.101Z",
+      "updatedAt": "2024-08-28T08:49:35.101Z",
+      "__v": 0
+    },
+    {
+      "product": {
+        "_id": "66b2349ea48010549ef8b644",
+        "color": "#1d1b1b",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722954906/q9cabymtahnjuwnnczey.jpg",
+        "size": "",
+        "price": 6,
+        "quantity": 1,
+        "title": "Amazfit GTS 3 Smart Watch 42mm for Android iPhone, Alexa Built-In, GPS, 12-Day Battery Life, Fitness Sports Watch with 150 Sports Modes, AMOLED Display, Sleep Heart Rate Health Tracker, Black",
+        "brand": "GTS",
+        "category": "smart watch"
+      },
+      "addedBy": "66aba658f82c2557d15208c0",
+      "_id": "66cee4a533184a27956b914c",
+      "createdAt": "2024-08-28T08:49:41.564Z",
+      "updatedAt": "2024-08-28T08:49:41.564Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 23,
+  "contact": "9809498493",
+  "address": "Bhimdatta 18, Kanchanpur",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66aba658f82c2557d15208c0"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "pending",
+  "createdAt": {
+    "$date": "2024-08-28T08:50:56.427Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-28T08:52:59.830Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cee7a933184a27956b9d02"
+  },
+  "orders": [
+    {
+      "_id": "66cee77b33184a27956b9c47",
+      "product": {
+        "_id": "66b235b5a48010549ef8b655",
+        "color": "",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722955186/bwhioifc9oa6iwpkrcga.jpg",
+        "size": "",
+        "price": 4,
+        "quantity": 1,
+        "title": "Nike Air Jordan 4 Retro Big Kids",
+        "brand": "Nike",
+        "category": "shoes"
+      },
+      "addedBy": "66aba658f82c2557d15208c0",
+      "createdAt": "2024-08-28T09:01:47.964Z",
+      "updatedAt": "2024-08-28T09:01:47.964Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 4,
+  "contact": "9809498493",
+  "address": "Bhimdatta 18, Kanchanpur",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66aba658f82c2557d15208c0"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "pending",
+  "createdAt": {
+    "$date": "2024-08-28T09:02:33.598Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-28T09:04:16.475Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d03816294fe66de8173737"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66cf008fec7b4bbeb67bc324",
+        "color": "",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724842124/z5dcgous6jronipczx0g.jpg",
+        "size": "",
+        "price": 6,
+        "quantity": 1,
+        "title": "EatNeat 12 Pc Colorful Kitchen Knife Set - Camper Must Haves 5 Stainless Steel Knives with Safety Sheaths 5 pc Cutting Board and Kitchen Knife Set",
+        "brand": "EatNeat ",
+        "category": "kitchen"
+      },
+      "addedBy": "66ae142d4a03f3daa111a834",
+      "_id": "66d037fd294fe66de8173728",
+      "createdAt": "2024-08-29T08:57:33.998Z",
+      "updatedAt": "2024-08-29T08:57:33.998Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 6,
+  "contact": "9865816176",
+  "address": "mnr 18",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66ae142d4a03f3daa111a834"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "delivered",
+  "createdAt": {
+    "$date": "2024-08-29T08:57:58.504Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-29T08:59:28.849Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d038e0294fe66de8175eed"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66cefc25ec7b4bbeb67bb3e6",
+        "color": "#53c1b4",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724840993/gz6wiljljjs1nvewmnog.jpg",
+        "size": "",
+        "price": 16,
+        "quantity": 1,
+        "title": "LUCI Backpack Purse for Women Large Womens Backpack Leather Travel Backpack Fashion Backpack Purse Designer Ladies Shoulder Bags with Tassel Two-toned Brown",
+        "brand": "Cluci",
+        "category": "bag"
+      },
+      "addedBy": "66ae142d4a03f3daa111a834",
+      "_id": "66d038bd294fe66de8175eea",
+      "createdAt": "2024-08-29T09:00:45.525Z",
+      "updatedAt": "2024-08-29T09:00:45.525Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 16,
+  "contact": "9865816176",
+  "address": "mnr 15",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66ae142d4a03f3daa111a834"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "pending",
+  "createdAt": {
+    "$date": "2024-08-29T09:01:20.568Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-29T09:02:05.309Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d25a29e736dcdc3958b877"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66cf01d7ec7b4bbeb67bc843",
+        "color": "#262121",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724842451/v30wfvqltz93v82js3cc.webp",
+        "size": "",
+        "price": 21,
+        "quantity": 1,
+        "title": "Apple Watch Series 9 [GPS 41mm] Smartwatch with Pink Aluminum Case with Pink Sport Loop. Fitness Tracker, Blood Oxygen & ECG Apps, Always-On Retina Display, Carbon Neutral",
+        "brand": "Apple",
+        "category": "smart watch"
+      },
+      "addedBy": "66aba658f82c2557d15208c0",
+      "_id": "66d25a1ee736dcdc3958b874",
+      "createdAt": "2024-08-30T23:47:42.217Z",
+      "updatedAt": "2024-08-30T23:47:42.217Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 21,
+  "contact": "9809498493",
+  "address": "Bhimdatta 18, Kanchanpur",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66aba658f82c2557d15208c0"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "delivered",
+  "createdAt": {
+    "$date": "2024-08-30T23:47:53.492Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-30T23:49:19.622Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d294db8e82c357d8c00bf8"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66cefe24ec7b4bbeb67bb831",
+        "color": "",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724841504/ffjn1ebdgfbv4knqdtr1.jpg",
+        "size": "",
+        "price": 38,
+        "quantity": 1,
+        "title": "Google Pixel 8 Pro - Unlocked Android Smartphone with Telephoto Lens and Super Actua Display - 24-Hour Battery - Bay - 128 GB",
+        "brand": "Google Pixel",
+        "category": "mobile"
+      },
+      "addedBy": "66ae142d4a03f3daa111a834",
+      "_id": "66d294ca8e82c357d8c00bf5",
+      "createdAt": "2024-08-31T03:58:02.507Z",
+      "updatedAt": "2024-08-31T03:58:02.507Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 38,
+  "contact": "9809498493",
+  "address": "Bhimdatta -14 , Tilkeni",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66ae142d4a03f3daa111a834"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "delivered",
+  "createdAt": {
+    "$date": "2024-08-31T03:58:19.458Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-31T03:59:28.775Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d298408e82c357d8c0f82c"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66cefee0ec7b4bbeb67bba48",
+        "color": "#1a1919",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724841692/vkfxqgg5ntn0ixcpjtug.jpg",
+        "size": "",
+        "price": 9,
+        "quantity": 1,
+        "title": "FURTALK Unisex Vintage Washed Unstructured Baseball Cap 100% Washed Cotton Soft Cap Adjustable Unisex Baseball Hat Dad Hat",
+        "brand": "Furtalk",
+        "category": "cap"
+      },
+      "addedBy": "66d297f38e82c357d8c0f719",
+      "_id": "66d298238e82c357d8c0f829",
+      "createdAt": "2024-08-31T04:12:19.222Z",
+      "updatedAt": "2024-08-31T04:12:19.222Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 9,
+  "contact": "9809498493",
+  "address": "Janjyoti",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66d297f38e82c357d8c0f719"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "delivered",
+  "createdAt": {
+    "$date": "2024-08-31T04:12:48.625Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-31T04:14:22.599Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d299cd8e82c357d8c15cb7"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66cefc25ec7b4bbeb67bb3e6",
+        "color": "#1a1919",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724840993/gz6wiljljjs1nvewmnog.jpg",
+        "size": "",
+        "price": 16,
+        "quantity": 2,
+        "title": "LUCI Backpack Purse for Women Large Womens Backpack Leather Travel Backpack Fashion Backpack Purse Designer Ladies Shoulder Bags with Tassel Two-toned Brown",
+        "brand": "Cluci",
+        "category": "bag"
+      },
+      "addedBy": "66d297f38e82c357d8c0f719",
+      "_id": "66d299ab8e82c357d8c15cb1",
+      "createdAt": "2024-08-31T04:18:51.154Z",
+      "updatedAt": "2024-08-31T04:18:51.154Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 32,
+  "contact": "9809498493",
+  "address": "Janyoti",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66d297f38e82c357d8c0f719"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "delivered",
+  "createdAt": {
+    "$date": "2024-08-31T04:19:25.783Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-31T04:20:50.615Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d313fe83745bc9238ba16f"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66d313ce83745bc9238b9f16",
+        "color": "",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1725109194/igwr31vsdwx1sk6pjcod.jpg",
+        "size": "",
+        "price": 160,
+        "quantity": 1,
+        "title": "Rolex",
+        "brand": "Rolex",
+        "category": "watch"
+      },
+      "addedBy": "66d297f38e82c357d8c0f719",
+      "_id": "66d313ec83745bc9238ba16c",
+      "createdAt": "2024-08-31T13:00:28.546Z",
+      "updatedAt": "2024-08-31T13:00:28.546Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 160,
+  "contact": "9865816176",
+  "address": "Janjyoti",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66d297f38e82c357d8c0f719"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "delivered",
+  "createdAt": {
+    "$date": "2024-08-31T13:00:46.890Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-31T13:03:52.811Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d3146a83745bc9238ba648"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66cefe24ec7b4bbeb67bb831",
+        "color": "",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724841504/ffjn1ebdgfbv4knqdtr1.jpg",
+        "size": "",
+        "price": 38,
+        "quantity": 1,
+        "title": "Google Pixel 8 Pro - Unlocked Android Smartphone with Telephoto Lens and Super Actua Display - 24-Hour Battery - Bay - 128 GB",
+        "brand": "Google Pixel",
+        "category": "mobile"
+      },
+      "addedBy": "66d297f38e82c357d8c0f719",
+      "_id": "66d3145d83745bc9238ba645",
+      "createdAt": "2024-08-31T13:02:21.847Z",
+      "updatedAt": "2024-08-31T13:02:21.847Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 38,
+  "contact": "9865816176",
+  "address": "Janjyoti",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66d297f38e82c357d8c0f719"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "delivered",
+  "createdAt": {
+    "$date": "2024-08-31T13:02:34.449Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-31T13:03:43.081Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d314dd83745bc9238bc1e5"
+  },
+  "orders": [
+    {
+      "product": {
+        "_id": "66b229b51806f7ca096e03fb",
+        "color": "",
+        "image": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722952113/yzgkn1dlqx5mcsekeuww.jpg",
+        "size": "",
+        "price": 7,
+        "quantity": 1,
+        "title": "gloo 3.2 Cu.Ft. Single Door Compact Refrigerator with Freezer - Slide Out Glass Shelf, Perfect for Homes, Offices, Dorms - Black",
+        "brand": "igloo",
+        "category": "electronic"
+      },
+      "addedBy": "66d297f38e82c357d8c0f719",
+      "_id": "66d314d183745bc9238bc1e2",
+      "createdAt": "2024-08-31T13:04:17.574Z",
+      "updatedAt": "2024-08-31T13:04:17.574Z",
+      "__v": 0
+    }
+  ],
+  "totalAmount": 7,
+  "contact": "9865816176",
+  "address": "Janyoti",
+  "paymentStatus": "paid",
+  "user": {
+    "$oid": "66d297f38e82c357d8c0f719"
+  },
+  "paymentMethod": "esewa",
+  "orderStatus": "delivered",
+  "createdAt": {
+    "$date": "2024-08-31T13:04:29.535Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-31T13:05:11.514Z"
+  },
+  "__v": 0
+}]

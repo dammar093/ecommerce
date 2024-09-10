@@ -1,0 +1,95 @@
+[{
+  "_id": {
+    "$oid": "66aba658f82c2557d15208c0"
+  },
+  "fullName": "Dammar Singh Rana",
+  "email": "dammarrana093@gmail.com",
+  "username": "dyams093",
+  "password": "$2b$10$7jK5YLcvg9BV708hzcDhxekyMRds97PfvhAujmDAtYq.BUUL2pa3W",
+  "avatar": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722526880/h5lg3inkwkvkunbgvdcu.jpg",
+  "avatarId": "h5lg3inkwkvkunbgvdcu",
+  "role": "admin",
+  "createdAt": {
+    "$date": "2024-08-01T15:14:32.798Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-09T12:56:51.498Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ae142d4a03f3daa111a834"
+  },
+  "fullName": "Birendra Singh Dhami",
+  "email": "bire093@gmail.com",
+  "username": "bire093",
+  "password": "$2b$10$aykUy5o05jWdSVE6m3PrfOv2Bj8FNT/q/BZysURLkGWkFA8E98LnW",
+  "avatar": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722684462/b4p7rlj9renhkrazju72.jpg",
+  "avatarId": "b4p7rlj9renhkrazju72",
+  "role": "user",
+  "createdAt": {
+    "$date": "2024-08-03T11:27:41.845Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-03T11:27:41.845Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66aecd8799ee6d276b5410f0"
+  },
+  "fullName": "Mahima Panta",
+  "email": "mahi12@gmail.com",
+  "username": "mahima pant",
+  "password": "$2b$10$1LSwNhX9ZRegCYgbDSPBou4Pem4sOYTURXazpGdVLVkwGRIrEVyT2",
+  "avatar": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722731911/rnxcuycaidhsjejvm9y1.jpg",
+  "avatarId": "rnxcuycaidhsjejvm9y1",
+  "role": "user",
+  "createdAt": {
+    "$date": "2024-08-04T00:38:31.070Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-04T00:38:31.070Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cc2001cf088b035b49e99e"
+  },
+  "fullName": "Deepak Raj Pandey",
+  "email": "deepak093@gmail.com",
+  "username": "deepak093",
+  "password": "$2b$10$S6DT1fhMLqGLJaJQ3t6/nOoyUaNELsQ635VxtGV2q2mgpPA0ptU3S",
+  "avatar": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724653567/wygpdevq2axlkz1riyfm.jpg",
+  "avatarId": "wygpdevq2axlkz1riyfm",
+  "role": "user",
+  "createdAt": {
+    "$date": "2024-08-26T06:26:09.805Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-26T06:26:09.805Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d297f38e82c357d8c0f719"
+  },
+  "fullName": "Bharat Joshi",
+  "email": "bharat093@gmail.com",
+  "username": "bhaarat",
+  "password": "$2b$10$qssXjQ7rqk2KvNL2cslal.5gqGP169wFfsHyuphD4S/TnCfzboLwK",
+  "avatar": "https://res.cloudinary.com/dn6jddyjl/image/upload/v1725109219/i917fqfxix6oirn6xrap.jpg",
+  "avatarId": "i917fqfxix6oirn6xrap",
+  "role": "user",
+  "createdAt": {
+    "$date": "2024-08-31T04:11:31.232Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-31T13:00:20.336Z"
+  },
+  "__v": 0
+}]

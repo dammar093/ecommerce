@@ -1,0 +1,889 @@
+[{
+  "_id": {
+    "$oid": "66b229b51806f7ca096e03fb"
+  },
+  "title": "gloo 3.2 Cu.Ft. Single Door Compact Refrigerator with Freezer - Slide Out Glass Shelf, Perfect for Homes, Offices, Dorms - Black",
+  "price": 9,
+  "discountPercentage": 20,
+  "description": "The Gloo 3.2 Cu.Ft. Single Door Compact Refrigerator with Freezer is the ideal solution for homes, offices, and dorms. Featuring a sleek black design, it includes a slide-out glass shelf for flexible storage, making it easy to organize your food and beverages. The integrated freezer compartment offers added convenience for frozen items. Compact yet spacious, this refrigerator combines functionality and style, fitting perfectly into any small space while ensuring your essentials stay cool and fresh.",
+  "colors": [],
+  "sizes": [],
+  "brand": "igloo",
+  "stock": 19,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722952113/yzgkn1dlqx5mcsekeuww.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722952114/tfvxxq6dthqyt2hd6kb2.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722952115/vukzmolddshqcnvpbh9r.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722952116/slz5ox36v9vanhf3isn7.jpg"
+  ],
+  "imagesId": [
+    "yzgkn1dlqx5mcsekeuww",
+    "tfvxxq6dthqyt2hd6kb2",
+    "vukzmolddshqcnvpbh9r",
+    "slz5ox36v9vanhf3isn7"
+  ],
+  "category": "electronic",
+  "createdAt": {
+    "$date": "2024-08-06T13:48:37.136Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-31T13:04:54.723Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b22d8d89be75e40de56668"
+  },
+  "title": "SAMSUNG Galaxy S24 Ultra Cell Phone, 256GB AI Smartphone, Unlocked Android, 50MP Zoom Camera, Long Battery Life, S Pen, US Version, 2024, Titanium Violet",
+  "price": 12,
+  "discountPercentage": 12,
+  "description": "The SAMSUNG Galaxy S24 Ultra is a powerhouse AI smartphone with 256GB of storage, featuring a stunning Titanium Violet finish. Unlocked for flexibility, it boasts a 50MP zoom camera for exceptional photography, a long-lasting battery for all-day use, and the convenience of the S Pen. Released in 2024, this US version combines cutting-edge technology and sleek design, perfect for any tech enthusiast.",
+  "colors": [
+    "#9b9292",
+    "#ccd2b6",
+    "#6e6f67"
+  ],
+  "sizes": [],
+  "brand": "Samsung",
+  "stock": 10,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722953098/xo23v3i0hynn5qr6dced.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722953099/u2duojvj5zjbpm5itqxa.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722953100/poqakn6rrokiy4idlw6g.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722953101/u2ih9ry9ggw6qm5nbvmj.jpg"
+  ],
+  "imagesId": [
+    "xo23v3i0hynn5qr6dced",
+    "u2duojvj5zjbpm5itqxa",
+    "poqakn6rrokiy4idlw6g",
+    "u2ih9ry9ggw6qm5nbvmj"
+  ],
+  "category": "mobile",
+  "createdAt": {
+    "$date": "2024-08-06T14:05:01.944Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-06T14:05:01.944Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b22ee6a48010549ef8b5ea"
+  },
+  "title": "SAMSUNG 55-Inch Class Crystal UHD 4K DU7200 Series HDR Smart TV w/Object Tracking Sound Lite, PurColor, Motion Xcelerator, Mega Contrast, Q-Symphony (UN55DU7200, 2024 Model)",
+  "price": 13,
+  "discountPercentage": 12,
+  "description": "\r\nSAMSUNG 55-Inch Class Crystal UHD 4K DU7200 Series HDR Smart TV Description\r\n\r\nThe SAMSUNG 55-Inch Class Crystal UHD 4K DU7200 Series HDR Smart TV offers an immersive viewing experience with its vibrant PurColor technology and crisp 4K resolution. Featuring Object Tracking Sound Lite, it delivers dynamic audio that follows the action on-screen. The Motion Xcelerator ensures smooth, lag-free visuals for fast-paced scenes, while Mega Contrast enhances depth and detail. Q-Symphony harmonizes the TV and soundbar for a superior audio experience. Sleek and modern, this 2024 model brings cutting-edge entertainment to your living room.",
+  "colors": [],
+  "sizes": [],
+  "brand": "Samsung",
+  "stock": 12,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722953442/dzv6l0klffch8kej8hzs.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722953443/vg8jjy2ytovjawwbgr43.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722953444/fakaoe7hs4xjqpn1ixci.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722953446/etppzekws8ezj7hs6fch.jpg"
+  ],
+  "imagesId": [
+    "dzv6l0klffch8kej8hzs",
+    "vg8jjy2ytovjawwbgr43",
+    "fakaoe7hs4xjqpn1ixci",
+    "etppzekws8ezj7hs6fch"
+  ],
+  "category": "electronic",
+  "createdAt": {
+    "$date": "2024-08-06T14:10:46.777Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-06T14:10:46.777Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b23018a48010549ef8b60d"
+  },
+  "title": "Champion Men'S Tshirt, Classic Graphic Tshirt Soft And Comfortable T-Shirts For Men, Script Logo Reg. Or Big & Tall",
+  "price": 4,
+  "discountPercentage": 10,
+  "description": "Elevate your casual style with the Champion Men's Classic Graphic T-Shirt. Crafted from soft, comfortable fabric, this tee features a timeless script logo and comes in regular or big & tall sizes. Perfect for everyday wear, it combines classic design with a relaxed fit, making it an essential addition to any wardrobe.",
+  "colors": [
+    "#080808",
+    "#ea1f1f",
+    "#55ab49",
+    "#a59393"
+  ],
+  "sizes": [
+    "2xl",
+    "xl",
+    "3xl",
+    "4xl"
+  ],
+  "brand": "Champion",
+  "stock": 2,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722953749/qo8uuldqobaeeflhyuve.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722953750/pgzhbjdzhc7luijqufpr.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722953751/pzc5xuhdnp8ezxpebiwi.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722953752/erhwiyjh6ss9onvuuifg.jpg"
+  ],
+  "imagesId": [
+    "qo8uuldqobaeeflhyuve",
+    "pgzhbjdzhc7luijqufpr",
+    "pzc5xuhdnp8ezxpebiwi",
+    "erhwiyjh6ss9onvuuifg"
+  ],
+  "category": "fashion",
+  "createdAt": {
+    "$date": "2024-08-06T14:15:52.958Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-12T15:14:48.934Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b2349ea48010549ef8b644"
+  },
+  "title": "Amazfit GTS 3 Smart Watch 42mm for Android iPhone, Alexa Built-In, GPS, 12-Day Battery Life, Fitness Sports Watch with 150 Sports Modes, AMOLED Display, Sleep Heart Rate Health Tracker, Black",
+  "price": 6,
+  "discountPercentage": 0,
+  "description": "The Amazfit GTS 3 Smart Watch combines style and functionality with its 42mm AMOLED display, built-in Alexa, and GPS. Compatible with both Android and iPhone, it offers 150 sports modes and comprehensive health tracking, including sleep and heart rate monitoring. Enjoy up to 12 days of battery life on a single charge. The sleek black design and advanced features make it an ideal companion for fitness enthusiasts and tech-savvy users alike.",
+  "colors": [
+    "#1d1b1b",
+    "#e2eec9"
+  ],
+  "sizes": [],
+  "brand": "GTS",
+  "stock": 11,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722954906/q9cabymtahnjuwnnczey.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722954907/jt5ybvatwlt2lv62wzgl.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722954908/nunns4fedkrgmmog0pw4.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722954909/e0gbkprrlkfcnnrd28t2.jpg"
+  ],
+  "imagesId": [
+    "q9cabymtahnjuwnnczey",
+    "jt5ybvatwlt2lv62wzgl",
+    "nunns4fedkrgmmog0pw4",
+    "e0gbkprrlkfcnnrd28t2"
+  ],
+  "category": "smart watch",
+  "createdAt": {
+    "$date": "2024-08-06T14:35:10.082Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-28T08:52:59.861Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b235b5a48010549ef8b655"
+  },
+  "title": "Nike Air Jordan 4 Retro Big Kids",
+  "price": 5,
+  "discountPercentage": 12,
+  "description": "The Nike Air Jordan 4 Retro Big Kids combines classic style with modern comfort. Featuring a durable leather upper and iconic mesh panels, this sneaker delivers both a sleek look and breathability. The signature Air cushioning in the midsole provides superior support and comfort, while the rubber outsole ensures excellent traction. Designed for young athletes and sneaker enthusiasts alike, the Air Jordan 4 Retro offers a timeless design with a perfect blend of style and functionality.",
+  "colors": [],
+  "sizes": [],
+  "brand": "Nike",
+  "stock": 11,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722955186/bwhioifc9oa6iwpkrcga.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722955187/vvmjvdoc66qjo1mdf8er.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722955188/bbtkqstshoxij2x0pvoo.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1722955189/cdjz91li4nlizekpi3gs.jpg"
+  ],
+  "imagesId": [
+    "bwhioifc9oa6iwpkrcga",
+    "vvmjvdoc66qjo1mdf8er",
+    "bbtkqstshoxij2x0pvoo",
+    "cdjz91li4nlizekpi3gs"
+  ],
+  "category": "shoes",
+  "createdAt": {
+    "$date": "2024-08-06T14:39:49.960Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-28T09:04:16.494Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b369a02e5062b9acaa89fb"
+  },
+  "title": "IPone 14pro mx",
+  "price": 20,
+  "discountPercentage": 2,
+  "description": "Frame: The durable steel hardtail frame comes in sharp charcoal grey and features front suspension to smooth out the bumps along the way\r\nSpeeds: This 21-speed bike helps you find the perfect cadence to navigate your path ahead\r\nControl: With front and rear alloy linear pull brakes, control and strong stopping power is yours\r\nTires: The 24-inch all-terrain bike tires are great for various terrains\r\nIdeal Rider: The ideal rider for this bike is a man aged 12-19, and about 58-70in tall",
+  "colors": [],
+  "sizes": [],
+  "brand": "Apple",
+  "stock": 4,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723034013/feajvjt73lxe0ypzh6ms.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723034014/fcrgdxlfshm1ucqlm1tb.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723034015/svuy9jz7y2jq6diqtks3.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723034016/n0lg0opvyoc21cim2txw.jpg"
+  ],
+  "imagesId": [
+    "feajvjt73lxe0ypzh6ms",
+    "fcrgdxlfshm1ucqlm1tb",
+    "svuy9jz7y2jq6diqtks3",
+    "n0lg0opvyoc21cim2txw"
+  ],
+  "category": "mobile",
+  "createdAt": {
+    "$date": "2024-08-07T12:33:36.423Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-28T10:20:29.208Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b36aba2e5062b9acaa8a24"
+  },
+  "title": "Cycle",
+  "price": 21,
+  "discountPercentage": 21,
+  "description": "Frame: The durable steel hardtail frame comes in sharp charcoal grey and features front suspension to smooth out the bumps along the way\nSpeeds: T",
+  "colors": [],
+  "sizes": [],
+  "brand": "Huffan",
+  "stock": 11,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723034294/y57n6bkrgl7zbbv8sgna.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723034296/hwix7jrz5v5o7s6sqewu.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723034296/pc1uavwfh3mcrtsiwjgu.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723034297/djzqqfwa9za7ukrltozz.jpg"
+  ],
+  "imagesId": [
+    "y57n6bkrgl7zbbv8sgna",
+    "hwix7jrz5v5o7s6sqewu",
+    "pc1uavwfh3mcrtsiwjgu",
+    "djzqqfwa9za7ukrltozz"
+  ],
+  "category": "cycle",
+  "createdAt": {
+    "$date": "2024-08-07T12:38:18.059Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-28T10:22:13.556Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b36bd32e5062b9acaa8a4c"
+  },
+  "title": "Portable Bluetooth Speaker with Lights,Powerful Crystal Clear Sound,IPX5 Waterproof,All Day Playtime,AUX&TF-Card Input,Bluetooth 5.3,TWS Paring,Small Wireless Speaker for Outdoor,Gift Ideas",
+  "price": 5,
+  "discountPercentage": 20,
+  "description": "【Immersive Sound】: Experience stunning 15W（20W peak) sound in a compact design. With zero distortion audio, this Bluetooth speaker delivers loud highs, crisp midrange, and full bass for an immersive listening experience. With up to 15 hours of playtime on a single charge, enjoy your favorite tunes all day and night without interruption\r\n【Portable Design】: Compact and lightweight at 4.5 inches high and 3.07 inches in diameter, this speaker is perfect for on-the-go use. It features a TF card slot (supports WAV / FLAC / APE / MP3 formats), a 3.5mm AUX input port, Type-C fast charging, and a lanyard for convenient carrying\r\n【Dynamic Beat-Synced Light Show】: Enjoy an exciting light show that dances to the rhythm of your music. With vibrant LED lights that sync with the beat, this speaker adds an extra dimension to your listening experience\r\n【360° Stereo Pairing】: Enjoy true wireless stereo sound by pairing two speakers together. With 360° coverage, you can enjoy loud 30W music in any setting, whether it's at home, parties, the beach, park, or elsewhere\r\n【Advanced Bluetooth 5.3】: Equipped with the latest Bluetooth 5.3 chip, this speaker ensures fast pairing and a stable connection. It also features a built-in microphone for high-quality calls and automatic reconnection to the last device used",
+  "colors": [],
+  "sizes": [],
+  "brand": "CHIFENCHY",
+  "stock": 12,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723034574/ayfitc1oc4a0dhdhtujm.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723034576/c5c6lvifo7k2dpzvctli.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723034577/jjolshuwrvxyz9qgjcbr.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723034579/b9q7i6jbahxjqfu3qz2k.jpg"
+  ],
+  "imagesId": [
+    "ayfitc1oc4a0dhdhtujm",
+    "c5c6lvifo7k2dpzvctli",
+    "jjolshuwrvxyz9qgjcbr",
+    "b9q7i6jbahxjqfu3qz2k"
+  ],
+  "category": "speaker",
+  "createdAt": {
+    "$date": "2024-08-07T12:42:59.299Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-07T12:42:59.299Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b36cfa2e5062b9acaa8acb"
+  },
+  "title": "Beginning Node.js, Express & MongoDB Development",
+  "price": 5,
+  "discountPercentage": 10,
+  "description": "In this book, we take you on a fun, hands-on and pragmatic journey to learning Node.js, Express and MongoDB development. You'll start building your first Node.js app within minutes. Every chapter is written in a bite-sized manner and straight to the point as I don’t want to waste your time (and most certainly mine) on the content you don't need. In the end, you will have the skills to create a blog app and deploy it to the Internet.",
+  "colors": [],
+  "sizes": [],
+  "brand": "Node.Js",
+  "stock": 12,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723034873/flz7vgiwilf1jw2hjxrd.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723034874/w8g04ozxqhm0ndogsw6c.jpg"
+  ],
+  "imagesId": [
+    "flz7vgiwilf1jw2hjxrd",
+    "w8g04ozxqhm0ndogsw6c"
+  ],
+  "category": "stationary",
+  "createdAt": {
+    "$date": "2024-08-07T12:47:54.787Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-07T12:47:54.787Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b36d702e5062b9acaa8ae6"
+  },
+  "title": "Java for Web Development: Create Full-Stack Java Applications with Servlets, JSP Pages, MVC Pattern and Database Connectivity (English Edition)",
+  "price": 5,
+  "discountPercentage": 12,
+  "description": "Play around JavaBeans, NetBeans IDE, and build strong foundation of web development concepts\n\nKey Features\n\n● Extensive demonstrations of Servlets and JSP in action, including various instances.\n\n● Prepares you to succeed in Java Full Stack and Web Programming Interviews.\n\n\n",
+  "colors": [],
+  "sizes": [],
+  "brand": "Java",
+  "stock": 12,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723034990/c4ittltzo4qbtvf1mo5b.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723034991/cvj6lpnq9imoukbfv538.jpg"
+  ],
+  "imagesId": [
+    "c4ittltzo4qbtvf1mo5b",
+    "cvj6lpnq9imoukbfv538"
+  ],
+  "category": "stationary",
+  "createdAt": {
+    "$date": "2024-08-07T12:49:52.366Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-07T12:49:52.366Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b36de52e5062b9acaa8b29"
+  },
+  "title": "Iberia Basmati Rice Jar, 2 Pounds, Extra Long Grain, Naturally Aged Indian White Basmati Rice, Natural Basmati Rice in Food Grade Jar.",
+  "price": 20,
+  "discountPercentage": 30,
+  "description": "This 2 lb jar of Iberia Basmati Rice is a versatile ingredient for a wide variety of main and side dishes. Use it in curry, pilaf or other recipes. Iberia basmati rice has a pleasant natural fragrance that enhances the presentation and flavor of your meals. It's easy to cook, so you can prepare other dishes at the same time. The burlap bag has a zipper and carrying handle on top to make storage and transport easier. Sold in Sealed Food grade gourmet pet plastic jars for convenience.\r\nRich, buttery flavor and a pearly white luster\r\nGrown in the foothills of the Himalayas as it has been for centuries\r\nAged with patience and care for up to 18 months\r\nThe connoisseur's choice. The finest basmati for the finest cuisine.",
+  "colors": [],
+  "sizes": [],
+  "brand": "Basmati",
+  "stock": 12,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723035107/ofwuzvefckm9sntyy0gz.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723035108/alzxrkkhnqj4onfnhplm.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723035109/irbgmk0kzjn4uolqqr1r.jpg"
+  ],
+  "imagesId": [
+    "ofwuzvefckm9sntyy0gz",
+    "alzxrkkhnqj4onfnhplm",
+    "irbgmk0kzjn4uolqqr1r"
+  ],
+  "category": "grocery",
+  "createdAt": {
+    "$date": "2024-08-07T12:51:49.324Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-07T12:51:49.324Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b36e9f2e5062b9acaa8b54"
+  },
+  "title": "Nutella Biscuits, 20 Count Cookies, Hazelnut Spread with Cocoa, Kids Snacks, 9.7 oz​",
+  "price": 5,
+  "discountPercentage": 0,
+  "description": "Ingredients\r\nHAZELNUT SPREAD WITH COCOA (SUGAR, PALM OIL, HAZELNUTS, SKIM MILK, COCOA, LECITHIN AS EMULSIFIER, VANILLIN AN ARTIFICIAL FLAVOR), WHEAT FLOUR, VEGETABLE FATS (PALM, PALM KERNEL), CANE SUGAR, LACTOSE, WHEAT BRAN, MILK POWDER, HONEY, DISODIUM DIPHOSPHATE, SODIUM BICARBONATE AND AMMONIUM BICARBONATE AS LEAVENING AGENTS, MALTED BARLEY FLOUR, COCOA, SALT, EXTRACT OF MALTED BARLEY AND CORN, WHEAT STARCH, LECITHIN AS EMULSIFIER, VANILLIN: AN ARTIFICIAL FLAVOR.",
+  "colors": [],
+  "sizes": [],
+  "brand": "Nutella",
+  "stock": 120,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723035292/l1wlh9us70ernojqtj2f.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723035293/olw4kaycmr5pqod8myme.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723035294/rewc6txmasphkdwkpzlr.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723035295/s3gaysm3uwzxheg7dssu.jpg"
+  ],
+  "imagesId": [
+    "l1wlh9us70ernojqtj2f",
+    "olw4kaycmr5pqod8myme",
+    "rewc6txmasphkdwkpzlr",
+    "s3gaysm3uwzxheg7dssu"
+  ],
+  "category": "grocery",
+  "createdAt": {
+    "$date": "2024-08-07T12:54:55.603Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-07T12:54:55.603Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b3700d2e5062b9acaa8bd0"
+  },
+  "title": "Keyboard",
+  "price": 21,
+  "discountPercentage": 21,
+  "description": "About this item\r\nMini portable 60% compact layout: MK-Box is a 68 keys mechanical keyboard have cute small size, separate arrow keys and all your F-keys you need, can use it for gaming or work while saving space.\r\nMechanical red switch: characterized for being linear and smoother, slight key sound has no paragraph sense with minimal resistance, but fast action without a tactile bump feel which makes it easier to tap the keyboard.\r\nClassic charming blue LED backlit: Customize multiple illuminated LED light effects, supports about 15 backlight modes, press Fn + Ins can control it, FN + ←/→ control backlight speed, FN + ↑/↓ control backlight brightness.\r\nFull anti-ghosting keyboard: all 68 keys are no conflict, black grey red mash up design, ergonomic suspension double-color injection keycap, double kickstand feet adjustable typing angle and detachable usb cable, both practical and beautiful.\r\nExtensive compatibility: MageGee MK-Box mechanical keyboards use USB 2.0 connector making it compatible with Windows (2000, XP, ME, Vista, 7, 8), Linux and Mac, plug and play, no drivers or software required.",
+  "colors": [],
+  "sizes": [],
+  "brand": "MageGee",
+  "stock": 12,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723035658/xdmxjfadfsylaqmjexi1.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723035659/loacl2uzqoremidsmgly.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723035660/s9saxvg9gmh8bnm7ro28.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723035661/wudlqymfspwd0l1qobfz.jpg"
+  ],
+  "imagesId": [
+    "xdmxjfadfsylaqmjexi1",
+    "loacl2uzqoremidsmgly",
+    "s9saxvg9gmh8bnm7ro28",
+    "wudlqymfspwd0l1qobfz"
+  ],
+  "category": "laptop",
+  "createdAt": {
+    "$date": "2024-08-07T13:01:01.358Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-25T14:25:33.356Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b371322e5062b9acaa8beb"
+  },
+  "title": "PJ PAUL JONES Mens Casual Sport Coat Blazer Two Buttons Lightweight Business Jackets",
+  "price": 10,
+  "discountPercentage": 20,
+  "description": "About this item\r\nPREMIUM MATERIAL: We have avoided the situation that blazer are generally heavy, and we have carefully selected premium material to provide you with a lightweight and soft skin-friendly experience.\r\nUNIQUE DESIGN: Mens Casual Blazer Sport Coat that combines elements of various fashion trends. Two buttons, notch lapel, left chest real pocket, two front pockets and inside pocket , with back vent, fully lined, show your mature charm.\r\nVERSATILE MATCH: You can wear this mens lightweight suit jacket with tie, T-shirt, suit vest, shirt, turtleneck sweater, sweatshirt,",
+  "colors": [
+    "#b0cfb0",
+    "#1f6ed6",
+    "#848990",
+    "#c7c38e"
+  ],
+  "sizes": [
+    "sm",
+    "m",
+    "xl",
+    "2xl"
+  ],
+  "brand": "PJ PAUL",
+  "stock": 11,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723035950/vcuaye0mawptk10dsefd.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723035951/d3xsaq6ed0bzplaxznqi.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723035952/bc2k1o5j3gfx24u2rdxr.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1723035953/dbfcszsj5gvwieoztkmm.jpg"
+  ],
+  "imagesId": [
+    "vcuaye0mawptk10dsefd",
+    "d3xsaq6ed0bzplaxznqi",
+    "bc2k1o5j3gfx24u2rdxr",
+    "dbfcszsj5gvwieoztkmm"
+  ],
+  "category": "fashion",
+  "createdAt": {
+    "$date": "2024-08-07T13:05:54.308Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-07T13:05:54.308Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cc461e5f306228ce66e3f0"
+  },
+  "title": "Sari",
+  "price": 12,
+  "discountPercentage": 70,
+  "description": "Elina fashion Sarees For Women Bollywood Faux Georgette Saree || Sequence Embroidered Indian Sari & Unstitched Blouse",
+  "colors": [],
+  "sizes": [],
+  "brand": "Grater",
+  "stock": 6,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724663322/wkufu9ckfqg9sgigofmx.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724663323/ccotmu2oqlnlrwapwyy7.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724663324/qahncnjbafoxksngy45d.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724663325/nxevffnzdhedl4n1lhkh.jpg"
+  ],
+  "imagesId": [
+    "wkufu9ckfqg9sgigofmx",
+    "ccotmu2oqlnlrwapwyy7",
+    "qahncnjbafoxksngy45d",
+    "nxevffnzdhedl4n1lhkh"
+  ],
+  "category": "sari",
+  "createdAt": {
+    "$date": "2024-08-26T09:08:46.545Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-26T12:11:27.299Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cc7158336829341af108c6"
+  },
+  "title": "Mixing Bowls with Airtight Lids Set, 26PCS Stainless Steel Khaki Bowls with Grater Attachments, Non-Slip Bottoms & Kitchen",
+  "price": 12,
+  "discountPercentage": 40,
+  "description": "AIRTIGHT LIDS & 3 GRATER ATTACHMENTS:The airtight lids that come with this mixing bowl set make it easy to store ingredients and leftovers without worrying about spills or leaks. 3.5qt had a removable lid inside the main lid, for adding contents or",
+  "colors": [],
+  "sizes": [],
+  "brand": "Huffy",
+  "stock": 4,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724674388/bhtdjsjoo2vjvh97jtwp.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724674389/zwc6x2yifoij9aqts798.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724674390/ocsks1o3ebgkwawflnd2.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724674391/hnzhglw7y4uov4xjrggh.jpg"
+  ],
+  "imagesId": [
+    "bhtdjsjoo2vjvh97jtwp",
+    "zwc6x2yifoij9aqts798",
+    "ocsks1o3ebgkwawflnd2",
+    "hnzhglw7y4uov4xjrggh"
+  ],
+  "category": "kitchen",
+  "createdAt": {
+    "$date": "2024-08-26T12:13:12.942Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-26T12:26:32.367Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cefc25ec7b4bbeb67bb3e6"
+  },
+  "title": "LUCI Backpack Purse for Women Large Womens Backpack Leather Travel Backpack Fashion Backpack Purse Designer Ladies Shoulder Bags with Tassel Two-toned Brown",
+  "price": 20,
+  "discountPercentage": 20,
+  "description": "High-end Material: Travel backpack are made of high-quality PU leather material with reinforced stitching, gun-tone hardware, soft fabric lining, delicate tassel designed for fashion appearance and adjustable canvas shoulder straps for convenience.",
+  "colors": [
+    "#1a1919",
+    "#624a27",
+    "#53c1b4"
+  ],
+  "sizes": [],
+  "brand": "Cluci",
+  "stock": 1,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724840993/gz6wiljljjs1nvewmnog.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724840994/qdbyvw8mhdcclb9lxier.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724840995/nkx3i92nz8dpoddosd36.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724840996/fcjbaztyspxrs3tlc14u.jpg"
+  ],
+  "imagesId": [
+    "gz6wiljljjs1nvewmnog",
+    "qdbyvw8mhdcclb9lxier",
+    "nkx3i92nz8dpoddosd36",
+    "fcjbaztyspxrs3tlc14u"
+  ],
+  "category": "bag",
+  "createdAt": {
+    "$date": "2024-08-28T10:29:57.247Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-31T04:20:25.161Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cefcd4ec7b4bbeb67bb519"
+  },
+  "title": "Vintage Leather Backpack Fit 15.6 inch Laptop Waterproof Large School Casual Bookbag Work College Travel Smooth Zipper Backpack Men Father's Day",
+  "price": 12,
+  "discountPercentage": 6,
+  "description": "DURABLE AND LIGHTWEIGHT BACKPACK: Waterproof and high quality soft Faux Leather (similar to real leather), Smooth Zipper. Excellent stitching technic makes the mens womens black leather backpack more strong and sturdy",
+  "colors": [],
+  "sizes": [],
+  "brand": "Mateelan",
+  "stock": 10,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724841169/jhjt5vvv5cxtfyh9snqp.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724841170/f7mxsnyjaykch0cqvdqn.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724841171/iius8wlp5x53s3emnt5s.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724841172/w0z03kwgwwhhlzjaq4jm.jpg"
+  ],
+  "imagesId": [
+    "jhjt5vvv5cxtfyh9snqp",
+    "f7mxsnyjaykch0cqvdqn",
+    "iius8wlp5x53s3emnt5s",
+    "w0z03kwgwwhhlzjaq4jm"
+  ],
+  "category": "bag",
+  "createdAt": {
+    "$date": "2024-08-28T10:32:52.671Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-28T10:32:52.671Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cefe24ec7b4bbeb67bb831"
+  },
+  "title": "Google Pixel 8 Pro - Unlocked Android Smartphone with Telephoto Lens and Super Actua Display - 24-Hour Battery - Bay - 128 GB",
+  "price": 50,
+  "discountPercentage": 25,
+  "description": "Pixel 8 Pro is the all-pro phone engineered by Google; it’s super fast, powerful, and secure, with the new Google Tensor G3 chip that’s custom-designed with Google AI for cutting-edge photo and video features and smarter ways to help[1]",
+  "colors": [],
+  "sizes": [],
+  "brand": "Google Pixel",
+  "stock": 1,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724841504/ffjn1ebdgfbv4knqdtr1.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724841505/muawcy7nh3f5bgklfgbo.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724841506/fad1qrxcc2trmfjyfgde.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724841507/pnhmmacvihwwvinkqhm3.jpg"
+  ],
+  "imagesId": [
+    "ffjn1ebdgfbv4knqdtr1",
+    "muawcy7nh3f5bgklfgbo",
+    "fad1qrxcc2trmfjyfgde",
+    "pnhmmacvihwwvinkqhm3"
+  ],
+  "category": "mobile",
+  "createdAt": {
+    "$date": "2024-08-28T10:38:28.649Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-31T13:03:06.080Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cefee0ec7b4bbeb67bba48"
+  },
+  "title": "FURTALK Unisex Vintage Washed Unstructured Baseball Cap 100% Washed Cotton Soft Cap Adjustable Unisex Baseball Hat Dad Hat",
+  "price": 10,
+  "discountPercentage": 10,
+  "description": "Cotton Unstructured Soft Baseball Cap, the Premium material and rigorous crafting process to ensure durability and functional. The cap restores it's shape quickly after you take it out package. keep the shape on your head, no weird shape",
+  "colors": [
+    "#1a1919",
+    "#ffffff",
+    "#8f7070"
+  ],
+  "sizes": [],
+  "brand": "Furtalk",
+  "stock": 3,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724841692/vkfxqgg5ntn0ixcpjtug.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724841693/thxf4uqaolrr32nki2ok.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724841694/ly42tipy1vrljjobkm1i.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724841696/gzbscnvfepqfurnvomdo.jpg"
+  ],
+  "imagesId": [
+    "vkfxqgg5ntn0ixcpjtug",
+    "thxf4uqaolrr32nki2ok",
+    "ly42tipy1vrljjobkm1i",
+    "gzbscnvfepqfurnvomdo"
+  ],
+  "category": "cap",
+  "createdAt": {
+    "$date": "2024-08-28T10:41:36.454Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-31T04:13:40.154Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ceff82ec7b4bbeb67bbbb1"
+  },
+  "title": "2020 Apple MacBook Air Laptop: Apple M1 Chip, 13” Retina Display, 8GB RAM, 256GB SSD Storage, Backlit Keyboard, FaceTime HD Camera, Touch ID. Works with iPhone/iPad; Silver",
+  "price": 100,
+  "discountPercentage": 20,
+  "description": "Powerful Performance – Take on everything from professional-quality editing to action-packed gaming with ease. The Apple M1 chip with an 8-core CPU delivers up to 3.5x faster performance than the previous generation while using way less power.",
+  "colors": [],
+  "sizes": [],
+  "brand": "Apple",
+  "stock": 2,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724841855/zgyf4cjqmnxtaidjjisr.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724841856/g7ok7dkse6genuusjkhr.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724841857/znjuzdtrvknkju5qsjxv.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724841858/gln9v2m0xc5sugp7nzkm.jpg"
+  ],
+  "imagesId": [
+    "zgyf4cjqmnxtaidjjisr",
+    "g7ok7dkse6genuusjkhr",
+    "znjuzdtrvknkju5qsjxv",
+    "gln9v2m0xc5sugp7nzkm"
+  ],
+  "category": "laptop",
+  "createdAt": {
+    "$date": "2024-08-28T10:44:18.695Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-28T10:44:18.695Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cf008fec7b4bbeb67bc324"
+  },
+  "title": "EatNeat 12 Pc Colorful Kitchen Knife Set - Camper Must Haves 5 Stainless Steel Knives with Safety Sheaths 5 pc Cutting Board and Kitchen Knife Set",
+  "price": 20,
+  "discountPercentage": 70,
+  "description": "Cuts Like A Hot Knife Through Butter: Constructed from high grade stainless steel, these kitchen knives come with an edge that makes slicing effortless. Combined with their nonstick coating, these knives stay clean and make kitchen prep work a cinch.",
+  "colors": [],
+  "sizes": [],
+  "brand": "EatNeat ",
+  "stock": 1,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724842124/z5dcgous6jronipczx0g.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724842125/n5bwjxb73hrglnzb07wc.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724842126/mdi6frnohsbthuih7ywa.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724842127/gg6kvbgve0zozii8usvk.webp"
+  ],
+  "imagesId": [
+    "z5dcgous6jronipczx0g",
+    "n5bwjxb73hrglnzb07wc",
+    "mdi6frnohsbthuih7ywa",
+    "gg6kvbgve0zozii8usvk"
+  ],
+  "category": "kitchen",
+  "createdAt": {
+    "$date": "2024-08-28T10:48:47.619Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-29T08:58:50.535Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cf01d7ec7b4bbeb67bc843"
+  },
+  "title": "Apple Watch Series 9 [GPS 41mm] Smartwatch with Pink Aluminum Case with Pink Sport Loop. Fitness Tracker, Blood Oxygen & ECG Apps, Always-On Retina Display, Carbon Neutral",
+  "price": 30,
+  "discountPercentage": 30,
+  "description": "CARBON NEUTRAL — An aluminum Apple Watch Series 9 paired with the latest Sport Loop is carbon neutral. Learn more about Apple’s commitment to the environment at apple.com/2030.",
+  "colors": [
+    "#262121",
+    "#ca9fd0",
+    "#e3e3e3",
+    "#bdd284"
+  ],
+  "sizes": [],
+  "brand": "Apple",
+  "stock": 1,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724842451/v30wfvqltz93v82js3cc.webp",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724842452/i7gq6vdfmuturbheiq7r.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724842453/stbenjrm1vdsrll92zzp.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724842455/mndmmaiamt9z4demjlit.jpg"
+  ],
+  "imagesId": [
+    "v30wfvqltz93v82js3cc",
+    "i7gq6vdfmuturbheiq7r",
+    "stbenjrm1vdsrll92zzp",
+    "mndmmaiamt9z4demjlit"
+  ],
+  "category": "smart watch",
+  "createdAt": {
+    "$date": "2024-08-28T10:54:15.732Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-30T23:48:44.866Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66cf03a4ec7b4bbeb67bcb80"
+  },
+  "title": "Signature by Levi Strauss & Co. Gold Men's Relaxed Fit Flex Jeans",
+  "price": 10,
+  "discountPercentage": 25,
+  "description": "About this item\r\nRelaxed through seat and thigh\r\nStraight leg opening\r\nFlex internal waistband that provides extra stretch",
+  "colors": [
+    "#476390",
+    "#905247"
+  ],
+  "sizes": [],
+  "brand": "Zara",
+  "stock": 2,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724842913/czkcpiesvcxcri4vxzjw.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724842915/afdeg4ug0ukke3kvysmz.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1724842916/zblcqli8jeahib2qya4j.jpg"
+  ],
+  "imagesId": [
+    "czkcpiesvcxcri4vxzjw",
+    "afdeg4ug0ukke3kvysmz",
+    "zblcqli8jeahib2qya4j"
+  ],
+  "category": "fashion",
+  "createdAt": {
+    "$date": "2024-08-28T11:01:56.669Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-28T11:01:56.669Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d313ce83745bc9238b9f16"
+  },
+  "title": "Rolex",
+  "price": 200,
+  "discountPercentage": 20,
+  "description": "Nice watch",
+  "colors": [],
+  "sizes": [],
+  "brand": "Rolex",
+  "stock": 2,
+  "images": [
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1725109194/igwr31vsdwx1sk6pjcod.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1725109195/u5bfvlhq0ghpelvhays7.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1725109196/vgq3z9kpbn80aqnbexd5.jpg",
+    "https://res.cloudinary.com/dn6jddyjl/image/upload/v1725109197/kf5vbwlmrnuhr1te2cgn.jpg"
+  ],
+  "imagesId": [
+    "igwr31vsdwx1sk6pjcod",
+    "u5bfvlhq0ghpelvhays7",
+    "vgq3z9kpbn80aqnbexd5",
+    "kf5vbwlmrnuhr1te2cgn"
+  ],
+  "category": "watch",
+  "createdAt": {
+    "$date": "2024-08-31T12:59:58.263Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-31T13:01:28.104Z"
+  },
+  "__v": 0
+}]
