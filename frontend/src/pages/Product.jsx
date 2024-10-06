@@ -233,7 +233,8 @@ const Product = () => {
                     quantity: quantity,
                     title: product?.title || 'Product Title',
                     brand: product?.brand,
-                    category: product?.category
+                    category: product?.category,
+                    stock: product.stock
                   });
                 }}
               >

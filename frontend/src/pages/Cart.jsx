@@ -23,20 +23,23 @@ const Cart = () => {
   }, [])
 
   // increment quantity 
-  async function increaseQuntity(id) {
-    try {
-      const res = await axios.patch(`${baseUrl}/api/v1/carts/${id}`, { flag: "increment" }, {
-        headers: {
-          "Authorization": `Bearer ${token}`
-        },
-        withCredentials: true
-      })
-      // console.log(res.data.data);
-      dispatch(incrementQuantity(res.data.data.id))
+  async function increaseQuntity(id, stock) {
+    const index = cartProducts.findIndex(item => item._id === id);
+    if (cartProducts[index].product.quantity < stock) {
+      try {
+        const res = await axios.patch(`${baseUrl}/api/v1/carts/${id}`, { flag: "increment" }, {
+          headers: {
+            "Authorization": `Bearer ${token}`
+          },
+          withCredentials: true
+        })
+        // console.log(res.data.data);
+        dispatch(incrementQuantity(res.data.data.id))
 
-    } catch (error) {
-      console.log(error);
+      } catch (error) {
+        console.log(error);
 
+      }
     }
   }
   // decrement quantity
@@ -131,7 +134,7 @@ const Cart = () => {
                               onChange={(e) => updateQuanityByValue(e, item?._id)}
                               min={1} />
                             <Button className="w-[40px] py-1 px-2 outline-none border-[#4B5563] border-2 border-solid rounded focus:border-black"
-                              onClick={() => increaseQuntity(item?._id)}
+                              onClick={() => increaseQuntity(item?._id, item?.product.stock)}
                             ><FiPlus
                               /></Button>
                           </div>
