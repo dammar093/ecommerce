@@ -52,8 +52,10 @@ const Product = () => {
     getProduct();
   }, [id, dispatch]);
 
-  const increaseQuantity = () => {
-    setQuantity(prev => prev + 1);
+  const increaseQuantity = (q) => {
+    if (quantity < q)
+      setQuantity(prev => prev + 1);
+
   };
 
   const decreaseQuantity = () => {
@@ -202,7 +204,7 @@ const Product = () => {
                 min={1}
                 onChange={(e) => setQuantity(Number(e.target.value))}
               />
-              <div className='w-[40px] h-[40px] border border-gray-700 flex justify-center items-center cursor-pointer' onClick={increaseQuantity}>
+              <div className='w-[40px] h-[40px] border border-gray-700 flex justify-center items-center cursor-pointer' onClick={() => increaseQuantity(product.stock)}>
                 <FiPlus className='text-xl text-gray-700 font-medium' />
               </div>
             </div>
