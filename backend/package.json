@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": " index.js",
-    "build": "npm install",
-    "start": " index.js"
+    "dev": "index.js",
+    "start": "index.js",
+    "buld": "npm install"
   },
   "keywords": [],
   "author": "",
