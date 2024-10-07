@@ -30,6 +30,4 @@ app.use("/api/v1/products", productRouter)
 app.use("/api/v1/carts", cartRouter)
 app.use("/api/v1/orders", orderRouter);
 app.use("/api/v1/reviews", reviewRouter);
-app.use(express.static(path.join(__dirname, '/frontend/dist')));
-
 module.exports = app;
